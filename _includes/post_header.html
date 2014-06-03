@@ -1,0 +1,30 @@
+<header class="post-header">
+	<h3 class="content-title">
+		<a class="titulo-post" href="{{ post.url }}">{{ include.post.title }}</a>
+	</h3>
+	<div class="blog-entry-meta">
+		<div class="blog-entry-meta-date">
+			<i class="icon-time"></i>
+			{{ include.post.date | date: "%d/%m/%Y" }}
+		</div>
+		<div class="blog-entry-meta-author">
+			<i class="icon-user"></i>
+			<a href="#" class="blog-entry-meta-author">{{ include.post.author }}</a>
+		</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-circle"></i>
+			{{ include.post.categories | join: ", " }}
+	    	</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-tags"></i>
+			{{ include.post.tags | join: ", " }}
+		</div>
+		{% if include.show_comments %}
+		<div class="blog-entry-meta-comments">
+			<i class="icon-comments"></i>
+			<a href="{{ post.url }}#disqus_thread" ></a>
+		</div>
+		{% endif %}
+	</div>
+</header>
+
