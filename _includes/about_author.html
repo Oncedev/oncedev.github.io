@@ -1,0 +1,15 @@
+{% include fetch_author_data.html author=page.author %}
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/{{ author.url_image }}"></div>
+        <div class="data">
+                <h4><a href="mailto:{{ author.email }}">{{ author.name }}</a></h4>
+                <p>
+                    {{ author.about }}
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>

@@ -1,0 +1,27 @@
+-
+  id: "joaoseixas"
+  name: "João Seixas"
+  email: "joaoseixas@oncedev.com"
+  about: "sobre João"
+  url_image: "joao.jpg"
+
+-
+  id: "vladsonfreire"
+  name: "Vladson Freire"
+  email: "vladsonfreire@oncedev.com"
+  about: "sobre Vladson"
+  url_image: "vladson.jpg"
+
+-
+  id: "pauloortins"
+  name: "Paulo Ortins"
+  email: "pauloortins@oncedev.com"
+  about: "Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em pauloortins.com."
+  url_image: "paulo.jpg"
+
+-
+  id: "gabrielpeixoto"
+  name: "Gabriel Peixoto"
+  email: "gabrielpeixoto@oncedev.com"
+  about: "sobre Gabriel"
+  url_image: "gabriel.jpg"

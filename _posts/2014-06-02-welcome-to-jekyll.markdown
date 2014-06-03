@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-06-02 15:07:39
-author: Romário
+author: pauloortins
 categories: jekyll update
 tags: teste
 ---

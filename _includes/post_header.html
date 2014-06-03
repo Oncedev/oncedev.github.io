@@ -1,3 +1,5 @@
+{% include fetch_author_data.html author=include.post.author %}
+
 <header class="post-header">
 	<h3 class="content-title">
 		<a class="titulo-post" href="{{ post.url }}">{{ include.post.title }}</a>
@@ -9,7 +11,7 @@
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-			<a href="#" class="blog-entry-meta-author">{{ include.post.author }}</a>
+                        <a href="mailto:{{ author.email }}" class="blog-entry-meta-author">{{ author.name }}</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
