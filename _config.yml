@@ -8,5 +8,6 @@ url: "http://yourdomain.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+exclude: [jekyll-build.sh, README.md]
 
 category_archive: default
