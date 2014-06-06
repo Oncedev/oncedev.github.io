@@ -80,7 +80,7 @@ h3.title:after {
 
 ul,li,ol {
     line-height: 24px;
-    list-style: none;
+    list-style: disc inside none;
     margin: 0;
     padding: 0;
 }
