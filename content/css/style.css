@@ -687,6 +687,7 @@ h2.title {
 }
 
 .tabs ul.posts li {
+    list-style: none;
     margin-bottom: 15px;
     padding-bottom: 10px;
     overflow: hidden;
@@ -719,6 +720,10 @@ h2.title {
     font-style: normal;
     font-weight: 400;
     padding-right: 10px;
+}
+
+ul.category-list li {
+    list-style: none;
 }
 
 .widget.category ul li {
