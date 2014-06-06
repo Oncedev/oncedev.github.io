@@ -25,3 +25,10 @@
   email: "gabrielpeixoto@oncedev.com"
   about: "sobre Gabriel"
   url_image: "gabriel.jpg"
+
+-
+  id: "luizromario"
+  name: "Luiz Romário Santana Rios"
+  email: "romariorios@oncedev.com"
+  about: "Graduando em Ciência da Computação pela UFBA"
+  url_image: "team-member.jpg"
