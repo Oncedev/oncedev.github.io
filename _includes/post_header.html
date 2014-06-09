@@ -15,7 +15,9 @@
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
-			{{ include.post.categories | join: ", " }}
+			{% for cat in include.post.categories %}
+			<a href="/{{ cat }}">{{ cat }}</a>
+			{% endfor %}
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
