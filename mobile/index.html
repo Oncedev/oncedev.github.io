@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | O TDD morreu? O que eu tenho com isso?</title>
+      <title>OnceDev | Blog - mobile</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -115,7 +115,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Post</h2>
+                <h2 class="title">Blog</h2>
+                
+                <p>Mostrando Posts da categoria: <b>mobile</b> <a href="/"><b>X</b></a></p>
                 
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -123,9 +125,7 @@
                     <ul>
                         <li>Você está aqui:</li>
                         <li><a href="http://oncedev.com/">Início</a></li>
-                        <li><a href="/">Blog</a></li>
-                        
-                        <li>O TDD morreu? O que eu tenho com isso?</li>
+                        <li>Blog</li>
                         
                     </ul>
                 </div>
@@ -137,140 +137,58 @@
                 <div class="content">
                 <div class="container">
                         <div class="row">
-                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
-    <article class="post hentry">
-        
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
+    
+        <article class="post hentry">
+            
 
 
 
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="">O TDD morreu? O que eu tenho com isso?</a>
+		<a class="titulo-post" href="/mobile/2014/06/25/2014-06-25-porque-escolher-o-xamarin/">Por que escolher o Xamarin?</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			09/05/2014
+			25/06/2014
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/testes">testes</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			TDD, Teste_Unitário, Teste_Integrado, Teste_Automatizado
+			Xamarin, Mobile
+		</div>
+		
+		<div class="blog-entry-meta-comments">
+			<i class="icon-comments"></i>
+			<a href="/mobile/2014/06/25/2014-06-25-porque-escolher-o-xamarin/#disqus_thread" ></a>
 		</div>
 		
 	</div>
 </header>
 
 
-        <div class="post-content">					  
-        <p>Ol&aacute;, pessoal... Estou com o post da minha experi&ecirc;ncia no Lingu&aacute;gil 99% pronto. Confesso que n&atilde;o sabia que era t&atilde;o dif&iacute;cil colocar no papel todas as sensa&ccedil;&otilde;es vividas ao sair da Matrix. Essa semana eu finalizo... Espero que n&atilde;o seja tarde demais.</p>
+            <div class="post-content">
+                    <p>Uma dúvida comum quando começamos um novo projeto mobile é a escolha da estratégia a ser seguida, devemos desenvolver uma webapp? Devemos desenvolver uma aplicação híbrida com PhoneGap? Ou devemos optar por aplicações nativas e desenvolvermos uma versão específica para cada plataforma?</p>
 
-<p>Acabei de ler um <a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">post</a> de David Heinemeier Hansson, o criador do Ruby on Rails, sobre a morte do TDD. Mas como assim a morte do TDD? Esse n&atilde;o era, sem d&uacute;vidas, um dos ingredientes m&aacute;gicos para a qualidade do c&oacute;digo?</p>
 
-<p>Neste post, ele comenta que n&atilde;o utiliza mais TDD e que incentiva as pessoas a n&atilde;o testarem o seu software completamente, simplesmente por entender que o TDD &eacute; menos eficiente do que o teste de regress&atilde;o automatizado.</p>
-
-<p><strong><em>&quot;My name is David, and I do not write software test-first. I refuse to apologize for that any more, much less hide it. I&#39;m grateful for what TDD did to open my eyes to automated regression testing, but I&#39;ve long since moved on from the design dogma.&quot;</em></strong></p>
-
-<p>Fiquei confuso e fui procurar o Maur&iacute;cio Aniche, autor do livro <a href="http://www.tddnomundoreal.com.br/">Test-Driven Development: Teste e Design no Mundo Real</a>. Queria saber a sua opini&atilde;o,&nbsp; j&aacute; que ele foi o respons&aacute;vel pelo meu primeiro contato com o TDD. Ele foi super r&aacute;pido com a resposta e publicou no dia seguinte o post <a href="http://blog.caelum.com.br/mais-uma-vez-tdd-nao-e-bala-de-prata/">TDD n&atilde;o &eacute; bala de prata</a>.</p>
-
-<p>Somente analisando o t&iacute;tulo da postagem, &eacute; poss&iacute;vel perceber que ele utilizou um tom bem apaziguador ao defender que o TDD n&atilde;o &eacute; a solu&ccedil;&atilde;o para todos os problemas de qualidade de c&oacute;digo e que nem sempre pode ser usado.</p>
-
-<p><strong><em>&quot;&Eacute; claro que eu n&atilde;o uso TDD 100% do tempo, eu o alterno com o uso de outras pr&aacute;ticas (gosto muito de rabiscar em um papel para pensar no projeto de classes, e com frequ&ecirc;ncia, escrevo testes depois da implementa&ccedil;&atilde;o).&quot;</em></strong></p>
-
-<p>Aniche sempre defendeu essa abordagem mais serena e isso pode ser comprovado ao ler o livro dele, que &eacute; excelente.</p>
-
-<p>Um fato que me chamou a aten&ccedil;&atilde;o tanto no post do David quanto no post do Aniche, foram as cr&iacute;ticas ao uso indiscriminado do Teste Unit&aacute;rio e dos Mocks.</p>
-
-<p><strong><em>&quot;I rarely unit test in the traditional sense of the word, where all dependencies are mocked out, and thousands of tests can close in seconds. It just hasn&#39;t been a useful way of dealing with the testing of Rails applications. I test active record models directly, letting them hit the database, and through the use of fixtures. Then layered on top is currently a set of controller tests, but I&#39;d much rather replace those with even higher level system tests through Capybara or similar.&quot;</em></strong></p>
-
-<p><strong><em>&quot;No post, ele tamb&eacute;m usa o fraco argumento de que TDD o fazia mockar ActiveRecord, e que hoje ele prefere testes que integram (com banco de dados, IO, e etc). Essa discuss&atilde;o existe&nbsp;</em><a href="http://www.tddnomundoreal.com.br/"><em>no meu livro</em></a><em>, e o resumo dela &eacute;: se o objetivo da sua classe &eacute; interagir com um sistema externo (como &eacute; o caso de um DAO, ou dos m&eacute;todos Active Record das entidades no Rails), o melhor teste para ela, &eacute; aquele que se comunica com esse sistema; n&atilde;o faz sentido simular o banco de dados para testar um m&eacute;todo que s&oacute; serve para comunicar com o banco.&quot;</em></strong></p>
-
-<p>No meu processo de sa&iacute;da da Matrix , fui apresentado a in&uacute;meras t&eacute;cnicas e processos durante as reuni&otilde;es do &nbsp;Hora Extra Salvador, mas TDD foi, sem d&uacute;vida, a t&eacute;cnica que mais impulsionou a retomada da minha carreira em desenvolvimento. Esta t&eacute;cnica me fez perceber que eu n&atilde;o aplicava bem os conceitos de Orienta&ccedil;&atilde;o a Objetos e SOLID, pois os testes aplicados na arquitetura utilizada simplesmente eram imposs&iacute;veis de serem feitos. Essa dificuldade me obrigou a estudar e o TDD foi importante nesse processo, pois os feedbacks ajudavam a identificar de forma r&aacute;pida e eficiente o quanto eu n&atilde;o estava no caminho certo. Mas ser&aacute; que se eu fosse um cara que vivesse fora da Matrix eu teria gostado tanto de TDD?</p>
-
-<p>Iniciado o primeiro projeto fora da Matrix, percebi que usar TDD n&atilde;o era uma tarefa f&aacute;cil, pois, na minha cabe&ccedil;a, n&atilde;o fazia sentido construir, primeiramente, os testes das funcionalidades que eu j&aacute; sabia como implementar. Ou seja, eu usava as abstra&ccedil;&otilde;es do projeto ou elaborava um pequeno projeto sobre como a funcionalidade seria implementada. Surgiu ent&atilde;o a primeira grande d&uacute;vida: Se a solu&ccedil;&atilde;o da implementa&ccedil;&atilde;o da funcionalidade est&aacute; clara, porque fazer o teste primeiro?</p>
-
-<p>Esse questionamento foi sendo, aos poucos, respondido a medida em que&nbsp; rod&aacute;vamos os sprints dos projetos. Ent&atilde;o, pude perceber que a utiliza&ccedil;&atilde;o do TDD melhor se aplicava em funcionalidades com regras complexas e em funcionalidades que envolvem c&aacute;lculos.</p>
-
-<p>Ap&oacute;s sanada a resposta da primeira d&uacute;vida, surgiu uma ainda mais intrigante, que foi motivo de muitas discuss&otilde;es dentro da <a href="http://www.oncedev.com/">Oncedev</a>. Por que alguns bugs surgiam, mesmo ap&oacute;s escrever mais de 600 testes unit&aacute;rios aplicando ou n&atilde;o TDD?</p>
-
-<p>Ao ler o post do David percebi que ele tamb&eacute;m sofreu com esse dilema.</p>
-
-<p><strong><em>&quot;I&#39;m grateful for what TDD did to open my eyes to automated regression testing, but I&#39;ve long since moved on from the design dogma.&quot;</em></strong></p>
-
-<p><strong><em>&quot;Maybe it was necessary to use test-first as the counterintuitive ram for breaking down the industry&#39;s sorry lack of automated, regression testing.&quot;</em></strong></p>
-
-<p>Ap&oacute;s sofrer com o caso dos 600 testes, a resposta para esse problema &eacute; simples: n&atilde;o podemos esquecer que o software &eacute; a soma das partes e n&atilde;o as partes isoladas. Do que adianta voc&ecirc; fazer testes utilizando apenas Mock se voc&ecirc; n&atilde;o escreve um teste que considera a integra&ccedil;&atilde;o das partes?</p>
-
-<p>Esse post do David fortaleceu a minha opini&atilde;o, de que n&oacute;s de TI temos o costume de querer usar sempre a &uacute;ltima t&eacute;cnica ou linguagem apenas para manter algum status. N&atilde;o estou defendendo de que n&atilde;o devemos aprender coisas novas, mas temos que parar de achar que a solu&ccedil;&atilde;o que lan&ccedil;aram a apenas 6 meses &eacute; a solu&ccedil;&atilde;o dos nossos problemas.</p>
-
-<p>Estou agora aguardando algu&eacute;m aparecer dizendo que o resultado de toda a revolu&ccedil;&atilde;o dos testes &eacute; o teste integrado de interface automatizado, que de forma automatizada, reproduz a execu&ccedil;&atilde;o do software pelo usu&aacute;rio. Por&eacute;m este j&aacute; &eacute; feito de forma manual desde que o software nasceu.</p>
-
-<p><strong><em>&quot;Maybe it was a parable that just wasn&#39;t intended to be a literal description of the day-to-day workings of software writing. But whatever it started out as, it was soon since corrupted. Used as a hammer to beat down the nonbelievers, declare them unprofessional and unfit for writing software. A litmus test.&quot;</em></strong></p>
-
-<p>Separe na sua agenda um espa&ccedil;o para assistir ao Hangout sobre este assunto com as feras Kent Beck, Martin Fowler e David Heinemeier Hansson (DHH). <a href="https://plus.google.com/u/0/events/ci2g23mk0lh9too9bgbp3rbut0k">https://plus.google.com/u/0/events/ci2g23mk0lh9too9bgbp3rbut0k</a></p>
-
-<p>Sds,</p>
-
-<p>Vladson Freire<br />
-S&oacute;cio da Oncedev Solu&ccedil;&otilde;es</p>
-        </div>
-    </article>
-    <div class="blog-divider"></div>     
+            </div>
+            <footer class="post-footer">
+                    <a class="btn-small btn-color" href="/mobile/2014/06/25/2014-06-25-porque-escolher-o-xamarin/">Leia Mais</a>
+            </footer>
+        </article>
+        <div class="blog-divider"></div>
     
-
-
-
-
-<div class="about-author">
-    <h3 class="title">Sobre o Autor</h3>
-    <div class="author-content">
-        <div class="avatar"><img alt="" src="/content/img/team/vladson.jpg"></div>
-        <div class="data">
-                <h4><a href="mailto:vladsonfreire@oncedev.com">Vladson Freire</a></h4>
-                <p>
-                    sobre Vladson
-                </p>
-        </div>
-        <!-- End data -->
-    </div>
-</div>
-    <div class="divider"></div>
-    <!-- Comments Section Start -->
-    <div class="comment-wrapper">
-        <h3 class="title">Comentários</h3>
-        <div class="clearfix"></div>
-            
-                        <div id="disqus_thread"></div>
-                    <script type="text/javascript">
-                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
-
-                            /* * * DON'T EDIT BELOW THIS LINE * * */
-                            (function() {
-                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                            })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            
-        <div class="clearfix">
-        </div>
-    </div>
-    <!-- Comments Section End -->
-    <div class="divider"></div>
-
 </div>
 
                         <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">

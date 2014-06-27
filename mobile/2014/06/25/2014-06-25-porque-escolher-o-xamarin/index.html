@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | O TDD morreu? O que eu tenho com isso?</title>
+      <title>OnceDev | Por que escolher o Xamarin?</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -125,7 +125,7 @@
                         <li><a href="http://oncedev.com/">Início</a></li>
                         <li><a href="/">Blog</a></li>
                         
-                        <li>O TDD morreu? O que eu tenho com isso?</li>
+                        <li>Por que escolher o Xamarin?</li>
                         
                     </ul>
                 </div>
@@ -146,26 +146,26 @@
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="">O TDD morreu? O que eu tenho com isso?</a>
+		<a class="titulo-post" href="">Por que escolher o Xamarin?</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			09/05/2014
+			25/06/2014
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/testes">testes</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			TDD, Teste_Unitário, Teste_Integrado, Teste_Automatizado
+			Xamarin, Mobile
 		</div>
 		
 	</div>
@@ -173,56 +173,91 @@
 
 
         <div class="post-content">					  
-        <p>Ol&aacute;, pessoal... Estou com o post da minha experi&ecirc;ncia no Lingu&aacute;gil 99% pronto. Confesso que n&atilde;o sabia que era t&atilde;o dif&iacute;cil colocar no papel todas as sensa&ccedil;&otilde;es vividas ao sair da Matrix. Essa semana eu finalizo... Espero que n&atilde;o seja tarde demais.</p>
+        <p>Uma dúvida comum quando começamos um novo projeto mobile é a escolha da estratégia a ser seguida, devemos desenvolver uma webapp? Devemos desenvolver uma aplicação híbrida com PhoneGap? Ou devemos optar por aplicações nativas e desenvolvermos uma versão específica para cada plataforma?</p>
 
-<p>Acabei de ler um <a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">post</a> de David Heinemeier Hansson, o criador do Ruby on Rails, sobre a morte do TDD. Mas como assim a morte do TDD? Esse n&atilde;o era, sem d&uacute;vidas, um dos ingredientes m&aacute;gicos para a qualidade do c&oacute;digo?</p>
+<p>Cada uma dessas estratégias traz vantagens e desvantagens que devem ser pensadas de acordo com as características da aplicação a ser desenvolvida assim como o conhecimento da equipe que irá desenvolve-la. Exemplos de caracerísticas que devem ser analisadas são:</p>
 
-<p>Neste post, ele comenta que n&atilde;o utiliza mais TDD e que incentiva as pessoas a n&atilde;o testarem o seu software completamente, simplesmente por entender que o TDD &eacute; menos eficiente do que o teste de regress&atilde;o automatizado.</p>
+<ul>
+  <li>A aplicação usará funções nativas do aparelho?</li>
+  <li>Recursos disponíveis (tempo, dinheiro)</li>
+  <li>Conhecimento da equipe (Objective-C? Java? C#? Javascript? HTML5? CSS3?)</li>
+  <li>Exigência e expectativa dos usuários</li>
+  <li>Performance</li>
+</ul>
 
-<p><strong><em>&quot;My name is David, and I do not write software test-first. I refuse to apologize for that any more, much less hide it. I&#39;m grateful for what TDD did to open my eyes to automated regression testing, but I&#39;ve long since moved on from the design dogma.&quot;</em></strong></p>
+<h4 id="por-que-escolher-web-apps-ou-hbridas">Por que escolher web apps ou híbridas?</h4>
 
-<p>Fiquei confuso e fui procurar o Maur&iacute;cio Aniche, autor do livro <a href="http://www.tddnomundoreal.com.br/">Test-Driven Development: Teste e Design no Mundo Real</a>. Queria saber a sua opini&atilde;o,&nbsp; j&aacute; que ele foi o respons&aacute;vel pelo meu primeiro contato com o TDD. Ele foi super r&aacute;pido com a resposta e publicou no dia seguinte o post <a href="http://blog.caelum.com.br/mais-uma-vez-tdd-nao-e-bala-de-prata/">TDD n&atilde;o &eacute; bala de prata</a>.</p>
+<p>Web apps ou híbridas são mais rápidas e fáceis de serem desenvolvidas visto que será desenvolvido apenas um código fonte que será consumido através dos browsers de cada plataforma, no caso das web apps, ou será empacotado de forma (quase) nativa para cada plataforma, no caso das aplicações híbridas.</p>
 
-<p>Somente analisando o t&iacute;tulo da postagem, &eacute; poss&iacute;vel perceber que ele utilizou um tom bem apaziguador ao defender que o TDD n&atilde;o &eacute; a solu&ccedil;&atilde;o para todos os problemas de qualidade de c&oacute;digo e que nem sempre pode ser usado.</p>
+<p>As skills necessárias para desenvolver aplicações como essas (HTML5, CSS3 e Javascript) são também faceis de serem encontradas visto que são skills também utilizadas no desenvolvimento web, barateando dessa forma o custo e a manutenção das aplicações.</p>
 
-<p><strong><em>&quot;&Eacute; claro que eu n&atilde;o uso TDD 100% do tempo, eu o alterno com o uso de outras pr&aacute;ticas (gosto muito de rabiscar em um papel para pensar no projeto de classes, e com frequ&ecirc;ncia, escrevo testes depois da implementa&ccedil;&atilde;o).&quot;</em></strong></p>
+<p>Na minha visão, esse tipo de estratégia é ideal para aplicações que devem ser desenvolvidas com prazo e recursos limitados e para usuários que não exigem que essas aplicações possuam as mesmas caractéristicas que as aplicações que ele já está acostumado a utilizar nos seus dispositivos.</p>
 
-<p>Aniche sempre defendeu essa abordagem mais serena e isso pode ser comprovado ao ler o livro dele, que &eacute; excelente.</p>
+<p>O tipo de recurso que vai ser usado na aplicação também influencia diretamente nessa escolha, web apps ou apps híbridas <a href="http://www.tigerspike.com/news/2013/11/11/html5-vs-native-apps-new-research-finds-that-many-key-apis-are-native-only/">não possuem acesso a APIs nativas do aparelho.</a></p>
 
-<p>Um fato que me chamou a aten&ccedil;&atilde;o tanto no post do David quanto no post do Aniche, foram as cr&iacute;ticas ao uso indiscriminado do Teste Unit&aacute;rio e dos Mocks.</p>
+<p>Caso essas aplicações móveis continuem ganhando importância no negócio da empresa, ou novos recursos sejam necessários, eu aconselharia a migração dessas para aplicações nativas.</p>
 
-<p><strong><em>&quot;I rarely unit test in the traditional sense of the word, where all dependencies are mocked out, and thousands of tests can close in seconds. It just hasn&#39;t been a useful way of dealing with the testing of Rails applications. I test active record models directly, letting them hit the database, and through the use of fixtures. Then layered on top is currently a set of controller tests, but I&#39;d much rather replace those with even higher level system tests through Capybara or similar.&quot;</em></strong></p>
+<h4 id="por-que-escolher-aplicaes-nativas">Por que escolher aplicações nativas?</h4>
 
-<p><strong><em>&quot;No post, ele tamb&eacute;m usa o fraco argumento de que TDD o fazia mockar ActiveRecord, e que hoje ele prefere testes que integram (com banco de dados, IO, e etc). Essa discuss&atilde;o existe&nbsp;</em><a href="http://www.tddnomundoreal.com.br/"><em>no meu livro</em></a><em>, e o resumo dela &eacute;: se o objetivo da sua classe &eacute; interagir com um sistema externo (como &eacute; o caso de um DAO, ou dos m&eacute;todos Active Record das entidades no Rails), o melhor teste para ela, &eacute; aquele que se comunica com esse sistema; n&atilde;o faz sentido simular o banco de dados para testar um m&eacute;todo que s&oacute; serve para comunicar com o banco.&quot;</em></strong></p>
+<p>Na minha opinião, as aplicações nativas são muito superiores do que as não nativas. </p>
 
-<p>No meu processo de sa&iacute;da da Matrix , fui apresentado a in&uacute;meras t&eacute;cnicas e processos durante as reuni&otilde;es do &nbsp;Hora Extra Salvador, mas TDD foi, sem d&uacute;vida, a t&eacute;cnica que mais impulsionou a retomada da minha carreira em desenvolvimento. Esta t&eacute;cnica me fez perceber que eu n&atilde;o aplicava bem os conceitos de Orienta&ccedil;&atilde;o a Objetos e SOLID, pois os testes aplicados na arquitetura utilizada simplesmente eram imposs&iacute;veis de serem feitos. Essa dificuldade me obrigou a estudar e o TDD foi importante nesse processo, pois os feedbacks ajudavam a identificar de forma r&aacute;pida e eficiente o quanto eu n&atilde;o estava no caminho certo. Mas ser&aacute; que se eu fosse um cara que vivesse fora da Matrix eu teria gostado tanto de TDD?</p>
+<p>Tempo de resposta, aparência, possibilidade de usar os recursos mais avançados da plataforma assim que são lançados e a própria familiaridade que os usuários já possuem ao usar as aplicações nativas dos seus dispositivos são características importantes para o usuário final e que possuem influência no sucesso ou não de um aplicativo. </p>
 
-<p>Iniciado o primeiro projeto fora da Matrix, percebi que usar TDD n&atilde;o era uma tarefa f&aacute;cil, pois, na minha cabe&ccedil;a, n&atilde;o fazia sentido construir, primeiramente, os testes das funcionalidades que eu j&aacute; sabia como implementar. Ou seja, eu usava as abstra&ccedil;&otilde;es do projeto ou elaborava um pequeno projeto sobre como a funcionalidade seria implementada. Surgiu ent&atilde;o a primeira grande d&uacute;vida: Se a solu&ccedil;&atilde;o da implementa&ccedil;&atilde;o da funcionalidade est&aacute; clara, porque fazer o teste primeiro?</p>
+<p>Dessa forma, acredito que as aplicações nativas devem ser sempre o objetivo final para estratégias mobile que venham a obter sucesso, no entanto, desenvolver e principalmente manter aplicações nativas é algo que demanda bastante esforço. As vantagens e desvantagens devem ser analisadas com cuidado afim de maximizar o retorno sobre o investimento.</p>
 
-<p>Esse questionamento foi sendo, aos poucos, respondido a medida em que&nbsp; rod&aacute;vamos os sprints dos projetos. Ent&atilde;o, pude perceber que a utiliza&ccedil;&atilde;o do TDD melhor se aplicava em funcionalidades com regras complexas e em funcionalidades que envolvem c&aacute;lculos.</p>
+<h5 id="mltiplas-linguagens-de-programao">Múltiplas Linguagens de Programação</h5>
 
-<p>Ap&oacute;s sanada a resposta da primeira d&uacute;vida, surgiu uma ainda mais intrigante, que foi motivo de muitas discuss&otilde;es dentro da <a href="http://www.oncedev.com/">Oncedev</a>. Por que alguns bugs surgiam, mesmo ap&oacute;s escrever mais de 600 testes unit&aacute;rios aplicando ou n&atilde;o TDD?</p>
+<p>Desenvolver para as 3 principais plataformas mobile (Android, iOS e Windows Phone) exige que sejam criadas codebases totalmente diferentes e em linguagens de programação também diferentes, Java para Android, Objective-C para iOS, C# para Windows e talvez mais uma linguagem server side, caso seja necessária a integração com algum servidor, ou seja, o trabalho/custo acaba se multiplicando.</p>
 
-<p>Ao ler o post do David percebi que ele tamb&eacute;m sofreu com esse dilema.</p>
+<h5 id="mltiplos-desenvolvedores">Múltiplos Desenvolvedores</h5>
 
-<p><strong><em>&quot;I&#39;m grateful for what TDD did to open my eyes to automated regression testing, but I&#39;ve long since moved on from the design dogma.&quot;</em></strong></p>
+<p>Trabalhando com diferentes linguagens de programação surge a necessidade de se também trabalhar em times com múltiplos de desenvolvedores, ou seja, múltiplas fontes de custos, aumentamos também a concentração de conhecimento, visto que cada desenvolvedor saberá o suficiente pra trabalhar na sua plataforma e na sua linguagem de programação. Não só isso, na saída de qualquer um dos desenvolvedores, ainda existirá a difícil tarefa de se encontrar um desenvolvedor com as mesmas skills do desenvolvedor que está saindo, skill essas, diga-se de passagem, que não serão encontradas nem mesmo dentro da própria equipe.</p>
 
-<p><strong><em>&quot;Maybe it was necessary to use test-first as the counterintuitive ram for breaking down the industry&#39;s sorry lack of automated, regression testing.&quot;</em></strong></p>
+<h5 id="no-existe-reuso-e-nem-compartilhamento-de-conhecimento">Não existe reuso e nem compartilhamento de conhecimento</h5>
 
-<p>Ap&oacute;s sofrer com o caso dos 600 testes, a resposta para esse problema &eacute; simples: n&atilde;o podemos esquecer que o software &eacute; a soma das partes e n&atilde;o as partes isoladas. Do que adianta voc&ecirc; fazer testes utilizando apenas Mock se voc&ecirc; n&atilde;o escreve um teste que considera a integra&ccedil;&atilde;o das partes?</p>
+<p>Sabe aquela biblioteca super bacana que o desenvolvedor de iOS criou? Aquele outro projeto open source escrito em Java? Ambos terão que ser portados ou substituídos por outros similares para cada outra plataforma.</p>
 
-<p>Esse post do David fortaleceu a minha opini&atilde;o, de que n&oacute;s de TI temos o costume de querer usar sempre a &uacute;ltima t&eacute;cnica ou linguagem apenas para manter algum status. N&atilde;o estou defendendo de que n&atilde;o devemos aprender coisas novas, mas temos que parar de achar que a solu&ccedil;&atilde;o que lan&ccedil;aram a apenas 6 meses &eacute; a solu&ccedil;&atilde;o dos nossos problemas.</p>
+<h4 id="e-se-pudessmos-juntar-os-dois-mundos">E se pudessmos juntar os dois mundos?</h4>
 
-<p>Estou agora aguardando algu&eacute;m aparecer dizendo que o resultado de toda a revolu&ccedil;&atilde;o dos testes &eacute; o teste integrado de interface automatizado, que de forma automatizada, reproduz a execu&ccedil;&atilde;o do software pelo usu&aacute;rio. Por&eacute;m este j&aacute; &eacute; feito de forma manual desde que o software nasceu.</p>
+<p>E se pudessemos desenvolver aplicações em uma única linguagem, e ainda sim, aproveitar o que há de melhor nas aplicações nativas? O Xamarin visa preencher essa lacuna no mercado mobile.</p>
 
-<p><strong><em>&quot;Maybe it was a parable that just wasn&#39;t intended to be a literal description of the day-to-day workings of software writing. But whatever it started out as, it was soon since corrupted. Used as a hammer to beat down the nonbelievers, declare them unprofessional and unfit for writing software. A litmus test.&quot;</em></strong></p>
+<hr />
 
-<p>Separe na sua agenda um espa&ccedil;o para assistir ao Hangout sobre este assunto com as feras Kent Beck, Martin Fowler e David Heinemeier Hansson (DHH). <a href="https://plus.google.com/u/0/events/ci2g23mk0lh9too9bgbp3rbut0k">https://plus.google.com/u/0/events/ci2g23mk0lh9too9bgbp3rbut0k</a></p>
+<h2 id="xamarin-desenvolvimento-mobile-multi-plataforma">Xamarin, desenvolvimento mobile multi-plataforma</h2>
 
-<p>Sds,</p>
+<p>O Xamarin é uma solução mista entre a estratégia híbrida e estratégia nativa, com o Xamarin nós conseguimos escrever código C# que irá ser quase que totalmente reaproveitado entre as diferentes plataformas garantindo o reaproveitamento e unicidade da base de código assim como a experiência de se usar aplicações nativas.</p>
 
-<p>Vladson Freire<br />
-S&oacute;cio da Oncedev Solu&ccedil;&otilde;es</p>
+<h4 id="uma-nica-linguagem">Uma Única linguagem</h4>
+
+<p>O Xamarin permite que escrevamos código em apenas uma linguagem isso elimina todos os problemas que citei anteriormente. Com o Xamarin podemos ter uma equipe mais homogênea, onde todos os desenvolvedores (Android, iOS e Windows Phone) podem compartilhar conhecimento assim como também código entre si. Buscar um novo desenvolvedor mobile para a equipe nunca foi tão fácil.</p>
+
+<h4 id="interface-nativa">Interface Nativa</h4>
+
+<p>O código escrito em C# não é totalmente reaproveitado entre as plataformas e isso é uma vantagem, sabe por quê? Porque justamente a parte do código que não será reaproveitada será a parte responsável por garantir que as aplicações possuam a experiência nativa e em conformidade com os guias de interface e funcionalidade presentes nas aplicações que os usuários já estão acostumados a utilizar. A figura abaixo mostra como isso funciona.</p>
+
+<p><img src="http://xamarin.com/content/images/pages/platform/code-sharing.png" alt="Xamarin Diagram" /></p>
+
+<h4 id="sempre-atualizado-em-relao-s-apis-nativas">Sempre atualizado em relação às APIs nativas</h4>
+
+<p>O Xamarin fornece um espelho de todas as APIs tanto do Android quanto do iOS. Essa API é tão bem feita que podemos inclusive tirar dúvidas ou ler tutoriais utilizando a linguagem nativa da plataforma (Java e/ou Objective-C) e apenas converter o código para o C#. A velocidade de atualização do Xamarin em relação aos novos lançamentos das plataformas nativas também é bastante rápida.</p>
+
+<h4 id="reaproveite-sua-equipe">Reaproveite sua Equipe</h4>
+
+<p>Para a OnceDev e para os nossos clientes esse foi um ponto bastante favorável. Se já possuímos bons desenvolvedores C# com anos de experiênciadesenvolvendo para web/desktop, por que não aproveitar esse conhecimento só que dessa vez para a plataforma mobile? Muito melhor que força-los a aprender novas linguagens de programação apenas para esse intuito.</p>
+
+<h4 id="reaproveite-suas-ferramentas">Reaproveite suas Ferramentas</h4>
+
+<p>O Xamarin se integra perfeitamento com o Visual Studio e consequentemente com o Windows, então somos capazes de reaproveitar o mesmo conjunto de ferramentas que nós já utilizamos quando estamos desenvolvendo para web como o TFS e o Resharper. A nova versão do Xamarin, inclusive, também trouxe plugins para que a construção das interfaces também possa ser feita através do próprio Visual Studio!</p>
+
+<h4 id="custos">Custos</h4>
+
+<p>O único ponto desfavorável ao utilizar o Xamarin são os custos, as licensas custam $100, $300 e $999, para as versões de estudante, indie e enterprise, respectivamente, para cada plataforma e por ano. No entanto, com a valorização cada vez maior dos desenvolvedores de software, as licensas passaram a não ter um custo tão relevante, por exemplo, duas licensas (iOS e Android) custariam menos que o salário mensal de um desenvolvedor. </p>
+
+<h2 id="concluso">Conclusão</h2>
+
+<p>Apostar no Xamarin tem sido uma escolha acertada para a OnceDev, fomos capazes de utilizar todo o conhecimento e as ferramentas que nós já possuíamos como desenvolvedores C# só que dessa vez aplicadas a plataforma mobile. Também percebemos um aumento de produtividade e de reuso de código o que nos possibilitou confeccionar propostas mais vantajosas para nossos clientes. Definitivamente, é algo que iremos colocar bastante esforços nos próximos meses. </p>
+
+
         </div>
     </article>
     <div class="blog-divider"></div>     
@@ -234,11 +269,11 @@ S&oacute;cio da Oncedev Solu&ccedil;&otilde;es</p>
 <div class="about-author">
     <h3 class="title">Sobre o Autor</h3>
     <div class="author-content">
-        <div class="avatar"><img alt="" src="/content/img/team/vladson.jpg"></div>
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
         <div class="data">
-                <h4><a href="mailto:vladsonfreire@oncedev.com">Vladson Freire</a></h4>
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
                 <p>
-                    sobre Vladson
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em pauloortins.com.
                 </p>
         </div>
         <!-- End data -->
