@@ -23,11 +23,19 @@ Web apps ou híbridas são mais rápidas e fáceis de serem desenvolvidas visto 
 
 As skills necessárias para desenvolver aplicações como essas (HTML5, CSS3 e Javascript) são também faceis de serem encontradas visto que são skills também utilizadas no desenvolvimento web, barateando dessa forma o custo e a manutenção das aplicações.
 
-Na minha visão, esse tipo de estratégia é ideal para aplicações que devem ser desenvolvidas com prazo e recursos limitados e para usuários que não exigem que essas aplicações possuam as mesmas caractéristicas que as aplicações que ele já está acostumado a utilizar nos seus dispositivos. Caso essas aplicações móveis continuem ganhando importância no negócio da empresa, eu aconselharia a migração dessas para aplicações nativas.
+Na minha visão, esse tipo de estratégia é ideal para aplicações que devem ser desenvolvidas com prazo e recursos limitados e para usuários que não exigem que essas aplicações possuam as mesmas caractéristicas que as aplicações que ele já está acostumado a utilizar nos seus dispositivos.
+
+O tipo de recurso que vai ser usado na aplicação também influencia diretamente nessa escolha, web apps ou apps híbridas [não possuem acesso a APIs nativas do aparelho.][1]
+
+ Caso essas aplicações móveis continuem ganhando importância no negócio da empresa, ou novos recursos sejam necessários, eu aconselharia a migração dessas para aplicações nativas.
 
 #### Por que escolher aplicações nativas?
 
-Na minha opinião, as aplicações nativas são muito superiores do que as não nativas, tempo de resposta, aparência, possibilidade de usar os recursos mais avançados da plataforma assim que são lançados e a própria familiaridade que os usuários já possuem ao usar as aplicações nativas dos seus dispositivos. Dessa forma, acredito que as aplicações nativas devem ser sempre o objetivo final para estratégias mobile que venham a obter sucesso, no entanto, desenvolver e principalmente manter aplicações nativas é algo que demanda bastante esforço.
+Na minha opinião, as aplicações nativas são muito superiores do que as não nativas. 
+
+Tempo de resposta, aparência, possibilidade de usar os recursos mais avançados da plataforma assim que são lançados e a própria familiaridade que os usuários já possuem ao usar as aplicações nativas dos seus dispositivos são características importantes para o usuário final e que possuem influência no sucesso ou não de um aplicativo. 
+
+Dessa forma, acredito que as aplicações nativas devem ser sempre o objetivo final para estratégias mobile que venham a obter sucesso, no entanto, desenvolver e principalmente manter aplicações nativas é algo que demanda bastante esforço. As vantagens e desvantagens devem ser analisadas com cuidado afim de maximizar o retorno sobre o investimento.
 
 ##### Múltiplas Linguagens de Programação 
 
@@ -80,3 +88,5 @@ O único ponto desfavorável ao utilizar o Xamarin são os custos, as licensas c
 ## Conclusão
 
 Apostar no Xamarin tem sido uma escolha acertada para a OnceDev, fomos capazes de utilizar todo o conhecimento e as ferramentas que nós já possuíamos como desenvolvedores C# só que dessa vez aplicadas a plataforma mobile. Também percebemos um aumento de produtividade e de reuso de código o que nos possibilitou confeccionar propostas mais vantajosas para nossos clientes. Definitivamente, é algo que iremos colocar bastante esforços nos próximos meses. 
+
+[1]: http://www.tigerspike.com/news/2013/11/11/html5-vs-native-apps-new-research-finds-that-many-key-apis-are-native-only/
