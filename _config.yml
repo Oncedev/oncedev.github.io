@@ -11,3 +11,6 @@ permalink: pretty
 exclude: [jekyll-build.sh, README.md]
 
 category_archive: default
+
+#analytics
+google_analytics_tracking_id: UA-52445211-1
