@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Blog - jekyll</title>
+      <title>OnceDev | Criando um mapa da copa do mundo usando o Xamarin.iOS</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -131,9 +131,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Blog</h2>
-                
-                <p>Mostrando Posts da categoria: <b>jekyll</b> <a href="/"><b>X</b></a></p>
+                <h2 class="title">Post</h2>
                 
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -141,7 +139,9 @@
                     <ul>
                         <li>Você está aqui:</li>
                         <li><a href="http://oncedev.com/">Início</a></li>
-                        <li>Blog</li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Criando um mapa da copa do mundo usando o Xamarin.iOS</li>
                         
                     </ul>
                 </div>
@@ -153,58 +153,118 @@
                 <div class="content">
                 <div class="container">
                         <div class="row">
-                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    
-        <article class="post hentry">
-            
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
 
 
 
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="/jekyll/2014/06/05/migrando-o-blog-da-oncedev-para-o-jekyll/">Migrando o blog da OnceDev para o Jekyll</a>
+		<a class="titulo-post" href="">Criando um mapa da copa do mundo usando o Xamarin.iOS</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			05/06/2014
+			05/07/2014
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:romariorios@oncedev.com" class="blog-entry-meta-author">Luiz Romário Santana Rios</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/jekyll">jekyll</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			Jekyll, Blog, Ruby
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/jekyll/2014/06/05/migrando-o-blog-da-oncedev-para-o-jekyll/#disqus_thread" ></a>
+			Xamarin, Mobile
 		</div>
 		
 	</div>
 </header>
 
 
-            <div class="post-content">
-                    <p>Este blog, o blog da OnceDev, até o momento em que este artigo estava sendo escrito, era uma instância do Wordpress. Nessa semana, decidimos migrá-lo para o Jekyll. Neste artigo, o primeiro escrito “em Jekyll”, conto como foi a minha experiência.</p>
+        <div class="post-content">					  
+        <p>Tempo de copa no Brasil é impossível programar sem ao menos dividir a atenção entre o monitor do computador e a peleja rolando na TV. Mas não é só os jogos da copa que estão emocionantes, a capacidade de usar uma única linguagem para programar o servidor e aplicações mobile NATIVAS tem me empolgado bastante e a experiência tem sido bastante valiosa. Mas por que não juntar as duas paixões e fazer um post demonstrando um dos recursos do Xamarin para visualizar informações sobre a copa do mundo?</p>
+
+<p>Nesse post pretendo mostrar um passo a passo em como podemos utilizar mapas no Xamarin.iOS e usa-lo para plotar informações sobre as seleções e os estádios da copa do mundo. Iremos seguir usando baby steps na seguinte sequência:</p>
+
+<ol>
+  <li>Criação de uma aplicação no Xamarin</li>
+  <li>Criação do mapa</li>
+  <li>Plotando pontos no mapa</li>
+  <li>Criando uma tela de detalhe</li>
+  <li>Customizando a tela de detalhe</li>
+  <li>Done</li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="criao-de-uma-aplicao-no-xamarin">Criação de uma aplicação no Xamarin</h2>
+
+<p>O primeiro passo que iremos dar é criar uma aplicação no Xamarin chamada WorldCupMap. Para isso acesse File &gt; New &gt; Solution e crie um novo projeto conforme as configurações da imagem abaixo.</p>
+
+<p><img src="/content/img/blog/posts/2014-07-05/criando-aplicacao.png" alt="Criando aplicacao" /></p>
+
+<h3 id="analisando-a-estrutura-do-projeto">Analisando a estrutura do projeto</h3>
+
+<p>Após a criação do projeto, o Xamarin automaticamente cria uma estrutura com alguns arquivos. Vamos falar sobre a importância de alguns deles.</p>
+
+<p><img src="/content/img/blog/posts/2014-07-05/estrutura-projeto.png" alt="Estrutura do Projeto" /></p>
 
 
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/jekyll/2014/06/05/migrando-o-blog-da-oncedev-para-o-jekyll/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
     
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
+            
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
+
 </div>
 
                         <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
