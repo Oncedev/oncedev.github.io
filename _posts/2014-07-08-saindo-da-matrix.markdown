@@ -7,7 +7,7 @@ categories: Carreira
 tags: Carreira  
 ---
 
-Nos dias 6, 7 e 8 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação..... Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia. 
+Nos dias 6, 7 e 8 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação... Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia. 
 
 Quer saber a verdade? 
 
@@ -23,7 +23,7 @@ Você deve estar se perguntando o que a reportagem da Você SA. RH tem a ver com
 
 Eu trabalhava em uma empresa, a qual denominei de Matrix, que possuía as características elencadas pela revista. Eu trabalhava em uma Fábrica de Software!
 
-O conceito de Matrix nasceu quando que comecei a frequentar, no segundo semestre de 2012, o Hora Extra Bahia que é uma reunião que acontece semanalmente em um Café de um shopping ou algum barzinho de Salvador. 
+O conceito de Matrix nasceu quando que comecei a frequentar, no segundo semestre de 2012, o [Hora Extra Bahia][4] que é uma reunião que acontece semanalmente em um Café de um shopping ou algum barzinho de Salvador. 
 
 ![Galera do HoraExtra][1]
  
@@ -82,3 +82,4 @@ Então..... Pare de reclamar e saia da sua Matrix!
 [1]: /content/img/blog/posts/2014-07-07/galera-horaextra.png 
 [2]: /content/img/blog/posts/2014-07-07/agente-smith.png 
 [3]: /content/img/blog/posts/2014-07-07/pilulas.png 
+[4]: http://horaextra.org/
