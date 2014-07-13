@@ -7,6 +7,7 @@ url: "http://yourdomain.com"
 
 # Build settings
 markdown: kramdown
+highlighter: pygments 
 permalink: pretty
 exclude: [jekyll-build.sh, README.md]
 
