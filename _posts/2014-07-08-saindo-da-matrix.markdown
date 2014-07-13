@@ -7,7 +7,7 @@ categories: Carreira
 tags: Carreira  
 ---
 
-Nos dias 6, 7 e 8 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação... Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia. 
+Nos dias 13, 14 e 15 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação... Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia. 
 
 Quer saber a verdade? 
 
