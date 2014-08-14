@@ -2,7 +2,7 @@
 layout: post
 title:  "ASP.NET vNext - Game Changer ou Atualização Técnica"
 date:   2014-08-14 18:17:00
-author: pauloortins
+author: joaoseixas
 categories: ASPNET
 tags: csharp aspnet vnext 
 ---
