@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Migrando o blog da OnceDev para o Jekyll</title>
+      <title>OnceDev | ASP.NET vNext - Game Changer ou Atualização Técnica</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -141,7 +141,7 @@
                         <li><a href="http://oncedev.com/">Início</a></li>
                         <li><a href="/">Blog</a></li>
                         
-                        <li>Migrando o blog da OnceDev para o Jekyll</li>
+                        <li>ASP.NET vNext - Game Changer ou Atualização Técnica</li>
                         
                     </ul>
                 </div>
@@ -162,26 +162,26 @@
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="">Migrando o blog da OnceDev para o Jekyll</a>
+		<a class="titulo-post" href="">ASP.NET vNext - Game Changer ou Atualização Técnica</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			05/06/2014
+			14/08/2014
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:romariorios@oncedev.com" class="blog-entry-meta-author">Luiz Romário Santana Rios</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/jekyll">jekyll</a>
+			<a href="/aspnet">aspnet</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			Jekyll, Blog, Ruby
+			csharp, aspnet, vnext
 		</div>
 		
 	</div>
@@ -189,126 +189,68 @@
 
 
         <div class="post-content">					  
-        <p>Este blog, o blog da OnceDev, até o momento em que este artigo estava sendo escrito, era uma instância do Wordpress. Nessa semana, decidimos migrá-lo para o Jekyll. Neste artigo, o primeiro escrito “em Jekyll”, conto como foi a minha experiência.</p>
+        <p>Nos últimos anos algumas coisas realmente interessantes e empolgantes vêm acontecendo no mundo ASP.NET. Aqueles que lembram da tecnologia do tempo em que ela tentava tornar stateful o desenvolvimento web, podem se surpreender com algumas opções que temos hoje em dia.</p>
 
-<hr />
+<h2 id="aspnet-mvc">ASP.NET MVC</h2>
 
-<h1 id="jekyll">Jekyll?</h1>
+<p>Quem acompanha o desenvolvimento recente do ecossistema já percebeu que a Microsoft vem apostando quase todas as fichas no <a href="http://www.asp.net/mvc">ASP.NET MVC</a> (não confunda com WebForms). Sem dúvida a criação e disponibilização desse framework foi uma resposta técnica aos anseios da comunidade e a outras linguagens+frameworks que mostraram grande evolução nos últimos anos.</p>
 
-<p>O <a href="http://jekyllrb.com/">Jekyll</a> é um gerador de páginas HTML estáticas feito em Ruby que, basicamente, separa a estrutura básica e componentes comuns do site em templates e o seu conteúdo em arquivos de texto simples ou numa linguagem de Markdown simples – como é dito no próprio slogan: <em>“Transforme seu texto simples em páginas estáticas e blogs”</em>. Além disso, ele é <em>blog-aware</em>: de fábrica, é possível criar postagens, fazer layouts, categorias, etc..</p>
+<h2 id="aspnet-vnext">ASP.NET VNEXT</h2>
 
-<h2 id="por-que-usar-o-jekyll">Por que usar o Jekyll?</h2>
+<p>O ASP.NET vNEXT não é uma mudança apenas no framework como alguns pensam, é uma serie de alterações que abrem as portas para melhorias em todo o ciclo de desenvolvimento. O MVC 6 por exemplo, que é parte da iniciativa do vNEXT, traz melhorias fundamentais e que mudam toda a forma como a Microsoft trabalha seu framework e o deploy em seus servidores. </p>
 
-<p>Se o blog antigo já estava rodando e funcionando, pra que mudar para um novo sistema, trazendo o custo de se aprender uma nova tecnologia e, potencialmente, novos problemas?</p>
+<h3 id="mvc-6">MVC 6</h3>
 
-<p>Um dos problemas do Wordpress é que é necessário se configurar um banco de dados, realizar configurações, dentre outras coisas. Num blog, que o conteúdo, nunca editado por quem o acessa, é quase todo texto estático, um sistema como o Wordpress é um exagero. Já o Jekyll, por ser um gerador de HTML estático que obtém todo o conteúdo de arquivos de texto simples, não necessita de banco de dados nem de nenhuma configuração especial para a publicação do blog: basta gerá-lo e hospedar o conteúdo gerado no servidor.</p>
+<p>O principal objetivo do ASP.NET MVC 6 é ser “host agnostic” e independente do System.Web. Essa biblioteca que durante muito tempo foi o principal pilar de todo o framework ASP.NET, hoje causa muitos transtornos para a evolução do framework. Para se ter uma ideia do que estou falando, basta olhar o HttpContext, que é um objeto criado no inicio de toda requisição web do framework. Hoje esse objeto(o grafo inteiro do objeto) causa um overhead de 30k em todas as requisições web. Na nova versão isso será diminuído para cerca de 2k por request, com objetos planos e estruturas estilo JSON. Essa mudança obviamente envolverá quebra de compatibilidade com as versões atuais porque alguns métodos e objetos presentes no HttpContext deixarão de existir e outros serão migrados para pacotes opcionais.</p>
 
-<p>Além de a própria arquitetura do Jekyll ser bastante simples, as tecnologias utilizadas por ele, como o <a href="http://daringfireball.net/projects/markdown/">Markdown</a> e o <a href="http://liquidmarkup.org/">Liquid</a>, são também bastante simples, o que torna a adaptação ao novo sistema bem suave – me bastou apenas metade de um dia para, sem saber nada, começar a adaptar o blog antigo. Os problemas em potencial trazidos pelo Jekyll são bem menores que os problemas já existentes na então implementação atual.</p>
+<p>Outro ponto muito comentado e útil para o desenvolvimento no dia a dia é a junção dos frameworks de <a href="http://www.asp.net/web-pages">Web Pages</a>, <a href="http://www.asp.net/web-api">Web API</a> e <a href="http://www.asp.net/mvc">MVC</a>. A algum tempo já é possível usar todos juntos no mesmo projeto, porem eles implementam heranças diferentes e usam classes diferentes para determinados fins, o que torna a manutenção de um projeto sofrível. Agora todos eles utilizarão a mesma infraestrutura de classes.</p>
 
-<h1 id="migrando-o-blog">Migrando o blog</h1>
+<h3 id="true-side-by-side-deployment">TRUE SIDE-BY-SIDE DEPLOYMENT</h3>
 
-<p>Já que parecia valer tanto a pena, começamos a migrar o blog para a nova plataforma. Aqui, descreverei de maneira breve e aproximada como o processo de migração foi para mim. A documentação completa está disponível <a href="http://jekyllrb.com/docs/quickstart/">no site do Jekyll</a> e é possível pedir ajuda no <a href="https://github.com/jekyll/jekyll-help/">repositório de ajuda</a> no Github (em inglês).</p>
+<p>Uma das features mais importantes do vNext, na minha opinião, é que agora a publicação vai suportar “side-by-side deployment”. Isso quer dizer que a aplicação que você publicar não estará diretamente dependente das versões de DLL no <a href="http://msdn.microsoft.com/en-us/library/yf1d93sz(v=vs.110).aspx">GAC</a>, ou seja, você vai poder ter uma aplicação rodando MVC na versão 6 e outra rodando MVC na versão 7, sem impacto nenhum para qualquer uma das duas, já que agora as referências do framework ficarão junto com cada aplicação e não em um lugar compartilhado, como era o caso do GAC. Será possível atualizar o servidor sem que qualquer das suas aplicações sofram impacto.</p>
 
-<h2 id="criando-o-novo-blog">Criando o novo blog</h2>
+<h2 id="mudana-no-futuro-da-plataforma">MUDANÇA NO FUTURO DA PLATAFORMA</h2>
 
-<p>Antes de começar, é necessário criar um esqueleto a partir do qual se irá trabalhar. O Jekyll faz isso pelo comando <code>jekyll new nome-do-blog</code>. Depois de executado, ele gera uma pasta com a seguinte estrutura:</p>
+<p>A Microsoft apresentou mudanças significativas em 7 areas. Algumas delas são atualizações tecnológicas, outras são inovações que afetam apenas concorrentes do mesmo segmento e outras podem realmente mudar todo o mercado. Ou não!</p>
 
-<pre><code>nome-do-blog/
-  about.md
-  _config.yml
-  css/
-    main.css
-  feed.xml
-  _includes/
-    footer.html
-    header.html
-    head.html
-  index.html
-  _layouts/
-    default.html
-    page.html
-    post.html
-  _posts/
-    2014-06-05-welcome-to-jekyll.markdown
-</code></pre>
+<h3 id="modularizao">MODULARIZAÇÃO</h3>
 
-<p>Por padrão, o Jekyll já gera um blog de exemplo bem básico para o usuário ter uma ideia de como as coisas funcionam. Para gerar o site e executá-lo localmente, basta rodar <code>jekyll serve</code> – o site é gerado na pasta <code>_site</code> e fica disponível no endereço <code>http://0.0.0.0:4000/</code>.</p>
+<p>Existiu um grande esforço(ainda não finalizado) para efetuar mudanças e deixar o desenvolvimento cada vez mais modular. Nesse ponto a atualização tecnológica pode deixar pra traz concorrentes do segmento coorporativo como o Java. Muitas coisas novas com o KPM são “cópias” de ideias bem sucedidas em outros ecossistemas, que estão sendo melhoradas ou adaptadas ao mundo .NET. O Nuget que em parte já fazia esse papel agora é o coração do novo Katana Package Manager(KPM). 
+Houve também uma mudança na estratégia de dependências. Agora os projetos não referenciam mais “Libraries” e sim “Packages”. A maior diferença com isso é que um Package pode conter múltiplas Libraries e até versões diferentes de Libraries de acordo com a plataforma-alvo.</p>
 
-<h2 id="funcionamento-do-jekyll">Funcionamento do Jekyll</h2>
+<h3 id="ciclo-de-desenvolvimento-mais-rpido">CICLO DE DESENVOLVIMENTO MAIS RÁPIDO</h3>
 
-<p>Para transformar todos esses arquivos em um conjunto de páginas HTML estáticas, alguns dos arquivos e diretórios acima têm uma função especial.</p>
+<p>Com as mudanças no processo de build, deploy via power shell e mudança de algumas APIs do framework, não tivemos só aumento na velocidade no desenvolvimento e deploy mas também total desacoplamento do Visual Studio no caso do deploy por exemplo. Conheço muita gente que não via com bons olhos o processo de publish ser tão acoplado a ferramenta. Sempre houveram alternativas para publicação, mas cabia a cada desenvolvedor criar sua solução. Agora teremos um suporte maior a publish desacoplado do Visual Studio vindo da própria Microsoft. </p>
 
-<ul>
-  <li><code>_config.yml</code>: Configurações do site.</li>
-  <li><code>_posts</code>: O conteúdo dos artigos. Além do próprio texto dos artigos, é aqui que são definidas a data, as tags, as categorias, o título, etc.. O Jekyll gera um artigo de exemplo escrito em Markdown, mas também é possível usar o <a href="http://txstyle.org/">Textile</a> ou até mesmo HTML puro – o que é bastante útil no caso de uma migração em que as postagens antigas do blog estão todas em HTML.</li>
-  <li><code>_layouts</code>: Aqui ficam os layouts disponíveis para se atribuir a posts, páginas e até mesmo outros layouts. Isso torna bastante fácil a criação de hierarquias de layouts, se necessário.</li>
-  <li><code>_includes</code>: Includes são “pedaços” de páginas (conhecidos por alguns como “parciais” ou “partials”) que podem ser incluídos em páginas e layouts.</li>
-</ul>
+<h3 id="transio-suave-entre-on-premises-e-cloud">TRANSIÇÃO SUAVE ENTRE ON-PREMISES E CLOUD</h3>
 
-<p>Todos os arquivos que contém <em>Front Matter</em> serão processados pelo Jekyll como templates e gerados no <code>_site</code> como páginas. Os demais arquivos são copiados sem nenhuma modificação para lá. Mais detalhes sobre a estrutura de diretórios <a href="http://jekyllrb.com/docs/structure/">aqui</a>.</p>
+<p>Não ter um dependência com System.Web ajuda a melhorar as coisas, mas a Microsoft foi além e otimizou ainda mais algo que eles estão chamando de “Cloud Optimized Framework”. Com esse framework otimizado para nuvem você perde ainda mais funcionalidades e APIs, como é o caso do System.Drawing. Tudo para deixar a aplicação ainda mais portável e “host agnostic”. </p>
 
-<h3 id="front-matter">Front Matter</h3>
+<p><img src="/content/img/blog/posts/2014-08-14/aspnet-stack.png" alt="ASP.NET Stack " /></p>
 
-<p>O <em><a href="http://jekyllrb.com/docs/frontmatter/">Front Matter</a></em> é um cabeçalho no formato YAML presente em todos os arquivos que irão sofrer algum processamento pelo Jekyll – páginas, posts, layouts, etc.. Por exemplo:</p>
+<p>A grande vantagem de usar de usar essa abordagem é que dessa forma o Core(ou Mono) CLR é publicado junto com a sua aplicação, você não vai mais precisar atualizar a versão do CLR da sua maquina host ou se preocupar com websites diferentes rodando sobre versões diferentes de CLR. </p>
 
-<pre><code>---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-06-05 17:53:30
-categories: jekyll update
----
-</code></pre>
+<h2 id="concluindo">CONCLUINDO…</h2>
 
-<p>Esse é o cabeçalho do post de exemplo gerado pelo Jekyll. Ele define o layout da página gerada, o título do artigo, a data e as categorias. Algumas dessas propriedades serão lidas internamente pelo Jekyll, mas todas podem ser acessadas pela variável global <code>page</code>.</p>
+<p>Ainda existem muitas outras coisas para serem faladas a respeito do vNEXT, mas uma das coisas que pode mudar o jogo a favor da Microsoft nos próximos anos é o “desapego” as suas próprias ferramentas e plataformas. O vNEXT entrega novamente o poder ao desenvolvedor ou gestor de escolher suas próprias plataformas e ferramentas. Não existe mais dependência com Visual Studio, não existe mais dependência com sistema operacional e todo o código é livre. Cabe a cada um fazer sua escolha.</p>
 
-<h3 id="templates-e-variveis">Templates e variáveis</h3>
+<p><img src="/content/img/blog/posts/2014-08-14/aspnet-onyourterms.png" alt="ASP.NET On Your Terms" /></p>
 
-<p>Todos os templates do projeto têm acesso a algumas variáveis globais. As mais importantes são:</p>
+<p>Andar em direção a proporcionar um ambiente verdadeiramente “host agnostic” é um passo ambicioso e nos dias de hoje cada vez mais necessário. A Microsoft dessa vez acerta em cheio e caminha na direção que a comunidade .NET aponta. 
+Esse texto tem como objetivo iniciar o processo de descoberta sobre o vNEXT e as mudanças que ele propõe. Continue e vá mais fundo no conhecimento para criar sua própria opinião acessando os links a seguir:</p>
+
+<h2 id="referncias">REFERÊNCIAS</h2>
 
 <ul>
-  <li><code>site</code>: Contém informações e configurações do site, além dos <a href="http://jekyllrb.com/docs/datafiles/">dados inseridos em <code>_data</code></a>.</li>
-  <li><code>page</code>: Contém informações da página e dados inseridos no Front Matter.</li>
+  <li><a href="http://www.hanselman.com/blog/IntroducingASPNETVNext.aspx">Introducing ASP.NET vNext - Scott Hanselman</a></li>
+  <li><a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/C9-09">Channel 9 Live: ASP.NET Developer Q&amp;A with Scott Hunter &amp; Scott Hanselman</a></li>
+  <li><a href="http://blogs.msdn.com/b/cesardelatorre/archive/2014/05/12/the-future-of-net-in-the-server-asp-net-vnext-optimized-for-cloud-and-server-workloads.aspx">The Future of .NET in the Server: ASP.NET vNext optimized for Cloud and Server workloads</a></li>
+  <li><a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B385">The Future of .NET on the Server (By Scott Hanselman and Scott Hunter) </a></li>
+  <li><a href="https://github.com/aspnet/Home/wiki">ASP.NET vNEXT no Github </a></li>
+  <li><a href="http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B411">The Future of .NET on the Server (By Scott Hanselman and David Fowler) (Sessão Avançada)</a></li>
+  <li><a href="https://github.com/aspnet/KRuntime">KRuntime no Github</a></li>
 </ul>
 
-<p>Para usar o valor de uma variável no template, basta colocá-lo entre <code>{{}}</code>:</p>
-
-<pre><code>&lt;title&gt;{{ page.title }}&lt;/title&gt;
-</code></pre>
-
-<p>Também é possível realizar operações lógicas com os templates (loops, ifs, etc.). Essas ficam entre <code>{%%}</code>:</p>
-
-<pre><code>{% for p in site.posts %}
-&lt;p&gt;{{ post.title }}&lt;/p&gt;
-{% endfor %}
-</code></pre>
-
-<p>Mais detalhes sobre a linguagem de templates Liquid <a href="http://docs.shopify.com/themes/liquid-basics">aqui</a>.</p>
-
-<h2 id="finalmente-a-migrao">Finalmente, a migração</h2>
-
-<p>Como o blog antigo já tinha os estilos e os layouts prontos, migrar o blog foi quase trivial. Primeiramente, todas as folhas de estilo, scripts e outros conteúdos foram movidos para uma pasta chamada <code>content</code> e, nos layouts, todos os links foram modificados para referenciar essa página – afinal, o Jekyll simplesmente a copia no site gerado.</p>
-
-<p>Depois, tivemos que adaptar os layouts do blog antigo para o Jekyll. Como o blog antigo usava um framework com operações parecidas com as dos templates do Jekyll, em vários casos, bastou apenas substituir-se a sintaxe antiga pela nova e usar as variáveis já fornecidas pelo Jekyll, em vez de as variáveis passadas pelo controller do site. Um ponto dificultador é que havia bastante repetição de código nos layouts do blog antigo, então tive que gastar algum tempo quebrando os layouts em parciais para eliminar a repetição de código.</p>
-
-<p>Depois de algumas poucas horas, o blog já estava parcialmente migrado. Ainda faltavam algumas coisas, mas o layout já estava pronto.</p>
-
-<p>Agora, era necessário se criar páginas para os posts de cada uma das categorias do blog. Felizmente, já existe um plugin para essa finalidade – um <a href="https://github.com/shigeya/jekyll-category-archive-plugin">gerador de arquivos de categorias</a>.</p>
-
-<p>Depois, era necessário inserir informações sobre o autor de cada post no final deste. Para isso, com a ajuda do <a href="https://github.com/budparr">budparr</a> no <a href="https://github.com/jekyll/jekyll-help/">jekyll-help</a> (valeu, cara) eu criei um <code>authors.yml</code> no <code>_data</code> e referenciei apenas o id do autor no cabeçalho do artigo (mais detalhes da solução completa <a href="https://github.com/jekyll/jekyll-help/issues/65">aqui</a>).</p>
-
-<p>Finalmente, para copiar os posts, bastou copiar o conteúdo antigo em HTML mesmo e criar templates HTML dentro de <code>_posts</code> com o conteúdo antigo, bastando, apenas, inserir um cabeçalho <em>Front Matter</em> em cada um dos artigos para que eles sejam processados pelo Jekyll.</p>
-
-<h2 id="hospedando-no-github">Hospedando no Github</h2>
-
-<p>Depois de pronto, decidimos hospedar o site como uma <a href="https://pages.github.com/">página do Github</a>, já que páginas do Github podem ser facilmente hospedadas a partitr de um repositório git no próprio Github e suportam Jekyll. Porém, um problema das páginas do Github é que elas não suportam plugins e isso acabou comprometendo as páginas de categorias. A solução (encontrada <a href="http://arademaker.github.io/blog/2011/12/01/github-pages-jekyll-plugins.html">aqui</a>) foi deixar a página estática gerada pelo Jekyll no ramo <code>master</code> do repositório e o código, num outro ramo chamado <code>source</code>. Isso deixou a geração do conteúdo do site um tanto menos conveniente, mas eu escrevi um <a href="https://github.com/Oncedev/oncedev.github.io/blob/source/jekyll-build.sh">script</a> para amenizar a situação.</p>
-
-<h1 id="resultado">Resultado</h1>
-
-<p>Apesar de alguns problemas, a migração foi feita com sucesso em um dia e meio e a hospedagem, em mais um dia. Agora, além de o site estar mais fácil de se manter, ele está muito mais leve.</p>
-
-<p>Portanto, por essa experiência, recomendo o Jekyll para todos que querem fazer um blog ou um site estático simples.</p>
-
-<p>Até.</p>
 
         </div>
     </article>
@@ -321,11 +263,11 @@ categories: jekyll update
 <div class="about-author">
     <h3 class="title">Sobre o Autor</h3>
     <div class="author-content">
-        <div class="avatar"><img alt="" src="/content/img/team/team-member.jpg"></div>
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
         <div class="data">
-                <h4><a href="mailto:romariorios@oncedev.com">Luiz Romário Santana Rios</a></h4>
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
                 <p>
-                    Graduando em Ciência da Computação pela UFBA
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
                 </p>
         </div>
         <!-- End data -->
