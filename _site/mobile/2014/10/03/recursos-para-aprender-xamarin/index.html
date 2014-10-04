@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Migrando o blog da OnceDev para o Jekyll</title>
+      <title>OnceDev | Aprenda a desenvolver aplicações cross-plataform com o Xamarin</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -141,7 +141,7 @@
                         <li><a href="http://oncedev.com/">Início</a></li>
                         <li><a href="/">Blog</a></li>
                         
-                        <li>Migrando o blog da OnceDev para o Jekyll</li>
+                        <li>Aprenda a desenvolver aplicações cross-plataform com o Xamarin</li>
                         
                     </ul>
                 </div>
@@ -162,26 +162,26 @@
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="">Migrando o blog da OnceDev para o Jekyll</a>
+		<a class="titulo-post" href="">Aprenda a desenvolver aplicações cross-plataform com o Xamarin</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			05/06/2014
+			03/10/2014
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:romariorios@oncedev.com" class="blog-entry-meta-author">Luiz Romário Santana Rios</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/jekyll">jekyll</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			Jekyll, Blog, Ruby
+			Xamarin, Mobile
 		</div>
 		
 	</div>
@@ -189,126 +189,156 @@
 
 
         <div class="post-content">					  
-        <p>Este blog, o blog da OnceDev, até o momento em que este artigo estava sendo escrito, era uma instância do Wordpress. Nessa semana, decidimos migrá-lo para o Jekyll. Neste artigo, o primeiro escrito “em Jekyll”, conto como foi a minha experiência.</p>
+        <p>Olá pessoal, tudo bom? Quem me conhece pessoalmente e/ou me acompanha na internet tem visto o quanto eu estou empolgado com o Xamarin e como nós na OnceDev estamos apostando nessa ferramenta para construirmos aplicativos mobile com experiência nativa e com o maior retorno possível para os nossos clientes.</p>
 
-<hr />
+<p>Recentemente tive a oportunidade de palestrar sobre o Xamarin tanto na semana de computação da UFBA como na semana da computação da UNIFACS (quem quiser dar uma olhada nos slides eles tão <a href="http://www.slideshare.net/pauloortins/semana-computao-ufba-2014-quer-desenvolver-aplicaes-nativas-e-crossplataforma-pergunteme-como">aqui</a> e <a href="http://www.slideshare.net/pauloortins/semana-computao-unifacs-2014-quer-desenvolver-aplicaes-nativas-e-crossplataforma-perguntecomo">aqui</a>) e foi bacana ouvir o feedback positivo do pessoal assim como perceber o interesse da galera no Xamarin. </p>
 
-<h1 id="jekyll">Jekyll?</h1>
+<p>Após as palestras, muita gente veio me perguntar sobre como elas podem começar a aprender a desenvolver aplicações mobile com o Xamarin e esse post é pra essa galera que me encheu de alegria. Nesse post fiz um compilado de vários recursos que eu utilizo para aprender mais e mais sobre o Xamarin.</p>
 
-<p>O <a href="http://jekyllrb.com/">Jekyll</a> é um gerador de páginas HTML estáticas feito em Ruby que, basicamente, separa a estrutura básica e componentes comuns do site em templates e o seu conteúdo em arquivos de texto simples ou numa linguagem de Markdown simples – como é dito no próprio slogan: <em>“Transforme seu texto simples em páginas estáticas e blogs”</em>. Além disso, ele é <em>blog-aware</em>: de fábrica, é possível criar postagens, fazer layouts, categorias, etc..</p>
+<p>Espero que gostem!</p>
 
-<h2 id="por-que-usar-o-jekyll">Por que usar o Jekyll?</h2>
+<h3 id="sites">Sites</h3>
 
-<p>Se o blog antigo já estava rodando e funcionando, pra que mudar para um novo sistema, trazendo o custo de se aprender uma nova tecnologia e, potencialmente, novos problemas?</p>
+<p>Nesta seção incluo os sites que acho relevantes tanto para aprender o básico da ferramenta assim como para se manter atualizado sobre o que está por vir.</p>
 
-<p>Um dos problemas do Wordpress é que é necessário se configurar um banco de dados, realizar configurações, dentre outras coisas. Num blog, que o conteúdo, nunca editado por quem o acessa, é quase todo texto estático, um sistema como o Wordpress é um exagero. Já o Jekyll, por ser um gerador de HTML estático que obtém todo o conteúdo de arquivos de texto simples, não necessita de banco de dados nem de nenhuma configuração especial para a publicação do blog: basta gerá-lo e hospedar o conteúdo gerado no servidor.</p>
+<p><a href="http://developer.xamarin.com/">Xamarin Docs</a> - Esse é o site oficial do Xamarin para desenvolvedores, nele é capaz de encontrar vários tutorias ensinando desde como fazer a instalação do Xamarin até o uso de cada uma das principais features de cada plataforma como Mapas, Contatos, Camera e por aí vai.</p>
 
-<p>Além de a própria arquitetura do Jekyll ser bastante simples, as tecnologias utilizadas por ele, como o <a href="http://daringfireball.net/projects/markdown/">Markdown</a> e o <a href="http://liquidmarkup.org/">Liquid</a>, são também bastante simples, o que torna a adaptação ao novo sistema bem suave – me bastou apenas metade de um dia para, sem saber nada, começar a adaptar o blog antigo. Os problemas em potencial trazidos pelo Jekyll são bem menores que os problemas já existentes na então implementação atual.</p>
+<p><a href="http://planet.xamarin.com/">Planet Xamarin</a> - Agregador de blogs sobre o Xamarin, hoje ele exibe posts de mais de 40 blogs incluindo os blogs de vários MVPs Xamarin e o próprio blog oficial.</p>
 
-<h1 id="migrando-o-blog">Migrando o blog</h1>
+<p><a href="http://blog.xamarin.com/">Blog Oficial</a> - Blog oficial do Xamarin</p>
 
-<p>Já que parecia valer tanto a pena, começamos a migrar o blog para a nova plataforma. Aqui, descreverei de maneira breve e aproximada como o processo de migração foi para mim. A documentação completa está disponível <a href="http://jekyllrb.com/docs/quickstart/">no site do Jekyll</a> e é possível pedir ajuda no <a href="https://github.com/jekyll/jekyll-help/">repositório de ajuda</a> no Github (em inglês).</p>
+<p><a href="http://forums.xamarin.com/">Xamarin Forums</a> - Forum oficial do Xamarin, onde são discutidas features da ferramenta, empregos, eventos e assim por diante.</p>
 
-<h2 id="criando-o-novo-blog">Criando o novo blog</h2>
+<p><a href="http://xamarin.meetup.com/">Xamarin Meetups</a> - Quer frequentar meetups sobre o Xamarin? Esse site traz uma lista de todos os meetups sobre o Xamarin no mundo!</p>
 
-<p>Antes de começar, é necessário criar um esqueleto a partir do qual se irá trabalhar. O Jekyll faz isso pelo comando <code>jekyll new nome-do-blog</code>. Depois de executado, ele gera uma pasta com a seguinte estrutura:</p>
+<h3 id="livros">Livros</h3>
 
-<pre><code>nome-do-blog/
-  about.md
-  _config.yml
-  css/
-    main.css
-  feed.xml
-  _includes/
-    footer.html
-    header.html
-    head.html
-  index.html
-  _layouts/
-    default.html
-    page.html
-    post.html
-  _posts/
-    2014-06-05-welcome-to-jekyll.markdown
-</code></pre>
+<p><a href="http://www.amazon.com/Xamarin-Cross-platform-Application-Development-Jonathan/dp/1849698465/ref=sr_1_1?ie=UTF8&amp;qid=1412379161&amp;sr=8-1&amp;keywords=xamarin">Xamarin Cross-platform Application Development</a> - Livro focado em como podemos desenvolver arquiteturas cross-plataforma e quais são as boas práticas que o mercado tem usado. Há alguns meses atrás, escrevi um review desse livro no meu <a href="http://www.pauloortins.com/2014/07/23/xamarin-cross-platform-application-development-review/">blog pessoal</a>.</p>
 
-<p>Por padrão, o Jekyll já gera um blog de exemplo bem básico para o usuário ter uma ideia de como as coisas funcionam. Para gerar o site e executá-lo localmente, basta rodar <code>jekyll serve</code> – o site é gerado na pasta <code>_site</code> e fica disponível no endereço <code>http://0.0.0.0:4000/</code>.</p>
+<p><a href="http://www.amazon.com/Application-Development-Community-Experience-Distilled/dp/1783559160/ref=sr_1_1?ie=UTF8&amp;qid=1412380491&amp;sr=8-1&amp;keywords=Xamarin+Mobile+Application+Development+for+Android">Xamarin Mobile Application Development for Android</a> - Livro foca no desenvolvimento de aplicativos android usando o Xamarin.</p>
 
-<h2 id="funcionamento-do-jekyll">Funcionamento do Jekyll</h2>
+<p><a href="http://www.amazon.com/Development-Xamarin-Cookbook-Dimitris-Tavlikos/dp/1849698929/ref=sr_1_2?ie=UTF8&amp;qid=1410309645&amp;sr=8-2&amp;keywords=xamarin">iOS Development with Xamarin Cookbook</a> e <a href="http://www.amazon.com/Xamarin-Mobile-Application-Development-iOS/dp/1783559187/ref=sr_1_1?ie=UTF8&amp;qid=1412381139&amp;sr=8-1&amp;keywords=Xamarin+Mobile+Application+Development+for+iOS">Xamarin Mobile Application Development for iOS</a> - Livros focam no desenvolvimento de aplicativos para iOS usando o Xamarin. </p>
 
-<p>Para transformar todos esses arquivos em um conjunto de páginas HTML estáticas, alguns dos arquivos e diretórios acima têm uma função especial.</p>
+<p><a href="http://www.amazon.com/Learning-Xamarin-Studio-William-Smith/dp/1783550813/ref=sr_1_7?ie=UTF8&amp;qid=1412379692&amp;sr=8-7&amp;keywords=xamarin">Learning Xamarin Studio</a> - Livro sobre o Xamarin Studo, a IDE oficial do Xamarin e roda tanto no OSX como no Windows. </p>
 
-<ul>
-  <li><code>_config.yml</code>: Configurações do site.</li>
-  <li><code>_posts</code>: O conteúdo dos artigos. Além do próprio texto dos artigos, é aqui que são definidas a data, as tags, as categorias, o título, etc.. O Jekyll gera um artigo de exemplo escrito em Markdown, mas também é possível usar o <a href="http://txstyle.org/">Textile</a> ou até mesmo HTML puro – o que é bastante útil no caso de uma migração em que as postagens antigas do blog estão todas em HTML.</li>
-  <li><code>_layouts</code>: Aqui ficam os layouts disponíveis para se atribuir a posts, páginas e até mesmo outros layouts. Isso torna bastante fácil a criação de hierarquias de layouts, se necessário.</li>
-  <li><code>_includes</code>: Includes são “pedaços” de páginas (conhecidos por alguns como “parciais” ou “partials”) que podem ser incluídos em páginas e layouts.</li>
-</ul>
+<p><a href="http://www.amazon.com/Creating-Xamarin-Forms-Preview-Developer-Reference-ebook/dp/B00NXYJ8DK/ref=sr_1_1?ie=UTF8&amp;qid=1412381275&amp;sr=8-1&amp;keywords=xamarin+forms">Creating Mobile Apps with Xamarin.Forms</a> - O Xamarin.Forms foi lançado junto ao Xamarin 3.0 e traz uma API única para a criação de interfaces possibilitando que seja compartilhando ainda mais código entre as plataformas. Esse livro ainda se encontra em preview mas já existe um material bem interessante.</p>
 
-<p>Todos os arquivos que contém <em>Front Matter</em> serão processados pelo Jekyll como templates e gerados no <code>_site</code> como páginas. Os demais arquivos são copiados sem nenhuma modificação para lá. Mais detalhes sobre a estrutura de diretórios <a href="http://jekyllrb.com/docs/structure/">aqui</a>.</p>
+<p><a href="http://www.amazon.com/Beginning-iOS-Development-Exploring-SDK/dp/143026022X/ref=sr_1_11?ie=UTF8&amp;qid=1412379366&amp;sr=8-11&amp;keywords=ios">Beginning iOS 7 Development: Exploring the iOS SDK</a> e <a href="http://commonsware.com/Android/">The Busy Coder’s Guide to Android Development</a> - O Xamarin possui uma API que reflete a API nativa, escrita em objective-c, entender como as APIs nativas funcionam só traz benefícios para quem quer desenvolver com o Xamarin, na minha opinião, esses são os livros que eu indico sobre iOS e Android, respectivamente.</p>
 
-<h3 id="front-matter">Front Matter</h3>
+<h3 id="palestras">Palestras</h3>
 
-<p>O <em><a href="http://jekyllrb.com/docs/frontmatter/">Front Matter</a></em> é um cabeçalho no formato YAML presente em todos os arquivos que irão sofrer algum processamento pelo Jekyll – páginas, posts, layouts, etc.. Por exemplo:</p>
+<p>Abaixo segue uma lista de videos de palestras sobre o Xamarin.</p>
 
-<pre><code>---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2014-06-05 17:53:30
-categories: jekyll update
----
-</code></pre>
+<p><a href="http://xamarin.com/evolve/2013#session-cfamnzkd03">10 Must-Use Components for Your Mobile Apps</a></p>
 
-<p>Esse é o cabeçalho do post de exemplo gerado pelo Jekyll. Ele define o layout da página gerada, o título do artigo, a data e as categorias. Algumas dessas propriedades serão lidas internamente pelo Jekyll, mas todas podem ser acessadas pela variável global <code>page</code>.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-0w86u7bco2">Advanced Memory Management on iOS and Android</a></p>
 
-<h3 id="templates-e-variveis">Templates e variáveis</h3>
+<p><a href="http://xamarin.com/evolve/2013#session-dnoeeoarfj">Architecting Cross-Platform Apps with MvvmCross</a></p>
 
-<p>Todos os templates do projeto têm acesso a algumas variáveis globais. As mais importantes são:</p>
+<p><a href="http://xamarin.com/evolve/2013#session-hyn4x37ep9">Binding Java Libraries</a></p>
 
-<ul>
-  <li><code>site</code>: Contém informações e configurações do site, além dos <a href="http://jekyllrb.com/docs/datafiles/">dados inseridos em <code>_data</code></a>.</li>
-  <li><code>page</code>: Contém informações da página e dados inseridos no Front Matter.</li>
-</ul>
+<p><a href="http://xamarin.com/evolve/2013#session-rnykii473a">Binding Objective-C libraries</a></p>
 
-<p>Para usar o valor de uma variável no template, basta colocá-lo entre <code>{{}}</code>:</p>
+<p><a href="http://xamarin.com/evolve/2013#session-59g7jey0ps">Building Connected Cross-Platform Mobile Apps with Xamarin and Azure Mobile Services</a></p>
 
-<pre><code>&lt;title&gt;{{ page.title }}&lt;/title&gt;
-</code></pre>
+<p><a href="http://channel9.msdn.com/Blogs/Breakpoint/EP4">Building Cross-Platform Code in Visual Studio with Xamarin</a></p>
 
-<p>Também é possível realizar operações lógicas com os templates (loops, ifs, etc.). Essas ficam entre <code>{%%}</code>:</p>
+<p><a href="http://channel9.msdn.com/events/TechDays/Techdays-2014-the-Netherlands/Building-Cross-platform-mobile-applications-using-Xamarin">Building Cross platform mobile applications using Xamarin</a></p>
 
-<pre><code>{% for p in site.posts %}
-&lt;p&gt;{{ post.title }}&lt;/p&gt;
-{% endfor %}
-</code></pre>
+<p><a href="http://channel9.msdn.com/events/TechEd/NewZealand/2014/WIN313">Building cross-platform mobile apps using Microsoft technologies and Xamarin</a></p>
 
-<p>Mais detalhes sobre a linguagem de templates Liquid <a href="http://docs.shopify.com/themes/liquid-basics">aqui</a>.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-g6wp8zpfwe">Building Great App Experiences by with Scalable Cloud Services</a></p>
 
-<h2 id="finalmente-a-migrao">Finalmente, a migração</h2>
+<p><a href="http://xamarin.com/evolve/2013#session-g1idcxy2rm">Building Hybrid Apps with Xamarin</a></p>
 
-<p>Como o blog antigo já tinha os estilos e os layouts prontos, migrar o blog foi quase trivial. Primeiramente, todas as folhas de estilo, scripts e outros conteúdos foram movidos para uma pasta chamada <code>content</code> e, nos layouts, todos os links foram modificados para referenciar essa página – afinal, o Jekyll simplesmente a copia no site gerado.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-0fq90z17d9">Building Mobile Cross-platform Geospatial Apps</a></p>
 
-<p>Depois, tivemos que adaptar os layouts do blog antigo para o Jekyll. Como o blog antigo usava um framework com operações parecidas com as dos templates do Jekyll, em vários casos, bastou apenas substituir-se a sintaxe antiga pela nova e usar as variáveis já fornecidas pelo Jekyll, em vez de as variáveis passadas pelo controller do site. Um ponto dificultador é que havia bastante repetição de código nos layouts do blog antigo, então tive que gastar algum tempo quebrando os layouts em parciais para eliminar a repetição de código.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-iobxm3ko80">Create a uniform login experience with a centralized cloud authentication system</a></p>
 
-<p>Depois de algumas poucas horas, o blog já estava parcialmente migrado. Ainda faltavam algumas coisas, mas o layout já estava pronto.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-mlqohiyfo7">Cross-platform Barcode Scanning with ZXing</a></p>
 
-<p>Agora, era necessário se criar páginas para os posts de cada uma das categorias do blog. Felizmente, já existe um plugin para essa finalidade – um <a href="https://github.com/shigeya/jekyll-category-archive-plugin">gerador de arquivos de categorias</a>.</p>
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Cross-Platform-Development-With-Xamarin">Cross Platform Development With Xamarin</a></p>
 
-<p>Depois, era necessário inserir informações sobre o autor de cada post no final deste. Para isso, com a ajuda do <a href="https://github.com/budparr">budparr</a> no <a href="https://github.com/jekyll/jekyll-help/">jekyll-help</a> (valeu, cara) eu criei um <code>authors.yml</code> no <code>_data</code> e referenciei apenas o id do autor no cabeçalho do artigo (mais detalhes da solução completa <a href="https://github.com/jekyll/jekyll-help/issues/65">aqui</a>).</p>
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Cross-Platform-Mobile-Apps-with-Xamarin-and-Azure-Mobile-Services">Cross Platform Mobile Apps with Xamarin and Azure Mobile Services</a></p>
 
-<p>Finalmente, para copiar os posts, bastou copiar o conteúdo antigo em HTML mesmo e criar templates HTML dentro de <code>_posts</code> com o conteúdo antigo, bastando, apenas, inserir um cabeçalho <em>Front Matter</em> em cada um dos artigos para que eles sejam processados pelo Jekyll.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-onvj5e4unu">Cross-Platform UI Controls</a></p>
 
-<h2 id="hospedando-no-github">Hospedando no Github</h2>
+<p><a href="http://channel9.msdn.com/events/dotnetConf/2014/Developing-Native-iOS-Android-and-Windows-Apps-with-Xamarin">Developing Native iOS, Android, and Windows Apps with Xamarin</a></p>
 
-<p>Depois de pronto, decidimos hospedar o site como uma <a href="https://pages.github.com/">página do Github</a>, já que páginas do Github podem ser facilmente hospedadas a partitr de um repositório git no próprio Github e suportam Jekyll. Porém, um problema das páginas do Github é que elas não suportam plugins e isso acabou comprometendo as páginas de categorias. A solução (encontrada <a href="http://arademaker.github.io/blog/2011/12/01/github-pages-jekyll-plugins.html">aqui</a>) foi deixar a página estática gerada pelo Jekyll no ramo <code>master</code> do repositório e o código, num outro ramo chamado <code>source</code>. Isso deixou a geração do conteúdo do site um tanto menos conveniente, mas eu escrevi um <a href="https://github.com/Oncedev/oncedev.github.io/blob/source/jekyll-build.sh">script</a> para amenizar a situação.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-odav9o642i">Fast UI Creation with MonoTouch.Dialog</a></p>
 
-<h1 id="resultado">Resultado</h1>
+<p><a href="http://xamarin.com/evolve/2013#session-9v0ezipgkx">Getting the Most from Xamarin Studio</a></p>
 
-<p>Apesar de alguns problemas, a migração foi feita com sucesso em um dia e meio e a hospedagem, em mais um dia. Agora, além de o site estar mais fácil de se manter, ele está muito mais leve.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-zm59b5yptf">GitHub Halp App: Minimizing Platform-specific code with MvvM</a></p>
 
-<p>Portanto, por essa experiência, recomendo o Jekyll para todos que querem fazer um blog ou um site estático simples.</p>
+<p><a href="http://channel9.msdn.com/events/Build/2014/3-653">Go Mobile with C# and Xamarin</a></p>
 
-<p>Até.</p>
+<p><a href="http://xamarin.com/evolve/2013#session-xcjpj20d6s">Intro to Calabash</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-7wb0etd3r8">Keeping your Users Happy with Testable Apps</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-d336r1byq5">Mapping on iOS and Android</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-odi5o5i1ha">Maximizing code-sharing with Xamarin.Mobile</a></p>
+
+<p><a href="http://channel9.msdn.com/events/TechEd/NorthAmerica/2014/DEV-B221#fbid=">Native Mobile Application Development for iOS, Android, and Windows in C# and Visual Studio Using Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-b8fz8gfsnf">Push Notifications with PushSharp</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-shy07zqsoz">Sharing up to 80% code for iOS, Android and Windows platforms, a retail app case study</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-wrhca9u0e9">Using Async in your Mobile Apps</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Using-Portable-Class-Libraries-with-Xamarin">Using Portable Class Libraries with Xamarin</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Using-Xamarin-to-take-Existing-NET-Apps-Cross-Platform">Using Xamarin to take Existing .NET Apps Cross Platform</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-lp0r1bj6k2">What’s New in Xamarin.Android</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-b3mx6e6rmb">What’s new in Xamarin.iOS</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-polfkxk60c">Writing native Mac apps in C# with Xamarin.Mac</a></p>
+
+<h3 id="pessoas">Pessoas</h3>
+
+<p>Esses são os caras da comunidade Xamarin e vale muito a pena acompanhar o trabalho dessa galera!</p>
+
+<p><a href="https://twitter.com/xforward">Brett Duncavage - @xforward</a></p>
+
+<p><a href="https://twitter.com/davidortinau">David Ortinau - @davidortinau</a></p>
+
+<p><a href="https://twitter.com/dtavlikos">Dimitris Tavlikos - @dtavlikos</a></p>
+
+<p><a href="https://twitter.com/gshackles">Greg Shackles - @gshackles</a></p>
+
+<p><a href="https://twitter.com/jtclancey">James Clancey - @jtclancey</a></p>
+
+<p><a href="https://twitter.com/jonasmaturana">Jonas Maturana - @jonasmaturana</a></p>
+
+<p><a href="https://twitter.com/jonathanpeppers">Jonathan Peppers - @JonathanPeppers</a></p>
+
+<p><a href="https://twitter.com/migueldeicaza">Miguel de Icaza - @migueldeicaza</a></p>
+
+<p><a href="https://twitter.com/natfriedman">Nat Friedman - @natfriedman</a></p>
+
+<p><a href="https://twitter.com/fastchicken">Nic Wise - @fastchicken</a></p>
+
+<p><a href="https://twitter.com/paulcbetts">Paul Betts - @paulcbetts</a></p>
+
+<p><a href="https://twitter.com/sichy">Pavel Sich - @sichy</a></p>
+
+<p><a href="https://twitter.com/Redth">Redth - @redth</a></p>
+
+<p><a href="https://twitter.com/decriptor">Stephen Shaw - @decriptor</a></p>
+
+<p><a href="https://twitter.com/slodge">Stuart Lodge - @slodge</a></p>
+
+<p><a href="https://twitter.com/wbm">Wally - @wbm</a></p>
+
+<h3 id="sempre-em-construo">Sempre em Construção</h3>
+
+<p>Essa lista estará sempre em construção e eu conto com a colaboração de todos vocês!</p>
+
 
         </div>
     </article>
@@ -321,11 +351,11 @@ categories: jekyll update
 <div class="about-author">
     <h3 class="title">Sobre o Autor</h3>
     <div class="author-content">
-        <div class="avatar"><img alt="" src="/content/img/team/team-member.jpg"></div>
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
         <div class="data">
-                <h4><a href="mailto:romariorios@oncedev.com">Luiz Romário Santana Rios</a></h4>
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
                 <p>
-                    Graduando em Ciência da Computação pela UFBA
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
                 </p>
         </div>
         <!-- End data -->
