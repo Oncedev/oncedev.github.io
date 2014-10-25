@@ -234,7 +234,7 @@
 
 <p>Vamos abrir a classe <code>WorldCupMapViewController.cs</code>, remover todo o seu contéudo e adicionar o código abaixo.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">WorldCupMapViewController</span> <span class="p">:</span> <span class="n">UIViewController</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">WorldCupMapViewController</span> <span class="p">:</span> <span class="n">UIViewController</span>
 <span class="p">{</span>
 	<span class="k">protected</span> <span class="n">MKMapView</span> <span class="n">map</span><span class="p">;</span>
 	<span class="k">public</span> <span class="nf">WorldCupMapViewController</span> <span class="p">(</span><span class="n">IntPtr</span> <span class="n">handle</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">handle</span><span class="p">)</span>
@@ -262,7 +262,7 @@
 
 <p>Para a representação das informações criaremos uma classe de nome <code>WorldCupInfo</code> que irá armazenar o título (nome do país ou do estádio) e suas coordenadas geográficas (latitude e longitude).</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">WorldCupInfo</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">WorldCupInfo</span>
 <span class="p">{</span>
 	<span class="k">public</span> <span class="nf">WorldCupInfo</span> <span class="p">()</span>
 	<span class="p">{</span>
@@ -290,7 +290,7 @@
 
 <p>No método GetInfoList eu utilizei a matrix para economizar espaço ao exibir o post.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">protected</span> <span class="n">MKMapView</span> <span class="n">map</span><span class="p">;</span>
+<div class="highlight"><pre><code class="c#"><span class="k">protected</span> <span class="n">MKMapView</span> <span class="n">map</span><span class="p">;</span>
 <span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">WorldCupInfo</span><span class="p">&gt;</span> <span class="n">_infoList</span><span class="p">;</span>
 
 <span class="k">public</span> <span class="nf">WorldCupMapViewController</span> <span class="p">(</span><span class="n">IntPtr</span> <span class="n">handle</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">handle</span><span class="p">)</span>
@@ -363,7 +363,7 @@
 
 <p>Por último, é necessário a criação dos annotations após a inicialização do mapa.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadView</span> <span class="p">()</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadView</span> <span class="p">()</span>
 <span class="p">{</span>
 	<span class="n">map</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MKMapView</span> <span class="p">(</span><span class="n">UIScreen</span><span class="p">.</span><span class="n">MainScreen</span><span class="p">.</span><span class="n">Bounds</span><span class="p">);</span>
 	<span class="n">View</span> <span class="p">=</span> <span class="n">map</span><span class="p">;</span>
@@ -391,7 +391,7 @@
 
 <p>Primeiro vamos adicionar a propriedade Image na classe WorldCupInfo.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">WorldCupInfo</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">WorldCupInfo</span>
 <span class="p">{</span>
 	<span class="k">public</span> <span class="nf">WorldCupInfo</span> <span class="p">()</span>
 	<span class="p">{</span>
@@ -420,7 +420,7 @@
 
 <p>E precisamos adicionar o nova propriedade na inicialização da lista e na conversão para a classe WorldCupInfo.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">WorldCupInfo</span><span class="p">&gt;</span> <span class="n">GetInfoList</span> <span class="p">()</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">WorldCupInfo</span><span class="p">&gt;</span> <span class="n">GetInfoList</span> <span class="p">()</span>
 <span class="p">{</span>
 	<span class="kt">var</span> <span class="n">infoMatrix</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[][]</span> <span class="p">{</span>
 		<span class="k">new</span> <span class="kt">object</span><span class="p">[]</span> <span class="p">{</span><span class="s">&quot;Algeria&quot;</span><span class="p">,</span> <span class="m">28.667122</span><span class="p">,</span><span class="m">2.677408</span><span class="p">,</span> <span class="s">&quot;algeria.png&quot;</span> <span class="p">},</span>
@@ -488,7 +488,7 @@
 
 <p>Segue o código abaixo.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">MyMapDelegate</span> <span class="p">:</span> <span class="n">MKMapViewDelegate</span>
+<div class="highlight"><pre><code class="c#"><span class="k">class</span> <span class="nc">MyMapDelegate</span> <span class="p">:</span> <span class="n">MKMapViewDelegate</span>
 <span class="p">{</span>
 	<span class="k">private</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">WorldCupInfo</span><span class="p">&gt;</span> <span class="n">_infoList</span><span class="p">;</span>
 
@@ -536,7 +536,7 @@
 
 <p>Por último, é necessário associar o delegate ao mapa, para isso vamos fazer a seguinte alteração no código de criação do mapa.</p>
 
-<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadView</span> <span class="p">()</span>
+<div class="highlight"><pre><code class="c#"><span class="k">public</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">LoadView</span> <span class="p">()</span>
 <span class="p">{</span>
 	<span class="n">map</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MKMapView</span> <span class="p">(</span><span class="n">UIScreen</span><span class="p">.</span><span class="n">MainScreen</span><span class="p">.</span><span class="n">Bounds</span><span class="p">);</span>
 	<span class="n">map</span><span class="p">.</span><span class="n">Delegate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MyMapDelegate</span> <span class="p">(</span><span class="n">_infoList</span><span class="p">);</span>
