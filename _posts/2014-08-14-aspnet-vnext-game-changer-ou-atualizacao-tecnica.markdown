@@ -80,5 +80,4 @@ Esse texto tem como objetivo iniciar o processo de descoberta sobre o vNEXT e as
 [11]: http://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B411
 [12]: https://github.com/aspnet/KRuntime
 [13]: /content/img/blog/posts/2014-08-14/aspnet-stack.png 
-
 [14]: /content/img/blog/posts/2014-08-14/aspnet-onyourterms.png 

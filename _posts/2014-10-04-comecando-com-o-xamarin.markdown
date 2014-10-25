@@ -28,6 +28,10 @@ Nesta seção incluo os sites que acho relevantes tanto para aprender o básico 
 [Xamarin Forums][6] - Forum oficial do Xamarin, onde são discutidas features da ferramenta, empregos, eventos e assim por diante.
 
 [Xamarin Meetups][7] - Quer frequentar meetups sobre o Xamarin? Esse site traz uma lista de todos os meetups sobre o Xamarin no mundo!
+
+[MonoBrasil][17] - Site da comunidade Mono no Brasil.
+
+[Grupos de Usuários CrossMobile][18] - Grupo de Usuários CrossMobile do Brasil.
  
 ### Livros
 
@@ -173,3 +177,5 @@ Essa lista estará sempre em construção e eu conto com a colaboração de todo
 [14]: http://www.amazon.com/Xamarin-Mobile-Application-Development-iOS/dp/1783559187/ref=sr_1_1?ie=UTF8&qid=1412381139&sr=8-1&keywords=Xamarin+Mobile+Application+Development+for+iOS
 [15]: http://commonsware.com/Android/
 [16]: http://www.amazon.com/Creating-Xamarin-Forms-Preview-Developer-Reference-ebook/dp/B00NXYJ8DK/ref=sr_1_1?ie=UTF8&qid=1412381275&sr=8-1&keywords=xamarin+forms
+[17]: http://www.monobrasil.com.br/
+[18]: http://www.gucrossmobile.com.br/
