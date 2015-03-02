@@ -8,12 +8,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.network :forwarded_port, guest: 3000, host: 3000    # rails
     config.vm.network :forwarded_port, guest: 4000, host: 4000    # jekyll
 
-    config.vm.provision :shell, :inline => 'apt-get update'
-    config.vm.provision :shell, :inline => 'sudo apt-get install build-essential --no-upgrade --yes'
-
-    config.vm.provision "chef_solo" do |chef| 
-        chef.add_recipe "ruby_build"
-        chef.add_recipe "chef_gem"
-        chef.add_recipe "rvm::system"
-    end
+    config.vm.provision "shell", path: "env.sh"
 end
