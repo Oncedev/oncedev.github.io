@@ -1,4 +1,3 @@
-jekyll build &&
 git checkout master &&
 
 for i in *; do
