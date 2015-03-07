@@ -25,4 +25,4 @@ Alguns podem chamar uma parte dessa nova área de internet das coisas ou alguma 
 
 Afinal, o que é real de todo esse mundo de internet e o que é verdadeiro na nossa "realidade"? No fundo todos os negócios impactam pessoas, vidas e histórias. Não existe separação alguma, e assim que as pessoas perceberem isso vão começar a criar coisas incríveis!
 
-E você, acha que a Ford tem chance contra Google ou Apple?
+**E você, acha que a Ford tem chance contra Google ou Apple?**
