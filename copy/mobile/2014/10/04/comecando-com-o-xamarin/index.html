@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+   <head>
+      <meta charset="utf-8">
+      <title>OnceDev | Começando com o Xamarin</title>
+      <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
+      <meta name="author" content="FIFOTHEMES.COM">
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <!-- Library CSS -->
+      <link rel="stylesheet" href="/content/css/bootstrap.css">
+      <link rel="stylesheet" href="/content/css/fonts/font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="/content/css/animations.css" media="screen">
+      <link rel="stylesheet" href="/content/css/superfish.css" media="screen">
+      <link rel="stylesheet" href="/content/css/revolution-slider/css/settings.css" media="screen">
+      <link rel="stylesheet" href="/content/css/prettyPhoto.css" media="screen">
+      <!-- Theme CSS -->
+      <link rel="stylesheet" href="/content/css/style.css">
+      <!-- Skin -->
+      <link rel="stylesheet" href="/content/css/colors/orange.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/content/css/theme-responsive.css">
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="/content/img/ico/favicon.ico">
+      <link rel="apple-touch-icon" href="/content/img/ico/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/content/img/ico/apple-touch-icon-72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/content/img/ico/apple-touch-icon-114.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/content/img/ico/apple-touch-icon-144.png">
+      <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/content/js/respond.min.js"></script>
+      <![endif]-->
+      <!--[if IE]>
+      <link rel="stylesheet" href="/content/css/ie.css">
+      <![endif]-->
+
+      
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-52445211-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+  
+   </head>
+   <body class="home">
+      <div class="wrap">
+         <!-- Header Start -->
+         <header id="header">
+            <!-- Header Top Bar Start -->
+			<!--
+            <div class="top-bar">
+               <div class="slidedown collapse">
+                  <div class="container">
+                     <div class="phone-email pull-left">
+                        <a><i class="icon-phone"></i> Ligue : +55 71 9723 9272</a>
+                        <a href="mail@example.com"><i class="icon-envelope"></i> Email : contato@oncedev.com</a>
+                     </div>
+                     <div class="pull-right">
+                        <ul class="social pull-left">
+                           <li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+                           <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                           <li class="dribbble"><a href="#"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#"><i class="icon-rss"></i></a></li>
+                        </ul>
+                        <div id="search-form" class="pull-right">
+                           <form action="#" method="get">
+                              <input type="text" class="search-text-box">
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			-->
+            <!-- Header Top Bar End -->
+            <!-- Main Header Start -->
+            <div class="main-header">
+               <div class="container">
+                  <!-- Logo Start -->
+                  <div class="logo pull-left">
+                     <h1>
+			<a href="http://www.oncedev.com/">
+                        <img src="/content/img/logo.png" alt="oncedev">
+                        </a>
+                     </h1>
+                  </div>
+                  <!-- Logo End -->
+                  <!-- Mobile Menu Start -->
+                  <div class="mobile navbar-header">
+                     <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse">
+                     <i class="icon-reorder icon-2x"></i>
+                     </a> 
+                  </div>
+                  <!-- Mobile Menu End -->
+                  <!-- Menu Start -->
+                  <nav class="collapse navbar-collapse menu">
+                     <ul class="nav navbar-nav sf-menu">
+			     <li><a href="http://www.oncedev.com/">Início</a></li>
+			     <li><a href="http://www.oncedev.com/missao">Missão</a></li>
+			     <li><a href="http://www.oncedev.com/clientes">Clientes</a></li>
+			     <li><a href="http://www.oncedev.com/servicos">Serviços</a></li>
+			     <li><a href="http://www.oncedev.com/contato">Contato</a></li>
+						<li><a href="/">Blog</a></li>
+                     </ul>
+                  </nav>
+                  <!-- Menu End --> 
+               </div>
+            </div>
+            <!-- Main Header End -->
+         </header>
+         <!-- Header End --> 
+		 
+		<!-- Content Start -->
+		<div id="main">
+                <div class="breadcrumb-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">Post</h2>
+                
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                    <ul>
+                        <li>Você está aqui:</li>
+                        <li><a href="http://www.oncedev.com/">Início</a></li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Começando com o Xamarin</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- Main Content start-->
+                <div class="content">
+                <div class="container">
+                        <div class="row">
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
+
+
+
+
+<header class="post-header">
+	<h3 class="content-title">
+		<a class="titulo-post" href="">Começando com o Xamarin</a>
+	</h3>
+	<div class="blog-entry-meta">
+		<div class="blog-entry-meta-date">
+			<i class="icon-time"></i>
+			04/10/2014
+		</div>
+		<div class="blog-entry-meta-author">
+			<i class="icon-user"></i>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
+		</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-circle"></i>
+			
+			<a href="/mobile">mobile</a>
+			
+	    	</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-tags"></i>
+			Xamarin, Mobile
+		</div>
+		
+	</div>
+</header>
+
+
+        <div class="post-content">					  
+        <p>Olá pessoal, tudo bom? Quem me conhece pessoalmente e/ou me acompanha na internet tem visto o quanto eu estou empolgado com o Xamarin e como nós na OnceDev estamos apostando nessa ferramenta para construirmos aplicativos mobile com experiência nativa e com o maior retorno possível para os nossos clientes.</p>
+
+<p>Recentemente tive a oportunidade de palestrar sobre o Xamarin tanto na semana de computação da UFBA como na semana da computação da UNIFACS (quem quiser dar uma olhada nos slides eles tão <a href="http://www.slideshare.net/pauloortins/semana-computao-ufba-2014-quer-desenvolver-aplicaes-nativas-e-crossplataforma-pergunteme-como">aqui</a> e <a href="http://www.slideshare.net/pauloortins/semana-computao-unifacs-2014-quer-desenvolver-aplicaes-nativas-e-crossplataforma-perguntecomo">aqui</a>) e foi bacana ouvir o feedback positivo do pessoal assim como perceber o interesse da galera no Xamarin.</p>
+
+<p>Após as palestras, muita gente veio me perguntar sobre como elas podem começar a aprender a desenvolver aplicações mobile com o Xamarin e esse post é pra essa galera que me encheu de alegria. Nesse post fiz um compilado de vários recursos que eu utilizo para aprender mais e mais sobre o Xamarin.</p>
+
+<p>Espero que gostem!</p>
+
+<h3 id="sites">Sites</h3>
+
+<p>Nesta seção incluo os sites que acho relevantes tanto para aprender o básico da ferramenta assim como para se manter atualizado sobre o que está por vir.</p>
+
+<p><a href="http://developer.xamarin.com/">Xamarin Docs</a> - Esse é o site oficial do Xamarin para desenvolvedores, nele é capaz de encontrar vários tutorias ensinando desde como fazer a instalação do Xamarin até o uso de cada uma das principais features de cada plataforma como Mapas, Contatos, Camera e por aí vai.</p>
+
+<p><a href="http://planet.xamarin.com/">Planet Xamarin</a> - Agregador de blogs sobre o Xamarin, hoje ele exibe posts de mais de 40 blogs incluindo os blogs de vários MVPs Xamarin e o próprio blog oficial.</p>
+
+<p><a href="http://blog.xamarin.com/">Blog Oficial</a> - Blog oficial do Xamarin</p>
+
+<p><a href="http://forums.xamarin.com/">Xamarin Forums</a> - Forum oficial do Xamarin, onde são discutidas features da ferramenta, empregos, eventos e assim por diante.</p>
+
+<p><a href="http://xamarin.meetup.com/">Xamarin Meetups</a> - Quer frequentar meetups sobre o Xamarin? Esse site traz uma lista de todos os meetups sobre o Xamarin no mundo!</p>
+
+<p><a href="http://www.monobrasil.com.br/">MonoBrasil</a> - Site da comunidade Mono no Brasil.</p>
+
+<p><a href="http://www.gucrossmobile.com.br/">Grupos de Usuários CrossMobile</a> - Grupo de Usuários CrossMobile do Brasil.</p>
+
+<h3 id="livros">Livros</h3>
+
+<p><a href="http://www.amazon.com/Xamarin-Cross-platform-Application-Development-Jonathan/dp/1849698465/ref=sr_1_1?ie=UTF8&amp;qid=1412379161&amp;sr=8-1&amp;keywords=xamarin">Xamarin Cross-platform Application Development</a> - Livro focado em como podemos desenvolver arquiteturas cross-plataforma e quais são as boas práticas que o mercado tem usado. Há alguns meses atrás, escrevi um review desse livro no meu <a href="http://www.pauloortins.com/2014/07/23/xamarin-cross-platform-application-development-review/">blog pessoal</a>.</p>
+
+<p><a href="http://www.amazon.com/Application-Development-Community-Experience-Distilled/dp/1783559160/ref=sr_1_1?ie=UTF8&amp;qid=1412380491&amp;sr=8-1&amp;keywords=Xamarin+Mobile+Application+Development+for+Android">Xamarin Mobile Application Development for Android</a> - Livro foca no desenvolvimento de aplicativos android usando o Xamarin.</p>
+
+<p><a href="http://www.amazon.com/Development-Xamarin-Cookbook-Dimitris-Tavlikos/dp/1849698929/ref=sr_1_2?ie=UTF8&amp;qid=1410309645&amp;sr=8-2&amp;keywords=xamarin">iOS Development with Xamarin Cookbook</a> e <a href="http://www.amazon.com/Xamarin-Mobile-Application-Development-iOS/dp/1783559187/ref=sr_1_1?ie=UTF8&amp;qid=1412381139&amp;sr=8-1&amp;keywords=Xamarin+Mobile+Application+Development+for+iOS">Xamarin Mobile Application Development for iOS</a> - Livros focam no desenvolvimento de aplicativos para iOS usando o Xamarin.</p>
+
+<p><a href="http://www.amazon.com/Learning-Xamarin-Studio-William-Smith/dp/1783550813/ref=sr_1_7?ie=UTF8&amp;qid=1412379692&amp;sr=8-7&amp;keywords=xamarin">Learning Xamarin Studio</a> - Livro sobre o Xamarin Studo, a IDE oficial do Xamarin e roda tanto no OSX como no Windows.</p>
+
+<p><a href="http://www.amazon.com/Creating-Xamarin-Forms-Preview-Developer-Reference-ebook/dp/B00NXYJ8DK/ref=sr_1_1?ie=UTF8&amp;qid=1412381275&amp;sr=8-1&amp;keywords=xamarin+forms">Creating Mobile Apps with Xamarin.Forms</a> - O Xamarin.Forms foi lançado junto ao Xamarin 3.0 e traz uma API única para a criação de interfaces possibilitando que seja compartilhando ainda mais código entre as plataformas. Esse livro ainda se encontra em preview mas já existe um material bem interessante.</p>
+
+<p><a href="http://www.amazon.com/Beginning-iOS-Development-Exploring-SDK/dp/143026022X/ref=sr_1_11?ie=UTF8&amp;qid=1412379366&amp;sr=8-11&amp;keywords=ios">Beginning iOS 7 Development: Exploring the iOS SDK</a> e <a href="http://commonsware.com/Android/">The Busy Coder’s Guide to Android Development</a> - O Xamarin possui uma API que reflete a API nativa, escrita em objective-c, entender como as APIs nativas funcionam só traz benefícios para quem quer desenvolver com o Xamarin, na minha opinião, esses são os livros que eu indico sobre iOS e Android, respectivamente.</p>
+
+<h3 id="palestras">Palestras</h3>
+
+<p>Abaixo segue uma lista de videos de palestras sobre o Xamarin.</p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-cfamnzkd03">10 Must-Use Components for Your Mobile Apps</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-0w86u7bco2">Advanced Memory Management on iOS and Android</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-dnoeeoarfj">Architecting Cross-Platform Apps with MvvmCross</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-hyn4x37ep9">Binding Java Libraries</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-rnykii473a">Binding Objective-C libraries</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-59g7jey0ps">Building Connected Cross-Platform Mobile Apps with Xamarin and Azure Mobile Services</a></p>
+
+<p><a href="http://channel9.msdn.com/Blogs/Breakpoint/EP4">Building Cross-Platform Code in Visual Studio with Xamarin</a></p>
+
+<p><a href="http://channel9.msdn.com/events/TechDays/Techdays-2014-the-Netherlands/Building-Cross-platform-mobile-applications-using-Xamarin">Building Cross platform mobile applications using Xamarin</a></p>
+
+<p><a href="http://channel9.msdn.com/events/TechEd/NewZealand/2014/WIN313">Building cross-platform mobile apps using Microsoft technologies and Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-g6wp8zpfwe">Building Great App Experiences by with Scalable Cloud Services</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-g1idcxy2rm">Building Hybrid Apps with Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-0fq90z17d9">Building Mobile Cross-platform Geospatial Apps</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-iobxm3ko80">Create a uniform login experience with a centralized cloud authentication system</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-mlqohiyfo7">Cross-platform Barcode Scanning with ZXing</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Cross-Platform-Development-With-Xamarin">Cross Platform Development With Xamarin</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Cross-Platform-Mobile-Apps-with-Xamarin-and-Azure-Mobile-Services">Cross Platform Mobile Apps with Xamarin and Azure Mobile Services</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-onvj5e4unu">Cross-Platform UI Controls</a></p>
+
+<p><a href="http://channel9.msdn.com/events/dotnetConf/2014/Developing-Native-iOS-Android-and-Windows-Apps-with-Xamarin">Developing Native iOS, Android, and Windows Apps with Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-odav9o642i">Fast UI Creation with MonoTouch.Dialog</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-9v0ezipgkx">Getting the Most from Xamarin Studio</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-zm59b5yptf">GitHub Halp App: Minimizing Platform-specific code with MvvM</a></p>
+
+<p><a href="http://channel9.msdn.com/events/Build/2014/3-653">Go Mobile with C# and Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-xcjpj20d6s">Intro to Calabash</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-7wb0etd3r8">Keeping your Users Happy with Testable Apps</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-d336r1byq5">Mapping on iOS and Android</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-odi5o5i1ha">Maximizing code-sharing with Xamarin.Mobile</a></p>
+
+<p><a href="http://channel9.msdn.com/events/TechEd/NorthAmerica/2014/DEV-B221#fbid=">Native Mobile Application Development for iOS, Android, and Windows in C# and Visual Studio Using Xamarin</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-b8fz8gfsnf">Push Notifications with PushSharp</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-shy07zqsoz">Sharing up to 80% code for iOS, Android and Windows platforms, a retail app case study</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-wrhca9u0e9">Using Async in your Mobile Apps</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Using-Portable-Class-Libraries-with-Xamarin">Using Portable Class Libraries with Xamarin</a></p>
+
+<p><a href="http://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Using-Xamarin-to-take-Existing-NET-Apps-Cross-Platform">Using Xamarin to take Existing .NET Apps Cross Platform</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-lp0r1bj6k2">What’s New in Xamarin.Android</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-b3mx6e6rmb">What’s new in Xamarin.iOS</a></p>
+
+<p><a href="http://xamarin.com/evolve/2013#session-polfkxk60c">Writing native Mac apps in C# with Xamarin.Mac</a></p>
+
+<h3 id="pessoas">Pessoas</h3>
+
+<p>Esses são os caras da comunidade Xamarin e vale muito a pena acompanhar o trabalho dessa galera!</p>
+
+<p><a href="https://twitter.com/xforward">Brett Duncavage - @xforward</a></p>
+
+<p><a href="https://twitter.com/davidortinau">David Ortinau - @davidortinau</a></p>
+
+<p><a href="https://twitter.com/dtavlikos">Dimitris Tavlikos - @dtavlikos</a></p>
+
+<p><a href="https://twitter.com/gshackles">Greg Shackles - @gshackles</a></p>
+
+<p><a href="https://twitter.com/jtclancey">James Clancey - @jtclancey</a></p>
+
+<p><a href="https://twitter.com/jonasmaturana">Jonas Maturana - @jonasmaturana</a></p>
+
+<p><a href="https://twitter.com/jonathanpeppers">Jonathan Peppers - @JonathanPeppers</a></p>
+
+<p><a href="https://twitter.com/migueldeicaza">Miguel de Icaza - @migueldeicaza</a></p>
+
+<p><a href="https://twitter.com/natfriedman">Nat Friedman - @natfriedman</a></p>
+
+<p><a href="https://twitter.com/fastchicken">Nic Wise - @fastchicken</a></p>
+
+<p><a href="https://twitter.com/paulcbetts">Paul Betts - @paulcbetts</a></p>
+
+<p><a href="https://twitter.com/sichy">Pavel Sich - @sichy</a></p>
+
+<p><a href="https://twitter.com/Redth">Redth - @redth</a></p>
+
+<p><a href="https://twitter.com/decriptor">Stephen Shaw - @decriptor</a></p>
+
+<p><a href="https://twitter.com/slodge">Stuart Lodge - @slodge</a></p>
+
+<p><a href="https://twitter.com/wbm">Wally - @wbm</a></p>
+
+<h3 id="sempre-em-construo">Sempre em Construção</h3>
+
+<p>Essa lista estará sempre em construção e eu conto com a colaboração de todos vocês!</p>
+
+
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
+    
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
+            
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
+
+</div>
+
+                        <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <!-- Tab Start -->
+    <div class="widget tabs">
+        <h3 class="title">Recentes</h3>
+        <div id="horizontal-tabs">
+            <div class="contents">
+                <div class="tabscontent" id="content1" style="display: block;">
+                    <ul class="posts">
+                    
+                    <li>
+                        <p><a href="/agilidade/2015/03/02/em-qual-tipo-de-empresa-agil-voce-trabalha/">Em qual tipo de empresa ágil você trabalha?</a></p>
+                        <span class="color">02/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">O que eu encontrei fora da Matrix?</a></p>
+                        <span class="color">25/10/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2014/10/04/comecando-com-o-xamarin/">Começando com o Xamarin</a></p>
+                        <span class="color">04/10/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/aspnet/2014/08/14/aspnet-vnext-game-changer-ou-atualizacao-tecnica/">ASP.NET vNext - Game Changer ou Atualização Técnica</a></p>
+                        <span class="color">14/08/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2014/07/13/criando-um-mapa-da-copa-do-mundo-usando-xamarin-ios/">Criando um mapa da copa do mundo usando o Xamarin.iOS</a></p>
+                        <span class="color">13/07/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/carreira/2014/07/07/saindo-da-matrix/">Saindo da Matrix</a></p>
+                        <span class="color">07/07/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2014/06/25/porque-escolher-o-xamarin/">Por que escolher o Xamarin?</a></p>
+                        <span class="color">25/06/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/jekyll/2014/06/05/migrando-o-blog-da-oncedev-para-o-jekyll/">Migrando o blog da OnceDev para o Jekyll</a></p>
+                        <span class="color">05/06/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/testes/2014/05/09/o-tdd-morreu-o-que-eu-tenho-com-isso/">O TDD morreu? O que eu tenho com isso?</a></p>
+                        <span class="color">09/05/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/lideranca/2014/05/09/o-lider-e-a-educacao/">O Líder e a Educação</a></p>
+                        <span class="color">09/05/2014</span>
+                    </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab End -->
+    <!-- Category Widget Start -->
+    <div class="widget category">
+        <h3 class="title">Categorias</h3>
+        <ul class="category-list slide">
+            
+            <li><a href="/eventos">eventos</a></li>
+            
+            <li><a href="/lideranca">lideranca</a></li>
+            
+            <li><a href="/testes">testes</a></li>
+            
+            <li><a href="/jekyll">jekyll</a></li>
+            
+            <li><a href="/mobile">mobile</a></li>
+            
+            <li><a href="/carreira">carreira</a></li>
+            
+            <li><a href="/aspnet">aspnet</a></li>
+            
+            <li><a href="/agilidade">agilidade</a></li>
+            
+        </ul>
+    </div>
+    <!-- Category Widget End -->                                
+</div>
+<!-- Sidebar End --> 
+    
+                        </div>
+                </div>
+                </div>
+                <!-- Main Content end-->
+                </div>
+		 <!-- Content End -->		
+		 
+         <!-- Footer Start -->
+         <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+               <div class="container">
+                  <div class="row">
+				  <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                       <div class="fb-like-box" data-href="https://www.facebook.com/oncedevsolucoes" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+					 </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                        <h3>Sobre</h3>
+                        <p> 
+                           A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade sem abrir mão de qualidade e do respeito ao cliente. 
+                        </p>
+                     </section>
+					
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                        <h3>Contatos</h3>
+                        <ul class="contact-us">
+                           <li>
+                              <i class="icon-map-marker"></i>
+                              <p> 
+                                 <strong>Endereço:</strong> Av. Otavio Mangabeira, nº 929 - Pituba, <br>
+                                 Salvador, Bahia 
+                              </p>
+                           </li>
+                           <li>
+                              <i class="icon-phone"></i>
+                              <p><strong>Telefone:</strong> +55 71 9993 1356</p>
+                           </li>
+                           <li>
+                              <i class="icon-envelope"></i>
+                              <p><strong>Email:</strong><a href="mailto:oncedev@oncedev.com">oncedev@oncedev.com</a></p>
+                           </li>
+                        </ul>
+                     </section>
+					 
+					  </div>
+               </div>
+            </div>
+            <!-- Footer Top End --> 
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright 2013 by <a href="#">OnceDev</a>. All Rights Reserved. </div>					 
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                        <ul class="social social-icons-footer-bottom">
+                           <a href="https://www.facebook.com/oncedevsolucoes" target="_blankk" data-toggle="tooltip" title="Facebook"><li class="facebook" style="margin-right: 5px !important;"><i class="icon-facebook"></i></li></a>
+                           <a href="https://twitter.com/OnceDev" target="_blankk" data-toggle="tooltip" title="Twitter"><li class="twitter"><i class="icon-twitter"></i></li></a>
+                           <!-- <li class="dribbble"><a href="#" data-toggle="tooltip" title="Dribble"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#" data-toggle="tooltip" title="Rss"><i class="icon-rss"></i></a></li> -->
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Bottom End --> 
+         </footer>
+         <!-- Scroll To Top --> 
+         <a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+		</div>
+		<!-- Wrap End -->
+		<!-- The Scripts -->
+		<script src="/content/js/jquery.min.js"></script>
+		<script src="/content/js/bootstrap.js"></script>
+		<script src="/content/js/jquery.parallax.js"></script> 
+		<script src="/content/js/modernizr-2.6.2.min.js"></script> 
+		<script src="/content/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="/content/js/jquery.nivo.slider.pack.js"></script>
+		<script src="/content/js/jquery.prettyPhoto.js"></script>
+		<script src="/content/js/superfish.js"></script>
+		<script src="/content/js/tweetMachine.js"></script>
+		<script src="/content/js/tytabs.js"></script>
+		<script src="/content/js/jquery.gmap.min.js"></script>
+		<script src="/content/js/circularnav.js"></script>
+		<script src="/content/js/jquery.sticky.js"></script>
+		<script src="/content/js/jflickrfeed.js"></script>
+		<script src="/content/js/imagesloaded.pkgd.min.js"></script>
+		<script src="/content/js/waypoints.min.js"></script>
+		<script src=" /content/js/custom.js "></script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+			  
+		<script type="text/javascript">
+			var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+		</script>
+		
+	  </body>
+	  
+</html>

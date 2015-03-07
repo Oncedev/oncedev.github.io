@@ -1,16 +1,9 @@
-git checkout master &&
+#!/bin/bash
 
-for i in *; do
-  if [[ $i != "_site" ]]; then
-    rm -rf $i
-  fi
-done &&
-
-cp _site/* . -r &&
-rm -rf _site &&
-touch .nojekyll &&
-
-git add --all . &&
-git commit
-
+cp -R _site ../copy
+git checkout master
+cp -R ../copy .
+git add --all .
+git commit -m "Updated Post"
+git push origin master
 git checkout source
