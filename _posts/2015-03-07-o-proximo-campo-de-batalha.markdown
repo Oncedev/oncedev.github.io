@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "O próximo campo de batalha"
-date:   2015-03-02 08:50:00
+date:   2015-03-07 08:50:00
 author: joaoseixas
 categories: mercado
 tags: mercado
