@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Blog - carreira</title>
+      <title>OnceDev | O que é o Xamarin.Forms e pra que serve?</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -131,9 +131,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Blog</h2>
-                
-                <p>Mostrando Posts da categoria: <b>carreira</b> <a href="/"><b>X</b></a></p>
+                <h2 class="title">Post</h2>
                 
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -141,7 +139,9 @@
                     <ul>
                         <li>Você está aqui:</li>
                         <li><a href="http://www.oncedev.com/">Início</a></li>
-                        <li>Blog</li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>O que é o Xamarin.Forms e pra que serve?</li>
                         
                     </ul>
                 </div>
@@ -153,109 +153,161 @@
                 <div class="content">
                 <div class="container">
                         <div class="row">
-                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    
-        <article class="post hentry">
-            
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
 
 
 
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="/carreira/2014/07/07/saindo-da-matrix/">Saindo da Matrix</a>
+		<a class="titulo-post" href="">O que é o Xamarin.Forms e pra que serve?</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			07/07/2014
+			08/03/2015
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/carreira">carreira</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			Carreira
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/carreira/2014/07/07/saindo-da-matrix/#disqus_thread" ></a>
+			Xamarin, Mobile
 		</div>
 		
 	</div>
 </header>
 
 
-            <div class="post-content">
-                    <p>Nos dias 13, 14 e 15 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação… Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia.</p>
+        <div class="post-content">					  
+        <p>Olá pessoal, tudo bom? Aqui estou mais uma vez para falar de Xamarin, nesse post vou falar sobre o Xamarin.Forms, uma API lançada em 2014 e que nos possibilita compartilhar ainda mais código entre os nossos aplicativos mobile.</p>
+
+<h3 id="o-que--o-xamarinforms-e-pra-que-serve">O que é o Xamarin.Forms e pra que serve?</h3>
+
+<p>Se você não sabe muito bem o que é o Xamarin, ou nunca ouviu falar, há alguns meses atrás eu escrevi um post nesse mesmo blog explicando tudinho e <a href="/mobile/2015/03/08/xamarin-forms/">você pode conferir nesse link</a>. A verdade é que a plataforma vem evoluindo a passos largos e a cada ano, nós, desenvolvedores de aplicativos, somos presenteados por Miguel de Icaza, Nat Friedman e sua trupe com novas soluções para os nossos maiores problemas.</p>
+
+<p>O <a href="http://xamarin.com/forms">Xamarin.Forms</a> foi um desses grandes presentes, como vimos no outro post, o Xamarin nos permite criar aplicativos híbridos utilizando o C# e compartilhando boa parte do nosso código, esse código compartilhado é justamente o código responsável pelas partes comuns às 3 plataformas, como por exemplo, regras de negócio e acesso a webservices e bancos de dados locais.</p>
+
+<p>No entanto, uma parte do código não era compartilhada, ou seja, deveria ser escrita para cada plataforma, é a interface do usuário e é justamente esse fato que diferencia o Xamarin de outras soluções híbridas, escrevendo uma UI para cada plataforma, nós conseguimos garantir que o nosso usuário vai ter a melhor experiência de uso possível e exatamente igual ao que ele já está acostumado em outros aplicativos ou funcionalidades do sistema operacional do seu aparelho. Logo, para colocar um texto na tela usando o Xamarin tradicional é necessário criar um <code>UILabel</code> no iOS, um <code>EditText</code> no Android e <code>TextBox</code> no Windows Phone.</p>
+
+<p>Mas pera aí, se nós já sabemos quais são as classes que deveremos instanciar para cada plataforma e seus respectivos atributos e métodos e todos eles já são escritos em C# por que não criar uma abstração em cima dessas APIs e reaproveitar ainda mais código? Por exemplo, para colocar um texto na tela eu poderia simplesmente instanciar um <code>Label</code> e o próprio Xamarin se encarregaria de instanciar a classe correta para cada plataforma, para criar um campo de texto, eu poderia simplesmente instanciar um <code>Entry</code> ou quem sabe em um sonho distante instanciar uma <code>TabbedPage</code> e o Xamarin por si só criar abas exatamente iguais às abas utilizadas em cada plataforma. Mas posso te falar uma coisa? Isso não é um sonho e nem está distante é justamente o <strong>Xamarin.Forms</strong>, uma api que encapsula as APIs nativas de cada sistema operacional e que nos permite, dessa forma, compartilhar ainda mais código em nossas aplicações Xamarin.</p>
+
+<h3 id="xamarinforms-um-nico-app-trs-diferentes-experincias">Xamarin.Forms, um único app, três diferentes experiências</h3>
+
+<p>Dê uma olhada no código abaixo, ele usa a API do Xamarin.Forms para criar uma tela com duas abas, onde uma das abas é a implementação de uma tela de login, nesse exemplo já começamos a conhecer algumas das classes do Forms, como a <code>TabbedPage</code>, usada para criar telas com abas, a <code>ContentPage</code>, usada para criar páginas com contéudo, a <code>Entry</code>, que serve para criar campos de texto e a classe <code>Button</code>, que serve para criar botões.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">using</span> <span class="nn">Xamarin.Forms</span><span class="p">;</span>
+
+<span class="kt">var</span> <span class="n">profilePage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentPage</span> <span class="p">{</span>
+    <span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Profile&quot;</span><span class="p">,</span>
+    <span class="n">Icon</span> <span class="p">=</span> <span class="s">&quot;Profile.png&quot;</span><span class="p">,</span>
+    <span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">{</span>
+        <span class="n">Spacing</span> <span class="p">=</span> <span class="m">20</span><span class="p">,</span> <span class="n">Padding</span> <span class="p">=</span> <span class="m">50</span><span class="p">,</span>
+        <span class="n">VerticalOptions</span> <span class="p">=</span> <span class="n">LayoutOptions</span><span class="p">.</span><span class="n">Center</span><span class="p">,</span>
+        <span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Entry</span> <span class="p">{</span> <span class="n">Placeholder</span> <span class="p">=</span> <span class="s">&quot;Username&quot;</span> <span class="p">},</span>
+            <span class="k">new</span> <span class="n">Entry</span> <span class="p">{</span> <span class="n">Placeholder</span> <span class="p">=</span> <span class="s">&quot;Password&quot;</span><span class="p">,</span> <span class="n">IsPassword</span> <span class="p">=</span> <span class="k">true</span> <span class="p">},</span>
+            <span class="k">new</span> <span class="n">Button</span> <span class="p">{</span>
+                <span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Login&quot;</span><span class="p">,</span>
+                <span class="n">TextColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">White</span><span class="p">,</span>
+                <span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">FromHex</span><span class="p">(</span><span class="s">&quot;77D065&quot;</span><span class="p">)</span> <span class="p">}}}</span>
+<span class="p">};</span>
+
+<span class="kt">var</span> <span class="n">settingsPage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentPage</span> <span class="p">{</span>
+    <span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Settings&quot;</span><span class="p">,</span>
+    <span class="n">Icon</span> <span class="p">=</span> <span class="s">&quot;Settings.png&quot;</span><span class="p">,</span>
+    <span class="p">(...)</span>
+<span class="p">};</span>
+
+<span class="kt">var</span> <span class="n">mainPage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TabbedPage</span> <span class="p">{</span> <span class="n">Children</span> <span class="p">=</span> <span class="p">{</span> <span class="n">profilePage</span><span class="p">,</span> <span class="n">settingsPage</span> <span class="p">}</span> <span class="p">};</span></code></pre></div>
+
+<p>Quando executamos o código acima é que mágica acontece e podemos observar os 3 aplicativos gerados na imagem abaixo, <strong>o mais importante aqui é observar a fidelidade que as telas possuem em relação a cada sistema operacional, podemos perceber isso na disposição das abas e no formato dos botões e dos campos de texto.</strong></p>
+
+<p><img src="/content/img/blog/posts/2015-03-07/example-forms.png" alt="Aplicações Xamarin.Forms" /></p>
+
+<h3 id="existem-muitos-mais-componentes-a-nossa-disposio">Existem muitos mais componentes a nossa disposição</h3>
+
+<p>Os componentes citados no exemplo são alguns dos vários componentes que temos a nossa disposição, a imagem abaixo ilustra isso. Os componentes da API são divididos em três categorias, <strong>Pages</strong>, são as páginas propriamente ditas e a <code>TabbedPage</code> e a <code>ContentPage</code> se encaixam nessa categoria, os <strong>Layouts</strong>, que são possibilidades de organização de componentes, o <code>StackLayout</code> se encaixa nessa categoria, e os <strong>Controls</strong>, que são os controles que o usuário vai interagir, o <code>Entry</code> e <code>Button</code> fazem parte desse último grupo.</p>
+
+<p><img src="/content/img/blog/posts/2015-03-07/forms-controls.png" alt="Pages, Layouts e Controles" /></p>
+
+<h3 id="acesso-a-apis-e-elementos-nativos">Acesso a APIs e Elementos Nativos</h3>
+
+<p>E não é só isso, embora o Xamarin.Forms encapsule as APIs nativas de cada plataforma, ainda assim é possível acessá-las caso seja necessária alguma implementação específica para cada plataforma, como por exemplo, as APIs de voz e o acesso a arquivos. Essas implementações específicas são feitas de duas formas: usando <strong>Custom Renderers</strong> e usando <strong>DependencyService</strong>.</p>
+
+<h3 id="at-breve">Até breve!</h3>
+
+<p>Eu não poderia estar mais empolgado com o Xamarin.Forms, a API está em constante atualização e na OnceDev, para a felicidade dos nossos clientes, já vem se mostrando um excelente diferencial competitivo nos possibilitando entregar <strong>ótimos aplicativos nas 3 principais plataformas e com um custo bem reduzido.</strong></p>
+
+<p>Nos próximos posts irei falar sobre cada uma das características do Xamarin.Forms, mas, caso você não queira esperar, coloquei ao final do post alguns links bem interessantes. Um grande abraço!</p>
+
+<h4 id="links-interessantes">Links Interessantes</h4>
+
+<ul>
+  <li><a href="http://developer.xamarin.com/guides/cross-platform/xamarin-forms/introduction-to-xamarin-forms/">Página para o tutorial da própria Xamarin</a></li>
+  <li><a href="http://www.amazon.com/gp/product/B00NXYJ8DK/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00NXYJ8DK&amp;linkCode=as2&amp;tag=paulorti-20&amp;linkId=7445BJ7K7EJKNLXU">Livro Creating Mobile Apps with Xamarin.Forms, atualmente em preview</a></li>
+  <li><a href="http://www.xforms-kickstarter.com/">Xamarin.Forms Kickstarter, web book sobre Xamarin.Forms em constante atualização</a></li>
+  <li><a href="https://www.youtube.com/watch?v=xWyOcEpNyXQ">Palestra - Your First Xamarin.Forms App por Craig Dunn</a></li>
+</ul>
 
 
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/carreira/2014/07/07/saindo-da-matrix/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
     
-        <article class="post hentry">
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
             
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
 
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
 
-
-
-<header class="post-header">
-	<h3 class="content-title">
-		<a class="titulo-post" href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">O que eu encontrei fora da Matrix?</a>
-	</h3>
-	<div class="blog-entry-meta">
-		<div class="blog-entry-meta-date">
-			<i class="icon-time"></i>
-			25/10/2014
-		</div>
-		<div class="blog-entry-meta-author">
-			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
-		</div>
-		<div class="blog-entry-meta-tags">
-			<i class="icon-circle"></i>
-			
-			<a href="/carreira">carreira</a>
-			
-	    	</div>
-		<div class="blog-entry-meta-tags">
-			<i class="icon-tags"></i>
-			Carreira
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/#disqus_thread" ></a>
-		</div>
-		
-	</div>
-</header>
-
-
-            <div class="post-content">
-                    <p>O que eu encontrei fora da Matrix
-Há pouco mais de um ano, eu tive a oportunidade de sair da minha Matrix, caso você queria saber como foi esse processo <a href="http://blog.oncedev.com/carreira/2014/07/07/saindo-da-matrix/">clique aqui</a>.</p>
-
-
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
-    
 </div>
 
                         <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
