@@ -9,7 +9,7 @@ tags: Xamarin Mobile
 
 Olá pessoal, tudo bom? Aqui estou mais uma vez para falar de Xamarin, nesse post vou falar sobre o Xamarin.Forms, uma API lançada em 2014 e que nos possibilita compartilhar ainda mais código entre os nossos aplicativos mobile.
 
-### O que é o Xamarin.Forms e pra que serve? 
+### Xamarin o que?
 
 Se você não sabe muito bem o que é o Xamarin, ou nunca ouviu falar, há alguns meses atrás eu escrevi um post nesse mesmo blog explicando tudinho e [você pode conferir nesse link][3]. A verdade é que a plataforma vem evoluindo a passos largos e a cada ano, nós, desenvolvedores de aplicativos, somos presenteados por Miguel de Icaza, Nat Friedman e sua trupe com novas soluções para os nossos maiores problemas. 
 
