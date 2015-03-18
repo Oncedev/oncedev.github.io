@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Blog - carreira</title>
+      <title>OnceDev | Anatomia de um aplicativo Xamarin.Forms</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -131,9 +131,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Blog</h2>
-                
-                <p>Mostrando Posts da categoria: <b>carreira</b> <a href="/"><b>X</b></a></p>
+                <h2 class="title">Post</h2>
                 
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -141,7 +139,9 @@
                     <ul>
                         <li>Você está aqui:</li>
                         <li><a href="http://www.oncedev.com/">Início</a></li>
-                        <li>Blog</li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Anatomia de um aplicativo Xamarin.Forms</li>
                         
                     </ul>
                 </div>
@@ -153,109 +153,182 @@
                 <div class="content">
                 <div class="container">
                         <div class="row">
-                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    
-        <article class="post hentry">
-            
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
 
 
 
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="/carreira/2014/07/07/saindo-da-matrix/">Saindo da Matrix</a>
+		<a class="titulo-post" href="">Anatomia de um aplicativo Xamarin.Forms</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			07/07/2014
+			18/03/2015
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/carreira">carreira</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			Carreira
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/carreira/2014/07/07/saindo-da-matrix/#disqus_thread" ></a>
+			Xamarin, Mobile
 		</div>
 		
 	</div>
 </header>
 
 
-            <div class="post-content">
-                    <p>Nos dias 13, 14 e 15 de março de 2014 aconteceu o Linguágil. Essa foi a 5º edição do evento, mas foi apenas a minha 2º participação… Atualmente eu acho estranho que um profissional de desenvolvimento de software fique de fora de um dos principais eventos de programação do estado da Bahia.</p>
+        <div class="post-content">					  
+        <p>Olá pessoal, dando continuidade aos posts sobre o Xamarin.Forms, dessa vez vou falar sobre como criar nosso primeiro aplicativo usando o Xamarin.Forms e quais são os principais projetos e arquivos que devemos levar em consideração.</p>
+
+<h3 id="criando-o-primeiro-aplicativo">Criando o primeiro aplicativo</h3>
+
+<p>Nesse exemplo estarei utilizando o <a href="http://xamarin.com/studio">Xamarin Studio, a IDE oficial da Xamarin</a>, o Xamarin Studio, assim como o Visual Studio, já vem com algumas opções de templates que nos ajudam a economizar algum tempo quando vamos criar um projeto, felizmente, existe também um template para a criação de aplicativos Xamarin.Forms. Para criar um aplicativo usaremos o template marcado na figura abaixo, o nosso primeiro app, com muita originalidade, se chamará <code>MyFirstApp</code>.</p>
+
+<p><img src="/content/img/blog/posts/2015-03-09/creating-first-app.png" alt="Criando o primeiro projeto" /></p>
+
+<p>Após a criação da solução, o template já nos traz alguns projetos prontos, são eles o <code>MyFirstApp</code>, o <code>MyFirstApp.Droid</code> e o <code>MyFirstApp.iOS</code>, conforme a figura abaixo.</p>
+
+<p><img src="/content/img/blog/posts/2015-03-09/project-created.png" alt="Primeiro projeto criado" /></p>
+
+<h3 id="myfirstapp-o-projeto-compartilhado">MyFirstApp, o projeto compartilhado</h3>
+
+<p><img src="/content/img/blog/posts/2015-03-09/core-detailed.png" alt="Projeto Compartilhado em Detalhes" /></p>
+
+<p>Muito se fala sobre a produtividade e o compartilhamento de código no Xamarin, e é através desse projeto que essa mágica acontece, nesse projeto vamos colocar o código responsável pelas regras de negócio, criação de páginas, viewmodels, acesso a banco de dados e acesso a webservices, resumindo, a idéia aqui é tentar colocar o máximo possível de código. Esse projeto então vai ser consumido por projetos específicos de cada plataforma, no nosso caso, o <code>MyFirstApp.Droid</code> e o <code>MyFirstApp.iOS</code>. O código abaixo merece comentários:</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">App</span> <span class="p">:</span> <span class="n">Application</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">App</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// The root page of your application</span>
+		<span class="n">MainPage</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ContentPage</span> <span class="p">{</span>
+			<span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">{</span>
+				<span class="n">VerticalOptions</span> <span class="p">=</span> <span class="n">LayoutOptions</span><span class="p">.</span><span class="n">Center</span><span class="p">,</span>
+    				<span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+						<span class="k">new</span> <span class="n">Label</span> <span class="p">{</span>
+							<span class="n">XAlign</span> <span class="p">=</span> <span class="n">TextAlignment</span><span class="p">.</span><span class="n">Center</span><span class="p">,</span>
+							<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Welcome to Xamarin Forms!&quot;</span>
+						<span class="p">}</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+			<span class="p">};</span>
+	<span class="p">}</span>
+
+	<span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnStart</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Handle when your app starts</span>
+	<span class="p">}</span>
+
+	<span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnSleep</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Handle when your app sleeps</span>
+	<span class="p">}</span>
+
+	<span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnResume</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Handle when your app resumes</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>O código acima mostra a criação da classe <code>App</code>, o entry point do projeto compartilhado, nessa classe é criada a pagina inicial do aplicativo, são definidos alguns eventos do ciclo de vida da aplicação assim como também podem ser colocado informações que são comuns à diferentes páginas da aplicação, um exemplo desse tipo de informação pode ser um objeto com algumas características do usuário logado ou os últimos filtros utilizados durante a sessão atual.</p>
+
+<h3 id="myfirstappdroid">MyFirstApp.Droid</h3>
+
+<p><img src="/content/img/blog/posts/2015-03-09/droid-detailed.png" alt="Projeto Android em Detalhes" /></p>
+
+<p>Um desenvolvedor Android desavisado poderia facilmente confundir esse projeto com qualquer outro projeto criado no <a href="http://developer.android.com/tools/studio/index.html">Android Studio</a>, nesse projeto nós vamos colocar tudo que vai ser específico da versão Android, imagens, customizações de controles ou layouts e implementações de classes que acessam alguma API Nativa do Android, como por exemplo, voz, acesso à arquivos e NFC.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="na">[Activity (Label = &quot;MyFirstApp.Droid&quot;, Icon = &quot;@drawable/icon&quot;, </span>
+<span class="na">		MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="k">global</span><span class="p">::</span><span class="n">Xamarin</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">Platform</span><span class="p">.</span><span class="n">Android</span><span class="p">.</span><span class="n">FormsApplicationActivity</span>
+<span class="p">{</span>
+	<span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnCreate</span> <span class="p">(</span><span class="n">Bundle</span> <span class="n">bundle</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">base</span><span class="p">.</span><span class="n">OnCreate</span> <span class="p">(</span><span class="n">bundle</span><span class="p">);</span>
+
+		<span class="k">global</span><span class="p">::</span><span class="n">Xamarin</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">Forms</span><span class="p">.</span><span class="n">Init</span> <span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">bundle</span><span class="p">);</span>
+
+		<span class="n">LoadApplication</span> <span class="p">(</span><span class="k">new</span> <span class="n">App</span> <span class="p">());</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Assim como nos aplicativos Android escritos em Java, em um aplicativo Xamarin.Forms, a <code>MainActivity</code> também é o entry point e o desejável, embora nem sempre isso aconteça, é que ela seja a única activity do projeto e que saia de cena após invocar o entry point do projeto compartilhado. Na <code>MainActivity</code> também podem ser configurados injeções de dependência, serviços de analytics, crash reports e qualquer outra funcionalidade que precise ser inicializada a partir de um projeto Android.</p>
+
+<h3 id="myfirstappios">MyFirstApp.iOS</h3>
+
+<p><img src="/content/img/blog/posts/2015-03-09/ios-detailed.png" alt="Projeto iOS em Detalhes" /></p>
+
+<p>Se um desenvolvedor Android poderia facilmente se confundir ao abrir o projeto Android em um aplicativo Xamarin, o mesmo vale para o desenvolvedor iOS, as pastas, a forma de nomear as imagens e os arquivos são os mesmos. Assim como acontece no <code>MyFirstApp.Droid</code>, nesse projeto iremos colocar código específico para o iOS (customizações de controles, uso de APIs nativas e etc). A figura abaixo mostra um print do arquivo <code>Info.plist</code>, como podemos ver é igual ao que encontramos quando criamos o aplicativo no <a href="https://developer.apple.com/xcode/">XCode</a>.</p>
+
+<p><img src="/content/img/blog/posts/2015-03-09/infoplist-info.png" alt="Info.plist Info" />
+<img src="/content/img/blog/posts/2015-03-09/infoplist-icons.png" alt="Info.plist Icons" /></p>
+
+<p>No iOS, o entry point se chama <code>Main</code> e assim como acontece no iOS com o objective-C, ele vai chamar a classe <code>AppDelegate</code> que vai servir para invocar o entry point do nosso projeto compartilhado, assim como na <code>MainActivity</code>, é nessa classe que vamos colocar qualquer configuração que deva ser feita a partir de um projeto iOS, como injeções de dependência, serviços de analytics, crash reports e por aí vai.</p>
+
+<h3 id="era-isso">Era isso!</h3>
+
+<p>Nesse post eu quis mostrar como se cria um aplicativo usando o Xamarin.Forms, qual a sua estrutura inicial e a responsabilidade de cada peça nessa estrutura, nos próximos posts vou falar mais a fundo sobre as Pages, Layouts e os Controls que são os componentes que usamos para criar as telas dos aplicativos. Até breve!</p>
 
 
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/carreira/2014/07/07/saindo-da-matrix/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
     
-        <article class="post hentry">
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
             
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
 
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
 
-
-
-<header class="post-header">
-	<h3 class="content-title">
-		<a class="titulo-post" href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">O que eu encontrei fora da Matrix?</a>
-	</h3>
-	<div class="blog-entry-meta">
-		<div class="blog-entry-meta-date">
-			<i class="icon-time"></i>
-			25/10/2014
-		</div>
-		<div class="blog-entry-meta-author">
-			<i class="icon-user"></i>
-                        <a href="mailto:vladsonfreire@oncedev.com" class="blog-entry-meta-author">Vladson Freire</a>
-		</div>
-		<div class="blog-entry-meta-tags">
-			<i class="icon-circle"></i>
-			
-			<a href="/carreira">carreira</a>
-			
-	    	</div>
-		<div class="blog-entry-meta-tags">
-			<i class="icon-tags"></i>
-			Carreira
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/#disqus_thread" ></a>
-		</div>
-		
-	</div>
-</header>
-
-
-            <div class="post-content">
-                    <p>O que eu encontrei fora da Matrix
-Há pouco mais de um ano, eu tive a oportunidade de sair da minha Matrix, caso você queria saber como foi esse processo <a href="http://blog.oncedev.com/carreira/2014/07/07/saindo-da-matrix/">clique aqui</a>.</p>
-
-
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
-    
 </div>
 
                         <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
