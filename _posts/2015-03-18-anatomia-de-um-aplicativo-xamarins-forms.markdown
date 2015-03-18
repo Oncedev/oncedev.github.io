@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Anatomia de um aplicativo Xamarin.Forms"
-date:   2015-03-10 08:50:00
+date:   2015-03-18 08:50:00
 author: pauloortins
 categories: Mobile
 tags: Xamarin Mobile
@@ -11,7 +11,7 @@ Olá pessoal, dando continuidade aos posts sobre o Xamarin.Forms, dessa vez vou 
 
 ### Criando o primeiro aplicativo
 
-Nesse exemplo estarei utilizando o [Xamarin Studio, a IDE oficial da Xamarin][1], no Xamarin Studio, assim como acontece no Visual Studio, ele já vem com algumas opções de templates que nos ajudam a economizar algum tempo quando vamos criar um projeto, felizmente, existe também um template para a criação de aplicativos Xamarin.Forms. Para criar um aplicativo usaremos esse template conforme a figura abaixo, o nosso primeiro app, com muita originalidade, se chamará `MyFirstApp`.
+Nesse exemplo estarei utilizando o [Xamarin Studio, a IDE oficial da Xamarin][1], o Xamarin Studio, assim como o Visual Studio, já vem com algumas opções de templates que nos ajudam a economizar algum tempo quando vamos criar um projeto, felizmente, existe também um template para a criação de aplicativos Xamarin.Forms. Para criar um aplicativo usaremos o template marcado na figura abaixo, o nosso primeiro app, com muita originalidade, se chamará `MyFirstApp`.
 
 ![Criando o primeiro projeto][2]
 
@@ -23,7 +23,7 @@ Após a criação da solução, o template já nos traz alguns projetos prontos,
 
 ![Projeto Compartilhado em Detalhes][4]
 
-Muito se fala sobre a produtividade e o compartilhamento de código no Xamarin, e é através desse projeto que essa mágica acontece, nesse projeto vamos colocar o código responsável pelas regras de negócio, criação de páginas, viewmodels, acesso a banco de dados, acesso a webservices, a idéia aqui é tentar colocar o máximo possível de código. Esse projeto então vai ser consumido por projetos específicos de cada plataforma, no nosso caso, o `MyFirstApp.Droid` e o `MyFirstApp.iOS`. O código abaixo merece comentários:
+Muito se fala sobre a produtividade e o compartilhamento de código no Xamarin, e é através desse projeto que essa mágica acontece, nesse projeto vamos colocar o código responsável pelas regras de negócio, criação de páginas, viewmodels, acesso a banco de dados e acesso a webservices, resumindo, a idéia aqui é tentar colocar o máximo possível de código. Esse projeto então vai ser consumido por projetos específicos de cada plataforma, no nosso caso, o `MyFirstApp.Droid` e o `MyFirstApp.iOS`. O código abaixo merece comentários:
 
 {% highlight c# %}
 public class App : Application
@@ -61,7 +61,7 @@ public class App : Application
 }
 {% endhighlight %}
 
-O código acima mostra a criação da classe `App`, o entry point do projeto compartilhado, nessa classe é criada a pagina inicial do aplicativo, são definidos alguns eventos do ciclo de vida da aplicação assim como também podem ser colocado informações que serão comuns a diferentes páginas da aplicação, um exemplo de informação pode ser um objeto com algumas características do usuário logado ou os últimos filtros utilizados durante a sessão atual.
+O código acima mostra a criação da classe `App`, o entry point do projeto compartilhado, nessa classe é criada a pagina inicial do aplicativo, são definidos alguns eventos do ciclo de vida da aplicação assim como também podem ser colocado informações que são comuns à diferentes páginas da aplicação, um exemplo desse tipo de informação pode ser um objeto com algumas características do usuário logado ou os últimos filtros utilizados durante a sessão atual.
 
 ### MyFirstApp.Droid
 
@@ -85,13 +85,13 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicat
 }
 {% endhighlight %}
 
-Assim como nos aplicativos Android escritos em Java, em um aplicativo Xamarin, a `MainActivity` também é o entry point e o desejável, embora nem sempre isso aconteça, é que ela seja a única activity do projeto e que saia de cena após invocar o entry point do projeto compartilhado. Na `MainActivity` também podem ser configurados injeções de dependência, serviços de analytics, crash reports e qualquer outra funcionalidade que precise ser inicializada a partir de um projeto Android.
+Assim como nos aplicativos Android escritos em Java, em um aplicativo Xamarin.Forms, a `MainActivity` também é o entry point e o desejável, embora nem sempre isso aconteça, é que ela seja a única activity do projeto e que saia de cena após invocar o entry point do projeto compartilhado. Na `MainActivity` também podem ser configurados injeções de dependência, serviços de analytics, crash reports e qualquer outra funcionalidade que precise ser inicializada a partir de um projeto Android.
 
 ### MyFirstApp.iOS
 
 ![Projeto iOS em Detalhes][6]
 
-Se um desenvolvedor Android poderia facilmente se confundir ao abrir o projeto Android em um aplicativo Xamarin, o mesmo vale para o desenvolvedor iOS, as pastas, a forma de nomear as imagens e os arquivos são os mesmos. A figura abaixo mostra um print do arquivo `Info.plist`, como podemos ver é igual ao que encontramos quando criamos o aplicativo no [XCode][8].
+Se um desenvolvedor Android poderia facilmente se confundir ao abrir o projeto Android em um aplicativo Xamarin, o mesmo vale para o desenvolvedor iOS, as pastas, a forma de nomear as imagens e os arquivos são os mesmos. Assim como acontece no `MyFirstApp.Droid`, nesse projeto iremos colocar código específico para o iOS (customizações de controles, uso de APIs nativas e etc). A figura abaixo mostra um print do arquivo `Info.plist`, como podemos ver é igual ao que encontramos quando criamos o aplicativo no [XCode][8].
 
 ![Info.plist Info][9]
 ![Info.plist Icons][10]
@@ -100,7 +100,7 @@ No iOS, o entry point se chama `Main` e assim como acontece no iOS com o objecti
 
 ### Era isso!
 
-Nesse post eu quis mostrar como se cria um aplicativo usando o Xamarin.Forms, qual a sua estrutura inicial e a responsabilidade de cada peça nessa estrutura, nos próximos posts vou falar mais a fundo sobre as Pages, Layouts e os Controls. Até breve!
+Nesse post eu quis mostrar como se cria um aplicativo usando o Xamarin.Forms, qual a sua estrutura inicial e a responsabilidade de cada peça nessa estrutura, nos próximos posts vou falar mais a fundo sobre as Pages, Layouts e os Controls que são os componentes que usamos para criar as telas dos aplicativos. Até breve!
 
 [1]: http://xamarin.com/studio
 [2]: /content/img/blog/posts/2015-03-09/creating-first-app.png
