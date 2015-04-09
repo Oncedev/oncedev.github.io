@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+   <head>
+      <meta charset="utf-8">
+      <title>OnceDev | Xamarin Forms: Usando Pages - Parte 1</title>
+      <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
+      <meta name="author" content="FIFOTHEMES.COM">
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <!-- Library CSS -->
+      <link rel="stylesheet" href="/content/css/bootstrap.css">
+      <link rel="stylesheet" href="/content/css/fonts/font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="/content/css/animations.css" media="screen">
+      <link rel="stylesheet" href="/content/css/superfish.css" media="screen">
+      <link rel="stylesheet" href="/content/css/revolution-slider/css/settings.css" media="screen">
+      <link rel="stylesheet" href="/content/css/prettyPhoto.css" media="screen">
+      <!-- Theme CSS -->
+      <link rel="stylesheet" href="/content/css/style.css">
+      <!-- Skin -->
+      <link rel="stylesheet" href="/content/css/colors/orange.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/content/css/theme-responsive.css">
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="/content/img/ico/favicon.ico">
+      <link rel="apple-touch-icon" href="/content/img/ico/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/content/img/ico/apple-touch-icon-72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/content/img/ico/apple-touch-icon-114.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/content/img/ico/apple-touch-icon-144.png">
+      <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/content/js/respond.min.js"></script>
+      <![endif]-->
+      <!--[if IE]>
+      <link rel="stylesheet" href="/content/css/ie.css">
+      <![endif]-->
+
+      
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-52445211-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+  
+   </head>
+   <body class="home">
+      <div class="wrap">
+         <!-- Header Start -->
+         <header id="header">
+            <!-- Header Top Bar Start -->
+			<!--
+            <div class="top-bar">
+               <div class="slidedown collapse">
+                  <div class="container">
+                     <div class="phone-email pull-left">
+                        <a><i class="icon-phone"></i> Ligue : +55 71 9723 9272</a>
+                        <a href="mail@example.com"><i class="icon-envelope"></i> Email : contato@oncedev.com</a>
+                     </div>
+                     <div class="pull-right">
+                        <ul class="social pull-left">
+                           <li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+                           <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                           <li class="dribbble"><a href="#"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#"><i class="icon-rss"></i></a></li>
+                        </ul>
+                        <div id="search-form" class="pull-right">
+                           <form action="#" method="get">
+                              <input type="text" class="search-text-box">
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			-->
+            <!-- Header Top Bar End -->
+            <!-- Main Header Start -->
+            <div class="main-header">
+               <div class="container">
+                  <!-- Logo Start -->
+                  <div class="logo pull-left">
+                     <h1>
+			<a href="http://www.oncedev.com/">
+                        <img src="/content/img/logo.png" alt="oncedev">
+                        </a>
+                     </h1>
+                  </div>
+                  <!-- Logo End -->
+                  <!-- Mobile Menu Start -->
+                  <div class="mobile navbar-header">
+                     <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse">
+                     <i class="icon-reorder icon-2x"></i>
+                     </a> 
+                  </div>
+                  <!-- Mobile Menu End -->
+                  <!-- Menu Start -->
+                  <nav class="collapse navbar-collapse menu">
+                     <ul class="nav navbar-nav sf-menu">
+			     <li><a href="http://www.oncedev.com/">Início</a></li>
+			     <li><a href="http://www.oncedev.com/missao">Missão</a></li>
+			     <li><a href="http://www.oncedev.com/clientes">Clientes</a></li>
+			     <li><a href="http://www.oncedev.com/servicos">Serviços</a></li>
+			     <li><a href="http://www.oncedev.com/contato">Contato</a></li>
+						<li><a href="/">Blog</a></li>
+                     </ul>
+                  </nav>
+                  <!-- Menu End --> 
+               </div>
+            </div>
+            <!-- Main Header End -->
+         </header>
+         <!-- Header End --> 
+		 
+		<!-- Content Start -->
+		<div id="main">
+                <div class="breadcrumb-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">Post</h2>
+                
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                    <ul>
+                        <li>Você está aqui:</li>
+                        <li><a href="http://www.oncedev.com/">Início</a></li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Xamarin Forms: Usando Pages - Parte 1</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- Main Content start-->
+                <div class="content">
+                <div class="container">
+                        <div class="row">
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
+
+
+
+
+<header class="post-header">
+	<h3 class="content-title">
+		<a class="titulo-post" href="">Xamarin Forms: Usando Pages - Parte 1</a>
+	</h3>
+	<div class="blog-entry-meta">
+		<div class="blog-entry-meta-date">
+			<i class="icon-time"></i>
+			08/04/2015
+		</div>
+		<div class="blog-entry-meta-author">
+			<i class="icon-user"></i>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
+		</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-circle"></i>
+			
+			<a href="/mobile">mobile</a>
+			
+	    	</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-tags"></i>
+			Xamarin, Mobile
+		</div>
+		
+	</div>
+</header>
+
+
+        <div class="post-content">					  
+        <p>No último post mostrei o esqueleto de uma aplicação Xamarin.Forms e usamos alguns dos componentes da API para criar uma tela simples que possui aparência e usabilidade nativa em cada uma das três plataformas. A partir desse post iremos conhecer mais os componentes da API começando pelas <code>Pages</code>.</p>
+
+<h3 id="pages">Pages</h3>
+
+<p>Uma <code>Page</code> no Xamarin.Forms representa uma tela dos nossos aplicativos mobile, funcionando assim de forma análoga as <code>Activities</code> no Android, as <code>ViewControllers</code> no iOS e as homôminas <code>Pages</code> do Windows Phone. A figura abaixo mostra todos os tipos de Pages que fazem parte do Xamarin.Forms, nesse post falaremos sobre a <code>ContentPage</code> e a <code>NavigationPage</code>, deixando a <code>TabbedPage</code>, a <code>MasterDetailPage</code> e a <code>CarouselPage</code> para um próximo post.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/pages.png" alt="Tipos de Pages" /></p>
+
+<h4 id="contentpage">ContentPage</h4>
+
+<p>No Xamarin.Forms cada Page tem o seu conteúdo associado a propriedade <code>Content</code> do tipo <code>View</code>, tipo esse, que é super classe de todos os Layouts e de todos os Controls da API (Lembra do <code>StackLayout</code>, do <code>Label</code> e <code>Entry</code> que vimos no <a href="/mobile/2015/03/18/anatomia-de-um-aplicativo-xamarins-forms/">último post?</a>). O <code>ContentPage</code> é exatamente uma página com uma view dentro dela.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/loren-ipsum.png" alt="ContentPage com Lorem Ipsun" /></p>
+
+<p>A figura acima mostra uma <code>ContentPage</code> onde a propriedade <code>Content</code> foi preenchida com um Label contendo um Lorem Ipsum aleatório conforme o código abaixo.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">FirstPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">FirstPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">{</span>
+			<span class="n">XAlign</span> <span class="p">=</span> <span class="n">TextAlignment</span><span class="p">.</span><span class="n">Center</span><span class="p">,</span>
+			<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;Nulla finibus, quam in elementum mattis, ipsum velit bibendum nisi, &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;ut feugiat ligula mi at lectus. Cras pretium elit a tortor accumsan &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;sagittis. Nunc vulputate libero sed sapien fermentum, eget condimentum &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;elit volutpat. Phasellus tincidunt sem mattis maximus auctor. Nunc congue &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;sodales urna, vel venenatis tortor tristique at. Vestibulum volutpat &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;sollicitudin mi vitae viverra. Nunc sollicitudin, nisl ac placerat congue, &quot;</span> <span class="p">+</span>
+			<span class="s">&quot;erat libero fringilla ante, at sodales risus leo ut lorem.&quot;</span>
+		<span class="p">};</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Como falei anteriormente nós também podemos usar Layouts como conteúdo de uma <code>ContentPage</code>, a imagem abaixo mostra uma <code>ContentPage</code> onde um <code>StackLayout</code> foi usado para mostrar as cores do arco-íris.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/rainbow.png" alt="ContentPage com as cores do arco-íris" /></p>
+
+<p>E o código abaixo é o código utilizado para criar a ContentPage com o arco-íris.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">RainbowPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">RainbowPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">()</span> <span class="p">{</span>				
+			<span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">FromRgb</span><span class="p">(</span><span class="m">255</span><span class="p">,</span> <span class="m">102</span><span class="p">,</span> <span class="m">0</span><span class="p">)},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Yellow</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Green</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Blue</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">FromRgb</span><span class="p">(</span><span class="m">111</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">255</span><span class="p">)},</span>
+				<span class="k">new</span> <span class="nf">BoxView</span><span class="p">()</span> <span class="p">{</span><span class="n">Color</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">FromRgb</span><span class="p">(</span><span class="m">159</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">255</span><span class="p">)}</span>
+			<span class="p">}</span>	
+		<span class="p">};</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<h4 id="navigationpage">NavigationPage</h4>
+
+<p>A <code>NavigationPage</code> serve para gerenciar uma pilha navegável de páginas e também é a forma mais utilizada para fazer navegação entre páginas em aplicações mobile (com certeza você já utilizou várias vezes esse tipo de navegação). Uma NavigationPage vai adicionar ao cabeçalho uma barra de navegação que mostrará o título da página atual e um botão de Voltar.</p>
+
+<p>Ao criar uma NavigationPage é necessário informar uma page em seu construtor que será o primeiro elemento da pilha de páginas (raiz). Como toda pilha, nós vamos interagir com ela empilhando e desempilhando novas páginas (<em>First-In First Out</em>). As Pages do Xamarin.Forms implementam a interface <code>INavigation</code> (box abaixo) que fornece os métodos para necessários para essa interação.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">interface</span> <span class="n">INavigation</span>
+<span class="p">{</span>
+    <span class="n">Task</span> <span class="nf">PushAsync</span><span class="p">(</span><span class="n">Page</span> <span class="n">page</span><span class="p">);</span>
+    <span class="n">Task</span><span class="p">&lt;</span><span class="n">Page</span><span class="p">&gt;</span> <span class="n">PopAsync</span><span class="p">();</span>
+    <span class="n">Task</span> <span class="nf">PopToRootAsync</span><span class="p">();</span>
+    <span class="n">Task</span> <span class="nf">PushModalAsync</span><span class="p">(</span><span class="n">Page</span> <span class="n">page</span><span class="p">);</span>
+    <span class="n">Task</span><span class="p">&lt;</span><span class="n">Page</span><span class="p">&gt;</span> <span class="n">PopModalAsync</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+
+<p>No próximo exemplo criaremos quatro páginas, uma NavigationPage, que gerenciará a navegação, duas ContentPage, uma vermelha e uma azul que terão botões que irão interagir com a pilha de navegação (poderemos empilhar uma página vermelha, empilhar uma página azul e voltar para a página raiz) e um label que mostrará o estado atual da pilha e a <code>ColorPage</code> que concentrará código comum à ambas <code>ContentPages</code>, afinal, nós gostamos de Xamarin mas também gostamos de boas práticas né?! Vamos na ordem:</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Nav Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">NavPage</span> <span class="p">:</span> <span class="n">NavigationPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">NavPage</span> <span class="p">()</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="k">new</span> <span class="n">BluePage</span><span class="p">())</span>
+	<span class="p">{</span>			
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>O código da <code>NavPage</code> é bem simples, ela apenas cria uma página de navegação e associa uma <code>BluePage</code> como primeiro elemento da pilha de navegação.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Blue Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">BluePage</span> <span class="p">:</span> <span class="n">ColorPage</span>
+<span class="p">{</span>		
+	<span class="k">public</span> <span class="nf">BluePage</span> <span class="p">()</span> <span class="p">:</span> <span class="k">base</span><span class="p">()</span>
+	<span class="p">{</span>			
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Blue</span><span class="p">;</span>
+		<span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Blue Page&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Red Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">RedPage</span> <span class="p">:</span> <span class="n">ColorPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">RedPage</span> <span class="p">()</span> <span class="p">:</span> <span class="k">base</span><span class="p">()</span>
+	<span class="p">{</span>			
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+		<span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Red Page&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Tanto a <code>RedPage</code> quanto a <code>BluePage</code> instanciam as suas propriedades de <code>BackgroundColor</code>, que será exibido em toda a tela do celular (exceto na barra de navegação) e de <code>Title</code>, que será exibido no cabeçalho da barra de navegação e ao lado do botão de Voltar conforme formos navegando entre as páginas. Note que ambas herdam de <code>ColorPage</code> já que, como ambas tem o mesmo visual e comportamento, não faz sentido repetir esse código em ambas as classes.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Color Page</span>
+<span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">ColorPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">private</span> <span class="n">StackLayout</span> <span class="n">_pages</span><span class="p">;</span>
+
+	<span class="k">public</span> <span class="nf">ColorPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">_pages</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">();</span>
+
+		<span class="c1">// Create Buttons</span>
+		<span class="kt">var</span> <span class="n">redButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span> <span class="p">()</span> <span class="p">{</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Push Red Page&quot;</span><span class="p">};</span>
+		<span class="n">redButton</span><span class="p">.</span><span class="n">Clicked</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+		<span class="p">{</span>
+			<span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">Navigation</span><span class="p">.</span><span class="n">PushAsync</span><span class="p">(</span><span class="k">new</span> <span class="n">RedPage</span><span class="p">());</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">blueButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span> <span class="p">()</span> <span class="p">{</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Push Blue Page&quot;</span><span class="p">};</span>
+		<span class="n">blueButton</span><span class="p">.</span><span class="n">Clicked</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+		<span class="p">{</span>
+			<span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">Navigation</span><span class="p">.</span><span class="n">PushAsync</span><span class="p">(</span><span class="k">new</span> <span class="n">BluePage</span><span class="p">());</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">backButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span> <span class="p">()</span> <span class="p">{</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Back&quot;</span><span class="p">};</span>
+		<span class="n">backButton</span><span class="p">.</span><span class="n">Clicked</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+		<span class="p">{</span>
+			<span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">Navigation</span><span class="p">.</span><span class="n">PopAsync</span><span class="p">();</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">rootButton</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Button</span> <span class="p">()</span> <span class="p">{</span><span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;Back to Root&quot;</span><span class="p">};</span>
+		<span class="n">rootButton</span><span class="p">.</span><span class="n">Clicked</span> <span class="p">+=</span> <span class="k">async</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> 
+		<span class="p">{</span>
+			<span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="n">Navigation</span><span class="p">.</span><span class="n">PopToRootAsync</span><span class="p">();</span>
+		<span class="p">};</span>
+
+		<span class="c1">// Create Content</span>
+		<span class="n">Content</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">()</span> 
+		<span class="p">{</span>
+			<span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+				<span class="n">redButton</span><span class="p">,</span>
+				<span class="n">blueButton</span><span class="p">,</span>
+				<span class="n">backButton</span><span class="p">,</span>
+				<span class="n">rootButton</span><span class="p">,</span>
+				<span class="n">_pages</span>
+			<span class="p">}</span>	
+		<span class="p">};</span>
+	<span class="p">}</span>
+		
+	<span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnAppearing</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="c1">// Override default OnAppearing and write NavigationStackContent</span>
+		<span class="n">_pages</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Clear</span> <span class="p">();</span>
+		<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">page</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="n">Navigation</span><span class="p">.</span><span class="n">NavigationStack</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">_pages</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span>
+				<span class="k">new</span> <span class="nf">Label</span> <span class="p">()</span> 
+				<span class="p">{</span>
+					<span class="n">Text</span> <span class="p">=</span> <span class="n">page</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">ToString</span><span class="p">()</span>
+				<span class="p">}</span>
+			<span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>O código da <code>ColorPage</code> acaba sendo o mais complicado do exemplo, mas não é difícil de entender, no construtor da página, nós construímos os elementos visuais da página (botões e listagem de páginas) e atribuímos os seus respectivos eventos de navegação usando os métodos <em>PushAsync</em> para inserir uma nova página na pilha, o método <em>PopAsync</em> para desempilhar apenas uma página e o método <em>PopToRootAsync</em> para desempilhar todas as páginas até que reste apenas a primeira página na pilha.</p>
+
+<p>Nesse exemplo também iremos usar pela primeira vez nesse blog o método <em>OnAppearing</em>, o <em>OnAppearing</em> faz parte do ciclo de eventos de inicialização da página, nesse caso, podemos sobreescrever esses métodos para realizar alguma operação, no caso, estou utilizando para obter as páginas da pilha e inserir elas no StackLayout. Mas por quê não fazer isso no construtor? O que acontece é que no construtor a página ainda não pertence a pilha de navegação e portanto não temos acesso a <code>NavigationStack</code>.</p>
+
+<p>Ao navegarmos pelo aplicativo teremos as telas abaixo:</p>
+
+<p>Tela Inicial</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/first-page.png" alt="Primeira Página" /></p>
+
+<p>Após clicarmos no botão <em>Push Red Page</em>, nós agora estamos na <code>RedPage</code> e a nossa pilha de navegação tem agora 2 páginas.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/second-page.png" alt="Segunda Página" /></p>
+
+<p>Ao clicarmos no botão de <em>Back</em>, a <code>RedPage</code> será desempilhada e voltaremos ao estado inicial da pilha.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/third-page.png" alt="Terceira Página" /></p>
+
+<p>Ao clicarmos 3 vezes no botão de <em>Push Red Page</em>, nós agora estamos na <code>RedPage</code> e a nossa pilha de navegação tem agora 4 páginas.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/forth-page.png" alt="Quarta Página" /></p>
+
+<p>Ao clicarmos no botão <em>Back to Root</em>, todas as telas exceto a primeira serão desempilhadas e voltaremos ao estado incial da pilha.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-08/fifth-page.png" alt="Quinta Página" /></p>
+
+<h3 id="era-isso">Era isso!</h3>
+
+<p>O objetivo do post era mostrar as páginas mais usadas quando estamos desenvolvendo um aplicativo usando o Xamarin.Forms, ficou um pouco longo mas espero que vocês tenham gostado <a href="https://github.com/pauloortins/MyXamarinSamples">(lembrando que todos os exemplos estão disponibilizados no meu github).</a> No próximo post vamos dar uma olhada nas Pages restantes (<code>TabbedPage</code>, <code>MasterDetailPage</code> e na <code>CarouselPage</code>), qualquer dúvida podem perguntar nos comentários ou me procurar nas redes sociais. Até mais!</p>
+
+
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
+    
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
+            
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
+
+</div>
+
+                        <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <!-- Tab Start -->
+    <div class="widget tabs">
+        <h3 class="title">Recentes</h3>
+        <div id="horizontal-tabs">
+            <div class="contents">
+                <div class="tabscontent" id="content1" style="display: block;">
+                    <ul class="posts">
+                    
+                    <li>
+                        <p><a href="/mobile/2015/04/08/xamarin-forms-usando-pages-parte-1/">Xamarin Forms: Usando Pages - Parte 1</a></p>
+                        <span class="color">08/04/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/03/18/anatomia-de-um-aplicativo-xamarins-forms/">Anatomia de um aplicativo Xamarin.Forms</a></p>
+                        <span class="color">18/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/03/08/xamarin-forms/">O que é o Xamarin.Forms e pra que serve?</a></p>
+                        <span class="color">08/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mercado/2015/03/07/o-proximo-campo-de-batalha/">O próximo campo de batalha</a></p>
+                        <span class="color">07/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/agilidade/2015/03/02/em-qual-tipo-de-empresa-agil-voce-trabalha/">Em qual tipo de empresa ágil você trabalha?</a></p>
+                        <span class="color">02/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">O que eu encontrei fora da Matrix?</a></p>
+                        <span class="color">25/10/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2014/10/04/comecando-com-o-xamarin/">Começando com o Xamarin</a></p>
+                        <span class="color">04/10/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/aspnet/2014/08/14/aspnet-vnext-game-changer-ou-atualizacao-tecnica/">ASP.NET vNext - Game Changer ou Atualização Técnica</a></p>
+                        <span class="color">14/08/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2014/07/13/criando-um-mapa-da-copa-do-mundo-usando-xamarin-ios/">Criando um mapa da copa do mundo usando o Xamarin.iOS</a></p>
+                        <span class="color">13/07/2014</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/carreira/2014/07/07/saindo-da-matrix/">Saindo da Matrix</a></p>
+                        <span class="color">07/07/2014</span>
+                    </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab End -->
+    <!-- Category Widget Start -->
+    <div class="widget category">
+        <h3 class="title">Categorias</h3>
+        <ul class="category-list slide">
+            
+            <li><a href="/eventos">eventos</a></li>
+            
+            <li><a href="/lideranca">lideranca</a></li>
+            
+            <li><a href="/testes">testes</a></li>
+            
+            <li><a href="/jekyll">jekyll</a></li>
+            
+            <li><a href="/mobile">mobile</a></li>
+            
+            <li><a href="/carreira">carreira</a></li>
+            
+            <li><a href="/aspnet">aspnet</a></li>
+            
+            <li><a href="/agilidade">agilidade</a></li>
+            
+            <li><a href="/mercado">mercado</a></li>
+            
+        </ul>
+    </div>
+    <!-- Category Widget End -->                                
+</div>
+<!-- Sidebar End --> 
+    
+                        </div>
+                </div>
+                </div>
+                <!-- Main Content end-->
+                </div>
+		 <!-- Content End -->		
+		 
+         <!-- Footer Start -->
+         <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+               <div class="container">
+                  <div class="row">
+				  <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                       <div class="fb-like-box" data-href="https://www.facebook.com/oncedevsolucoes" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+					 </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                        <h3>Sobre</h3>
+                        <p> 
+                           A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade sem abrir mão de qualidade e do respeito ao cliente. 
+                        </p>
+                     </section>
+					
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                        <h3>Contatos</h3>
+                        <ul class="contact-us">
+                           <li>
+                              <i class="icon-map-marker"></i>
+                              <p> 
+                                 <strong>Endereço:</strong> Av. Otavio Mangabeira, nº 929 - Pituba, <br>
+                                 Salvador, Bahia 
+                              </p>
+                           </li>
+                           <li>
+                              <i class="icon-phone"></i>
+                              <p><strong>Telefone:</strong> +55 71 9993 1356</p>
+                           </li>
+                           <li>
+                              <i class="icon-envelope"></i>
+                              <p><strong>Email:</strong><a href="mailto:oncedev@oncedev.com">oncedev@oncedev.com</a></p>
+                           </li>
+                        </ul>
+                     </section>
+					 
+					  </div>
+               </div>
+            </div>
+            <!-- Footer Top End --> 
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright 2013 by <a href="#">OnceDev</a>. All Rights Reserved. </div>					 
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                        <ul class="social social-icons-footer-bottom">
+                           <a href="https://www.facebook.com/oncedevsolucoes" target="_blankk" data-toggle="tooltip" title="Facebook"><li class="facebook" style="margin-right: 5px !important;"><i class="icon-facebook"></i></li></a>
+                           <a href="https://twitter.com/OnceDev" target="_blankk" data-toggle="tooltip" title="Twitter"><li class="twitter"><i class="icon-twitter"></i></li></a>
+                           <!-- <li class="dribbble"><a href="#" data-toggle="tooltip" title="Dribble"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#" data-toggle="tooltip" title="Rss"><i class="icon-rss"></i></a></li> -->
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Bottom End --> 
+         </footer>
+         <!-- Scroll To Top --> 
+         <a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+		</div>
+		<!-- Wrap End -->
+		<!-- The Scripts -->
+		<script src="/content/js/jquery.min.js"></script>
+		<script src="/content/js/bootstrap.js"></script>
+		<script src="/content/js/jquery.parallax.js"></script> 
+		<script src="/content/js/modernizr-2.6.2.min.js"></script> 
+		<script src="/content/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="/content/js/jquery.nivo.slider.pack.js"></script>
+		<script src="/content/js/jquery.prettyPhoto.js"></script>
+		<script src="/content/js/superfish.js"></script>
+		<script src="/content/js/tweetMachine.js"></script>
+		<script src="/content/js/tytabs.js"></script>
+		<script src="/content/js/jquery.gmap.min.js"></script>
+		<script src="/content/js/circularnav.js"></script>
+		<script src="/content/js/jquery.sticky.js"></script>
+		<script src="/content/js/jflickrfeed.js"></script>
+		<script src="/content/js/imagesloaded.pkgd.min.js"></script>
+		<script src="/content/js/waypoints.min.js"></script>
+		<script src=" /content/js/custom.js "></script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+			  
+		<script type="text/javascript">
+			var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+		</script>
+		
+	  </body>
+	  
+</html>
