@@ -4,7 +4,7 @@
 <!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
    <head>
       <meta charset="utf-8">
-      <title>OnceDev | Blog - lideranca</title>
+      <title>OnceDev | Xamarin Forms: Usando Pages - Parte 2</title>
       <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
       <meta name="author" content="FIFOTHEMES.COM">
       <!-- Mobile Metas -->
@@ -133,9 +133,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                <h2 class="title">Blog</h2>
-                
-                <p>Mostrando Posts da categoria: <b>lideranca</b> <a href="/"><b>X</b></a></p>
+                <h2 class="title">Post</h2>
                 
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
@@ -143,7 +141,9 @@
                     <ul>
                         <li>Você está aqui:</li>
                         <li><a href="http://www.oncedev.com/">Início</a></li>
-                        <li>Blog</li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Xamarin Forms: Usando Pages - Parte 2</li>
                         
                     </ul>
                 </div>
@@ -155,58 +155,232 @@
                 <div class="content">
                 <div class="container">
                         <div class="row">
-                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
-    
-        <article class="post hentry">
-            
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
 
 
 
 
 <header class="post-header">
 	<h3 class="content-title">
-		<a class="titulo-post" href="/lideranca/2014/05/09/o-lider-e-a-educacao/">O Líder e a Educação</a>
+		<a class="titulo-post" href="">Xamarin Forms: Usando Pages - Parte 2</a>
 	</h3>
 	<div class="blog-entry-meta">
 		<div class="blog-entry-meta-date">
 			<i class="icon-time"></i>
-			09/05/2014
+			10/04/2015
 		</div>
 		<div class="blog-entry-meta-author">
 			<i class="icon-user"></i>
-                        <a href="mailto:joaoseixas@oncedev.com" class="blog-entry-meta-author">João Seixas</a>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
 		</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-circle"></i>
 			
-			<a href="/lideranca">lideranca</a>
+			<a href="/mobile">mobile</a>
 			
 	    	</div>
 		<div class="blog-entry-meta-tags">
 			<i class="icon-tags"></i>
-			liderança, coaching, equipe
-		</div>
-		
-		<div class="blog-entry-meta-comments">
-			<i class="icon-comments"></i>
-			<a href="/lideranca/2014/05/09/o-lider-e-a-educacao/#disqus_thread" ></a>
+			Xamarin, Mobile
 		</div>
 		
 	</div>
 </header>
 
 
-            <div class="post-content">
-                    <p>Vivemos na era da informa&ccedil;&atilde;o e temos muitos dados a disposi&ccedil;&atilde;o para tomar decis&otilde;es nas empresas e em nossas vidas, na area que atuo as pessoas costumam se intitular &quot;&quot;knowledge workers&quot;&quot; ou &quot;&quot;trabalhadores do conhecimento&quot;&quot;, em uma tradu&ccedil;&atilde;o livre. Estamos na era da gest&atilde;o do capital intelectual, onde queremos construir e preservar o conhecimento. O objetivo &eacute; facilitar o processo de transmiss&atilde;o e constru&ccedil;&atilde;o de conhecimento dentro das empresas e com isso buscar acima de tudo, inova&ccedil;&atilde;o. E para isso, cabe ao l&iacute;&shy;der o papel de facilitador do aprendizado e da constru&ccedil;&atilde;o do conhecimento.</p>
+        <div class="post-content">					  
+        <p>Olá pessoal! Nesse post volto para falar de mais duas opções de Pages que são a TabbedPage e a CarouselPage. Vamos ver como podemos usá-las para criar os nossos aplicativos móveis!</p>
+
+<h3 id="tabbedpage">TabbedPage</h3>
+
+<p>Além da navegação baseada em pilhas, que podemos atingir usando a <a href="/mobile/2015/04/08/xamarin-forms-usando-pages-parte-1/">NavigationPage</a>, uma outra forma bem comum de navegação em aplicações móveis é a navegação em abas, utilizamos esse tipo de navegação todos os dias quando acessamos as nossas redes sociais, seja no <a href="www.facebook.com">Facebook</a>, no <a href="www.twitter.com">Twitter</a> ou no <a href="www.instagram.com">Instagram</a>.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-10/quora.png" alt="Fotos de Abas rede social" />
+O app Quora possui navegação baseada em abas.</p>
+
+<p>Algo importante quando falamos de abas, é termos a idéia de que cada sistema operacional tem um <em>look and feel</em> próprio, por exemplo, no Android, as abas são posicionadas no topo e exibem apenas texto, no iOS, as abas são posicionadas ao final da página e apresentam tanto texto quanto ícones, no Windows Phone, as abas não tem o formato de abas propriamente dito e sim são textos navegáveis. Como sempre falo aqui no blog, respeitar essas características é importante para garantir que os nossos usuários tenham sempre uma experiência de uso fluida e intuitiva. Você pode conferir essa diferença nos screenshots do aplicativo <a href="www.quora.com">Quora</a> na imagem acima ou no demo abaixo.</p>
+
+<p>Felizmente, o Xamarin.Forms possui uma <code>Page</code> específica para abas e que cuida disso tudo para nós, desenvolvedores, e é a <code>TabbedPage</code>. <a href="/mobile/2015/03/08/xamarin-forms/">No post introdutório</a> que fiz sobre o Xamarin.Forms nesse mesmo blog já foi possível ter um primeiro contato com a classe mas é nesse post que vamos aprofundar um pouco esse conhecimento.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-10/example-forms.png" alt="Fotos de Abas no primeiro post" /></p>
+
+<p>Uma TabbedPage não tem contéudo por si só, na verdade, a gente vai atribuir, como filhas, outras paginas com conteúdo próprio (<a href="/mobile/2015/04/08/xamarin-forms-usando-pages-parte-1/">lembra da ContentPage?</a>) que vão ser gerenciadas pela <code>TabbedPage</code>. É importante não esquecer de atribuir as propriedades <code>Title</code> e a <code>Icon</code> visto que elas serão usadas para a criação das abas. O código abaixo mostra a criação de uma <code>TabbedPage</code> e duas <code>ContentPage</code> que serão utilizadas como abas da página principal. Como ícones para as abas, usaremos dois ícones do <a href="http://ionicons.com/">Ionic Icons</a> que é uma coleção de ícones bem interessante e que eu recomendo fortemente, por default, no iOS (o único que usa ícones nas abas), as imagens são convertidas para um tom de cinza independentes da sua cor original, para usar imagens deveremos adiciona-las em cada projeto específico(iOS e Android) separadamente.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Blue Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">BluePage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">BluePage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Blue</span><span class="p">;</span>
+		<span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Blue Page&quot;</span><span class="p">;</span>
+		<span class="n">Icon</span> <span class="p">=</span> <span class="s">&quot;heart.png&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Red Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">RedPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">RedPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+		<span class="n">Title</span> <span class="p">=</span> <span class="s">&quot;Red Page&quot;</span><span class="p">;</span>
+		<span class="n">Icon</span> <span class="p">=</span> <span class="s">&quot;icecream.png&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// TabPage</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">TabPage</span> <span class="p">:</span> <span class="n">TabbedPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">TabPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">BluePage</span> <span class="p">());</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">RedPage</span> <span class="p">());</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executar o código abaixo no Android e no iOS, iremos ter uma tela com duas abas e com uma aparência nativa em cada um dos dispositivos.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-10/tabpage.png" alt="TabbedPage" /></p>
+
+<p>Quando trabalhamos com abas frequentemente temos a necessidade de interagir com a aba selecionada ou disparar alguma ação quando a aba selecionada é alterada. Na <code>TabbedPage</code> temos a propriedade <code>CurrentPage</code>, que pode ser usada para setar ou obter a aba selecionada e o evento <code>CurrentPageChanged</code> que é disparado toda vez que uma nova aba é selecionada.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Obtém ou seta a aba selecionada</span>
+<span class="k">public</span> <span class="n">T</span> <span class="n">CurrentPage</span> <span class="p">{</span>
+	<span class="k">get</span><span class="p">;</span>
+	<span class="k">set</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Evento que é disparado quando a aba selecionada é alterada</span>
+<span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span> <span class="n">CurrentPageChanged</span></code></pre></div>
+
+<h3 id="carouselpage">CarouselPage</h3>
+
+<p>Galerias de imagens, pessoas, restaurantes, discos e assim por diante são bastante comuns em aplicações mobile, nesse tipo de apresentação de dados, é exibida uma página em destaque enquanto a navegação entre as páginas é feita através dos eventos conhecidos como <em>swipe left</em> ou <em>swipe right</em> que consistem em arrastar lateralmente para a direita, ou para a esquerda, a página do aplicativo.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-10/gallery.jpg" alt="Foto Galeria Exemplo" /></p>
+
+<p>Para a criação de galerias a <code>CarouselPage</code> é a escolha certa. A <code>CarouselPage</code> é da mesma categoria da <code>TabbedPage</code> ,ambas herdam da mesma classe base, a <code>MultiPage</code>, no entanto, enquanto a <code>TabbedPage</code> organiza suas páginas filhas em abas, a <code>CarouselPage</code> organiza essas pages lado a lado e permite a navegação dessas páginas através dos <em>swipes</em> laterais. O código abaixo a criação de uma <code>CarouselPage</code> com 4 <code>ContentPages</code> de cores diferentes, a inicialização é igual a inicialização da <code>TabbedPage</code>, a diferença é como elas lidam com as páginas filhas por debaixo do pano.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Blue Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">BluePage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">BluePage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Blue</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Red Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">RedPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">RedPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Red</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Yellow Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">YellowPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">YellowPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Yellow</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Green Page</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">GreenPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">GreenPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">BackgroundColor</span> <span class="p">=</span> <span class="n">Color</span><span class="p">.</span><span class="n">Green</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// CarouselPage</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MyCarouselPage</span> <span class="p">:</span> <span class="n">CarouselPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">MyCarouselPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">BluePage</span> <span class="p">());</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">RedPage</span> <span class="p">());</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">YellowPage</span> <span class="p">());</span>
+		<span class="k">this</span><span class="p">.</span><span class="n">Children</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">GreenPage</span> <span class="p">());</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executarmos o projeto, nós vamos ter a página azul como página inicial, mas vamos ser capazes de navegar entre as páginas arrastando as telas.</p>
+
+<p><img src="/content/img/blog/posts/2015-04-10/carousel.png" alt="Carousel" /></p>
+
+<p>Como a <code>CarouselPage</code> herda da mesma classe base que a <code>TabbedPage</code>, nós também conseguimos acessar a página atual e disparar eventos ao alterar a página atual da mesma forma que fazemos quando usamos uma <code>TabbedPage</code>.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="c1">// Obtém ou seta a aba selecionada</span>
+<span class="k">public</span> <span class="n">T</span> <span class="n">CurrentPage</span> <span class="p">{</span>
+	<span class="k">get</span><span class="p">;</span>
+	<span class="k">set</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Evento que é disparado quando a aba selecionada é alterada</span>
+<span class="k">public</span> <span class="k">event</span> <span class="n">EventHandler</span> <span class="n">CurrentPageChanged</span></code></pre></div>
+
+<p>Ambos os exemplos demonstrados estão disponíveis no meu github (<a href="https://github.com/pauloortins/MyXamarinSamples/tree/master/TabsPage">TabbedPage</a> e <a href="https://github.com/pauloortins/MyXamarinSamples/tree/master/Carousel">CarouselPage</a>).</p>
+
+<h3 id="era-isso">Era isso!</h3>
+
+<p>Nesse post vimos duas pages que agem como gerenciadoras de outras pages que são a <code>TabbedPage</code> e a <code>CarouselPage</code> e vimos como pode ser fácil utiliza-las para criar navegações iguais às que já estamos acostumados a usar em outros aplicativos no nosso dia-a-dia. No próximo post vamos fechar a seção de Pages com a última da lista: a <code>MasterDetailPage</code>.</p>
 
 
-            </div>
-            <footer class="post-footer">
-                    <a class="btn-small btn-color" href="/lideranca/2014/05/09/o-lider-e-a-educacao/">Leia Mais</a>
-            </footer>
-        </article>
-        <div class="blog-divider"></div>
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
     
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
+            
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
+
 </div>
 
                         <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
