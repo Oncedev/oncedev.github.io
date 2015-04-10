@@ -219,7 +219,7 @@ Ao clicarmos no botão *Back to Root*, todas as telas exceto a primeira serão d
 
 ### Era isso!
 
-O objetivo do post era mostrar as páginas mais usadas quando estamos desenvolvendo um aplicativo usando o Xamarin.Forms, ficou um pouco longo mas espero que vocês tenham gostado [(lembrando que todos os exemplos estão disponibilizados no meu github).][9] No próximo post vamos dar uma olhada nas Pages restantes (`TabbedPage`, `MasterDetailPage` e na `CarouselPage`), qualquer dúvida podem perguntar nos comentários ou me procurar nas redes sociais. Até mais!
+O objetivo do post era mostrar as páginas mais usadas quando estamos desenvolvendo um aplicativo usando o Xamarin.Forms, ficou um pouco longo mas espero que vocês tenham gostado [(lembrando que todos os exemplos estão disponibilizados no meu github).][9] Nos próximos post vamos dar uma olhada nas Pages restantes (`TabbedPage`, `MasterDetailPage` e na `CarouselPage`), qualquer dúvida podem perguntar nos comentários ou me procurar nas redes sociais. Até mais!
 
 [1]: /content/img/blog/posts/2015-04-08/pages.png
 [2]: /content/img/blog/posts/2015-04-08/loren-ipsum.png
