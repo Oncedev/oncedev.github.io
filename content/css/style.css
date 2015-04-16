@@ -82,11 +82,16 @@ h3.title:after {
     width: 83px;
 }
 
-ul,li,ol {
+ul li {
     line-height: 24px;
     list-style: disc inside none;
     margin: 0;
     padding: 0;
+}
+
+ol li {
+    line-height: 24px;
+    margin: 0;
 }
 
 a:hover,a:focus {
