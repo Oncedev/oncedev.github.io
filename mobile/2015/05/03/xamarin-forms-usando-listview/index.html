@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+   <head>
+      <meta charset="utf-8">
+      <title>OnceDev | Xamarin Forms: Usando a ListView</title>
+      <meta name="description" content="A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade e sem abrir mão de qualidade.">
+      <meta name="author" content="FIFOTHEMES.COM">
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Google Fonts -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+      <!-- Library CSS -->
+      <link rel="stylesheet" href="/content/css/bootstrap.css">
+      <link rel="stylesheet" href="/content/css/fonts/font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="/content/css/animations.css" media="screen">
+      <link rel="stylesheet" href="/content/css/superfish.css" media="screen">
+      <link rel="stylesheet" href="/content/css/revolution-slider/css/settings.css" media="screen">
+      <link rel="stylesheet" href="/content/css/prettyPhoto.css" media="screen">
+      <!-- Theme CSS -->
+      <link rel="stylesheet" href="/content/css/style.css">
+      <!-- Skin -->
+      <link rel="stylesheet" href="/content/css/colors/orange.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="/content/css/theme-responsive.css">
+      <!-- Syntax CSS -->
+      <link rel="stylesheet" href="/content/css/syntax.css">
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="/content/img/ico/favicon.ico">
+      <link rel="apple-touch-icon" href="/content/img/ico/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="/content/img/ico/apple-touch-icon-72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="/content/img/ico/apple-touch-icon-114.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="/content/img/ico/apple-touch-icon-144.png">
+      <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/content/js/respond.min.js"></script>
+      <![endif]-->
+      <!--[if IE]>
+      <link rel="stylesheet" href="/content/css/ie.css">
+      <![endif]-->
+
+      
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-52445211-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+
+  
+   </head>
+   <body class="home">
+      <div class="wrap">
+         <!-- Header Start -->
+         <header id="header">
+            <!-- Header Top Bar Start -->
+			<!--
+            <div class="top-bar">
+               <div class="slidedown collapse">
+                  <div class="container">
+                     <div class="phone-email pull-left">
+                        <a><i class="icon-phone"></i> Ligue : +55 71 9723 9272</a>
+                        <a href="mail@example.com"><i class="icon-envelope"></i> Email : contato@oncedev.com</a>
+                     </div>
+                     <div class="pull-right">
+                        <ul class="social pull-left">
+                           <li class="facebook"><a href="#"><i class="icon-facebook"></i></a></li>
+                           <li class="twitter"><a href="#"><i class="icon-twitter"></i></a></li>
+                           <li class="dribbble"><a href="#"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#"><i class="icon-rss"></i></a></li>
+                        </ul>
+                        <div id="search-form" class="pull-right">
+                           <form action="#" method="get">
+                              <input type="text" class="search-text-box">
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+			-->
+            <!-- Header Top Bar End -->
+            <!-- Main Header Start -->
+            <div class="main-header">
+               <div class="container">
+                  <!-- Logo Start -->
+                  <div class="logo pull-left">
+                     <h1>
+			<a href="http://www.oncedev.com/">
+                        <img src="/content/img/logo.png" alt="oncedev">
+                        </a>
+                     </h1>
+                  </div>
+                  <!-- Logo End -->
+                  <!-- Mobile Menu Start -->
+                  <div class="mobile navbar-header">
+                     <a class="navbar-toggle" data-toggle="collapse" href=".navbar-collapse">
+                     <i class="icon-reorder icon-2x"></i>
+                     </a> 
+                  </div>
+                  <!-- Mobile Menu End -->
+                  <!-- Menu Start -->
+                  <nav class="collapse navbar-collapse menu">
+                     <ul class="nav navbar-nav sf-menu">
+			     <li><a href="http://www.oncedev.com/">Início</a></li>
+			     <li><a href="http://www.oncedev.com/missao">Missão</a></li>
+			     <li><a href="http://www.oncedev.com/clientes">Clientes</a></li>
+			     <li><a href="http://www.oncedev.com/servicos">Serviços</a></li>
+			     <li><a href="http://www.oncedev.com/contato">Contato</a></li>
+						<li><a href="/">Blog</a></li>
+                     </ul>
+                  </nav>
+                  <!-- Menu End --> 
+               </div>
+            </div>
+            <!-- Main Header End -->
+         </header>
+         <!-- Header End --> 
+		 
+		<!-- Content Start -->
+		<div id="main">
+                <div class="breadcrumb-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">Post</h2>
+                
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                    <ul>
+                        <li>Você está aqui:</li>
+                        <li><a href="http://www.oncedev.com/">Início</a></li>
+                        <li><a href="/">Blog</a></li>
+                        
+                        <li>Xamarin Forms: Usando a ListView</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- Main Content start-->
+                <div class="content">
+                <div class="container">
+                        <div class="row">
+                        <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+    <article class="post hentry">
+        
+
+
+
+
+<header class="post-header">
+	<h3 class="content-title">
+		<a class="titulo-post" href="">Xamarin Forms: Usando a ListView</a>
+	</h3>
+	<div class="blog-entry-meta">
+		<div class="blog-entry-meta-date">
+			<i class="icon-time"></i>
+			03/05/2015
+		</div>
+		<div class="blog-entry-meta-author">
+			<i class="icon-user"></i>
+                        <a href="mailto:pauloortins@oncedev.com" class="blog-entry-meta-author">Paulo Ortins</a>
+		</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-circle"></i>
+			
+			<a href="/mobile">mobile</a>
+			
+	    	</div>
+		<div class="blog-entry-meta-tags">
+			<i class="icon-tags"></i>
+			Xamarin, Mobile
+		</div>
+		
+	</div>
+</header>
+
+
+        <div class="post-content">					  
+        <p>Nesse post vamos falar da ListView, controle usado para mostrar dados em formato de lista.</p>
+
+<h3 id="listview">ListView</h3>
+
+<p>Quase sempre em nossos nossos aplicativos móveis temos a necessidade de mostrar dados em formato de listas, esses dados podem ser pessoas, mensagens, restaurantes ou qualquer outra coisa. O Xamarin.Forms possui um controle específico para esses casos, que é a <code>ListView</code>.</p>
+
+<h3 id="construindo-a-primeira-listview">Construindo a primeira ListView</h3>
+
+<p>Para declarar uma <code>ListView</code> não precisamos de nada mais além do <code>ItemsSource</code> que são os dados que vão ser exibidos na lista. O código abaixo mostra a criação de uma ListView para exibir uma lista de cidades.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">TextListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">TextListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="kt">var</span> <span class="n">cities</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="s">&quot;Miami&quot;</span><span class="p">,</span>
+			<span class="s">&quot;San Francisco&quot;</span><span class="p">,</span>
+			<span class="s">&quot;Los Angeles&quot;</span><span class="p">,</span>
+			<span class="s">&quot;Orlando&quot;</span><span class="p">,</span>
+			<span class="s">&quot;Houston&quot;</span><span class="p">,</span>
+			<span class="s">&quot;New York City&quot;</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">cities</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executar o código acima tanto no Android como no iOS nós temos as seguintes telas:</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/list-view-text.png" alt="ListView Simples" /></p>
+
+<h3 id="exibindo-objetos-complexos">Exibindo objetos complexos</h3>
+
+<p>A exibição nas listas não se resume a apenas objetos do tipo string, como a propriedade <code>ItemsSource</code> é um <code>IEnumerable</code>, nós também podemos passar objetos complexos para uma <code>ListView</code>. O exemplo abaixo mostra um exemplo utilizando a classe <code>City</code>.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">ComplexObjectListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">class</span> <span class="nc">City</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">State</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="nf">ComplexObjectListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>			
+		<span class="kt">var</span> <span class="n">cities</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Miami&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;San Francisco&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Los Angeles&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Orlando&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;TX&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Houston&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;NY&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New York City&quot;</span><span class="p">},</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">cities</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Se rodarmos o código acima, vamos ver que o resultado não é o esperado, ao invés de mostrar o nome de cada cidade, a lista está mostrando o nome da classe. Por default, a ListView executa o método <code>ToString()</code> de cada um dos objetos e por isso o nome da classe está sendo exibido.</p>
+
+<p>Para que seja atingido o mesmo resultado de antes precisamos adicionar um <code>DataTemplate</code>, que é um template que vai orientar a <code>ListView</code> em como renderizar cada item da lista.</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/complex-object-text.png" alt="ListView Objetos Complexos" /></p>
+
+<h3 id="usando-datatemplate-para-renderizar-a-listview">Usando DataTemplate para renderizar a ListView</h3>
+
+<p>O Xamarin já vem com alguns templates pré-construídos:</p>
+
+<ul>
+  <li><a href="http://iosapi.xamarin.com/index.aspx?link=T%3AXamarin.Forms.TextCell">TextCell</a></li>
+  <li><a href="http://iosapi.xamarin.com/?link=T%3aXamarin.Forms.ImageCell">ImageCell</a></li>
+  <li><a href="http://iosapi.xamarin.com/?link=T%3aXamarin.Forms.SwitchCell">SwitchCell</a></li>
+  <li><a href="http://iosapi.xamarin.com/?link=T%3aXamarin.Forms.EntryCell">EntryCell</a></li>
+</ul>
+
+<p>Nesse exemplo vamos usar o <code>TextCell</code> para renderizar os nomes das cidades, para isso vamos instanciar um <code>DataTemplate</code> do tipo <code>TextCell</code> e associar o texto da célula a propriedade <code>Name</code> da classe <code>City</code>.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TextCell</span><span class="p">));</span>
+<span class="n">dataTemplate</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">TextCell</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span></code></pre></div>
+
+<p>O código final fica assim:</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">ComplexObjectListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">class</span> <span class="nc">City</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">State</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="nf">ComplexObjectListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>			
+		<span class="kt">var</span> <span class="n">cities</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Miami&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;San Francisco&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Los Angeles&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Orlando&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;TX&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Houston&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;NY&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New York City&quot;</span><span class="p">},</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TextCell</span><span class="p">));</span>
+		<span class="n">dataTemplate</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">TextCell</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">cities</span><span class="p">,</span>
+			<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Agora sim, quando executarmos o código acima vamos ter o resultado que estávamos esperando.</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/complex-object-template.png" alt="ListView Objetos Complexos TextCell" /></p>
+
+<h3 id="usando-templates-customizados">Usando Templates Customizados</h3>
+
+<p>Muitas vezes apenas os templates já fornecidos pela <a href="www.xamarin.com">Xamarin</a> não vão ser suficientes para desenvolvermos os nossos apps, nesses casos nós vamos ter que construir os nossos próprios templates. Nesse exemplo vou mostrar como criar um template customizado para mostrar tanto o estado como o nome da cidade.</p>
+
+<p>Para criarmos um template customizado devemos herdar de <code>ViewCell</code>, definir como o nosso template será renderizado e como ele usará os dados de cada item da lista, no código abaixo nós criamos um template customizado chamado <code>CustomCell</code> e estabelecemos que ele terá 4 <code>Labels</code>, onde dois deles vão ser labels fixos (“State:” e “Name:”) enquanto os outros dois vão ser dinâmicos, isso é, exibirão as propriedades <code>State</code> e <code>Name</code> de cada registro.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">CustomCell</span> <span class="p">:</span> <span class="n">ViewCell</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">CustomCell</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="kt">var</span> <span class="n">stateLabel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">()</span> 
+		<span class="p">{</span>
+			<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;State:&quot;</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">stateText</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">();</span>
+		<span class="n">stateText</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;State&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">cityLabel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">()</span> 
+		<span class="p">{</span>
+			<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;City:&quot;</span>	
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">cityText</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">();</span>
+		<span class="n">cityText</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">view</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">Orientation</span> <span class="p">=</span> <span class="n">StackOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">,</span>
+			<span class="n">Children</span> <span class="p">=</span> 
+			<span class="p">{</span>
+				<span class="n">stateLabel</span><span class="p">,</span>
+				<span class="n">stateText</span><span class="p">,</span>
+				<span class="n">cityLabel</span><span class="p">,</span>
+				<span class="n">cityText</span>
+			<span class="p">}</span>
+		<span class="p">};</span>
+
+		<span class="n">View</span> <span class="p">=</span> <span class="n">view</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Por fim, associamos o novo template ao item template da lista.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">CustomCell</span><span class="p">));</span></code></pre></div>
+
+<p>Abaixo segue o código completo do exemplo.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">CustomCellListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>
+	<span class="k">class</span> <span class="nc">CustomCell</span> <span class="p">:</span> <span class="n">ViewCell</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="nf">CustomCell</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="kt">var</span> <span class="n">stateLabel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">()</span> 
+			<span class="p">{</span>
+				<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;State:&quot;</span>
+			<span class="p">};</span>
+
+			<span class="kt">var</span> <span class="n">stateText</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">();</span>
+			<span class="n">stateText</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;State&quot;</span><span class="p">);</span>
+
+			<span class="kt">var</span> <span class="n">cityLabel</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">()</span> 
+			<span class="p">{</span>
+				<span class="n">Text</span> <span class="p">=</span> <span class="s">&quot;City:&quot;</span>	
+			<span class="p">};</span>
+
+			<span class="kt">var</span> <span class="n">cityText</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span> <span class="p">();</span>
+			<span class="n">cityText</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+			<span class="kt">var</span> <span class="n">view</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span> <span class="p">()</span> <span class="p">{</span>
+				<span class="n">Orientation</span> <span class="p">=</span> <span class="n">StackOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">,</span>
+				<span class="n">Children</span> <span class="p">=</span> 
+				<span class="p">{</span>
+					<span class="n">stateLabel</span><span class="p">,</span>
+					<span class="n">stateText</span><span class="p">,</span>
+					<span class="n">cityLabel</span><span class="p">,</span>
+					<span class="n">cityText</span>
+				<span class="p">}</span>
+			<span class="p">};</span>
+
+			<span class="n">View</span> <span class="p">=</span> <span class="n">view</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">class</span> <span class="nc">City</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">State</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="nf">CustomCellListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Padding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Thickness</span> <span class="p">(</span><span class="m">20</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">cities</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Miami&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;San Francisco&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Los Angeles&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Orlando&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;TX&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Houston&quot;</span><span class="p">},</span>
+			<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">State</span> <span class="p">=</span> <span class="s">&quot;NY&quot;</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New York City&quot;</span><span class="p">},</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">CustomCell</span><span class="p">));</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">cities</span><span class="p">,</span>
+			<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executarmos o código acima vamos ter uma listagem onde serão exibidos o nome da cidade e o estado que ela pertence.</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/custom-template.png" alt="ListView Template Customizado" /></p>
+
+<h3 id="agrupando-listas">Agrupando listas</h3>
+
+<p>A <code>ListView</code> também suporta agrupamento de registros em seções e a criação de um índice lateral para navegação rápida. Nesse exemplo vamos continuar com as mesmas cidades mas dessa vez queremos mostrá-las agrupadas por estados.</p>
+
+<p>Para mostrar os dados agrupados, vamos ter que mudar um pouco a forma como criamos a nossa lista de cidades, ao invés de criamos uma única lista com todas as cidades, vamos criar uma lista de estados onde cada um desses estados vai possuir um nome e uma lista de cidades, na prática, vamos ter uma lista de listas. Note que a classe <code>State</code>(estado) herda de uma coleção, afinal, ela é uma lista de cidades.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">State</span> <span class="p">:</span> <span class="n">ObservableCollection</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">State</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">Name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+		<span class="k">get</span><span class="p">;</span>
+		<span class="k">set</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">City</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+		<span class="k">get</span><span class="p">;</span>
+		<span class="k">set</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Também temos que mudar a inicialização da <code>ListView</code> para dizer que ela agora é agrupada e para isso vamos setar as propriedades <code>IsGroupingEnabled</code>, <code>GroupDisplayBinding</code> e <code>GroupShortNameBinding</code>.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="n">IsGroupingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+	<span class="n">GroupDisplayBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+	<span class="n">GroupShortNameBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+	<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">states</span><span class="p">,</span>
+	<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span>
+<span class="p">};</span></code></pre></div>
+
+<p>A propriedade <code>IsGroupingEnabled</code> seta se a lista é agrupada ou não, a propriedade <code>GroupDisplayBinding</code> seta qual vai ser o texto que será exibido no cabeçalho de cada seção e, por último, a propriedade <code>GroupShortNameBinding</code> seta qual vai ser o texto que vai ser exibido nos índices laterais.</p>
+
+<p>Abaixo segue o código completo do exemplo:</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">GroupingListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>		
+	<span class="k">class</span> <span class="nc">State</span> <span class="p">:</span> <span class="n">ObservableCollection</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="nf">State</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">Name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">class</span> <span class="nc">City</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">public</span> <span class="nf">GroupingListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Padding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Thickness</span> <span class="p">(</span><span class="m">20</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">states</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">State</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;FL&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Miami&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Orlando&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;CA&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Los Angeles&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;San Francisco&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;TX&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Houston&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Austin&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;NY&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New York City&quot;</span><span class="p">},</span>
+			<span class="p">}</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TextCell</span><span class="p">));</span>
+		<span class="n">dataTemplate</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">TextCell</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">IsGroupingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+			<span class="n">GroupDisplayBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+			<span class="n">GroupShortNameBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">states</span><span class="p">,</span>
+			<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executar o código acima temos a nossa lista de cidades mas dessa vez agrupadas por estado.</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/grouping-list.png" alt="ListView agrupado por estados" /></p>
+
+<h3 id="customizando-o-cabealho-dos-agrupamentos">Customizando o cabeçalho dos agrupamentos</h3>
+
+<p>Assim como fazemos com os itens da lista também podemos customizar a renderização dos cabeçalhos de cada agrupamento utilizando um template. Nessa seção vamos customizar a exibição de cada agrupamento para mostrar além do nome do estado, também um ícone que o identifique, para isso vamos criar um template customizado da mesma forma que fizemos para os itens da lista.</p>
+
+<p>Nesse caso, vamos ter um <code>Label</code> que corresponderá a propriedade <code>Name</code> da classe <code>State</code> e uma <code>Image</code> cuja propriedade <code>Source</code> (caminho da imagem) corresponderá a propriedade <code>Icon</code> da classe <code>State</code>.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">class</span> <span class="nc">StateTemplate</span> <span class="p">:</span> <span class="n">ViewCell</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="nf">StateTemplate</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="kt">var</span> <span class="n">text</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+		<span class="n">text</span><span class="p">.</span><span class="n">SetBinding</span><span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">icon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Image</span><span class="p">()</span> <span class="p">{</span>
+			<span class="n">WidthRequest</span> <span class="p">=</span> <span class="m">25</span><span class="p">,</span>
+			<span class="n">HeightRequest</span> <span class="p">=</span> <span class="m">25</span>
+		<span class="p">};</span>
+		<span class="n">icon</span><span class="p">.</span><span class="n">SetBinding</span><span class="p">(</span><span class="n">Image</span><span class="p">.</span><span class="n">SourceProperty</span><span class="p">,</span> <span class="s">&quot;Icon&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">view</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span><span class="p">()</span> <span class="p">{</span>
+			<span class="n">Orientation</span> <span class="p">=</span> <span class="n">StackOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">,</span>
+			<span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+				<span class="n">icon</span><span class="p">,</span>
+				<span class="n">text</span>
+			<span class="p">}</span>
+		<span class="p">};</span>
+
+		<span class="n">Height</span> <span class="p">=</span> <span class="m">30</span><span class="p">;</span>
+		<span class="n">View</span> <span class="p">=</span> <span class="n">view</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Também temos que alterar a inicialização da lista para setar a propriedade <code>GroupHeaderTemplate</code> com o template que nós criamos.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="n">IsGroupingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+	<span class="n">GroupDisplayBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+	<span class="n">GroupShortNameBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+	<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">states</span><span class="p">,</span>
+	<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span><span class="p">,</span>
+	<span class="n">GroupHeaderTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">StateTemplate</span><span class="p">)),</span>
+	<span class="n">HasUnevenRows</span> <span class="p">=</span> <span class="k">true</span>
+<span class="p">};</span></code></pre></div>
+
+<p>O código completo do exemplo ficou o seguinte:</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="k">public</span> <span class="k">class</span> <span class="nc">GroupingTemplateListViewPage</span> <span class="p">:</span> <span class="n">ContentPage</span>
+<span class="p">{</span>		
+	<span class="k">class</span> <span class="nc">State</span> <span class="p">:</span> <span class="n">ObservableCollection</span><span class="p">&lt;</span><span class="n">City</span><span class="p">&gt;</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="nf">State</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">string</span> <span class="n">icon</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="n">Name</span> <span class="p">=</span> <span class="n">name</span><span class="p">;</span>
+			<span class="n">Icon</span> <span class="p">=</span> <span class="n">icon</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Icon</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">class</span> <span class="nc">StateTemplate</span> <span class="p">:</span> <span class="n">ViewCell</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="nf">StateTemplate</span><span class="p">()</span>
+		<span class="p">{</span>
+			<span class="kt">var</span> <span class="n">text</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Label</span><span class="p">();</span>
+			<span class="n">text</span><span class="p">.</span><span class="n">SetBinding</span><span class="p">(</span><span class="n">Label</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+			<span class="kt">var</span> <span class="n">icon</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Image</span><span class="p">()</span> <span class="p">{</span>
+				<span class="n">WidthRequest</span> <span class="p">=</span> <span class="m">25</span><span class="p">,</span>
+				<span class="n">HeightRequest</span> <span class="p">=</span> <span class="m">25</span>
+			<span class="p">};</span>
+			<span class="n">icon</span><span class="p">.</span><span class="n">SetBinding</span><span class="p">(</span><span class="n">Image</span><span class="p">.</span><span class="n">SourceProperty</span><span class="p">,</span> <span class="s">&quot;Icon&quot;</span><span class="p">);</span>
+
+			<span class="kt">var</span> <span class="n">view</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StackLayout</span><span class="p">()</span> <span class="p">{</span>
+				<span class="n">Orientation</span> <span class="p">=</span> <span class="n">StackOrientation</span><span class="p">.</span><span class="n">Horizontal</span><span class="p">,</span>
+				<span class="n">Children</span> <span class="p">=</span> <span class="p">{</span>
+					<span class="n">icon</span><span class="p">,</span>
+					<span class="n">text</span>
+				<span class="p">}</span>
+			<span class="p">};</span>
+
+			<span class="n">Height</span> <span class="p">=</span> <span class="m">30</span><span class="p">;</span>
+			<span class="n">View</span> <span class="p">=</span> <span class="n">view</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+
+	<span class="k">class</span> <span class="nc">City</span>
+	<span class="p">{</span>
+		<span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span>
+			<span class="k">get</span><span class="p">;</span>
+			<span class="k">set</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>			
+
+	<span class="k">public</span> <span class="nf">GroupingTemplateListViewPage</span> <span class="p">()</span>
+	<span class="p">{</span>
+		<span class="n">Padding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Thickness</span> <span class="p">(</span><span class="m">20</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">states</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">State</span><span class="p">&gt;</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;FL&quot;</span><span class="p">,</span> <span class="s">&quot;fl.jpg&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Miami&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Orlando&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;CA&quot;</span><span class="p">,</span> <span class="s">&quot;ca.jpeg&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Los Angeles&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;San Francisco&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;TX&quot;</span><span class="p">,</span> <span class="s">&quot;tx.jpg&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Houston&quot;</span><span class="p">},</span>
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Austin&quot;</span><span class="p">},</span>
+			<span class="p">},</span>
+			<span class="k">new</span> <span class="nf">State</span><span class="p">(</span><span class="s">&quot;NY&quot;</span><span class="p">,</span> <span class="s">&quot;ny.jpg&quot;</span><span class="p">)</span> 
+			<span class="p">{</span>					
+				<span class="k">new</span> <span class="nf">City</span><span class="p">()</span> <span class="p">{</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;New York City&quot;</span><span class="p">},</span>
+			<span class="p">}</span>
+		<span class="p">};</span>
+
+		<span class="kt">var</span> <span class="n">dataTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">TextCell</span><span class="p">));</span>
+		<span class="n">dataTemplate</span><span class="p">.</span><span class="n">SetBinding</span> <span class="p">(</span><span class="n">TextCell</span><span class="p">.</span><span class="n">TextProperty</span><span class="p">,</span> <span class="s">&quot;Name&quot;</span><span class="p">);</span>
+
+		<span class="kt">var</span> <span class="n">listView</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ListView</span> <span class="p">()</span> <span class="p">{</span>
+			<span class="n">IsGroupingEnabled</span> <span class="p">=</span> <span class="k">true</span><span class="p">,</span>
+			<span class="n">GroupDisplayBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+			<span class="n">GroupShortNameBinding</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Binding</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">),</span>
+			<span class="n">ItemsSource</span> <span class="p">=</span> <span class="n">states</span><span class="p">,</span>
+			<span class="n">ItemTemplate</span> <span class="p">=</span> <span class="n">dataTemplate</span><span class="p">,</span>
+			<span class="n">GroupHeaderTemplate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataTemplate</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">StateTemplate</span><span class="p">)),</span>
+			<span class="n">HasUnevenRows</span> <span class="p">=</span> <span class="k">true</span>
+		<span class="p">};</span>
+
+		<span class="n">Content</span> <span class="p">=</span> <span class="n">listView</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Ao executar o código acima, os cabeçalhos dos nossos grupos agora possuem imagem e texto.</p>
+
+<p><img src="/content/img/blog/posts/2015-05-03/grouping-template.png" alt="ListView agrupado por estados com cabeçalho customizado" /></p>
+
+<h3 id="usando-os-eventos-da-listview">Usando os eventos da ListView</h3>
+
+<p>Por fim, apenas listar registros não é suficiente para boa parte dos aplicativos, nós também temos que ser capazes de interagir com a lista através de eventos, como por exemplo, ao selecionar um item da lista nós poderíamos entrar em uma tela de detalhe e assim por diante. O <code>ListView</code> possui dois eventos para nos ajudar nesses cenários, o <code>ItemTapped</code> e o <code>ItemSelected</code>.</p>
+
+<p>O <code>ItemTapped</code> é disparado todas as vezes que nós damos um Tap em um dos itens da lista.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">listView</span><span class="p">.</span><span class="n">ItemTapped</span> <span class="p">+=</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">ItemTappedEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="n">DisplayAlert</span><span class="p">(</span><span class="s">&quot;ItemTapped&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">Item</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span> <span class="s">&quot;Ok&quot;</span><span class="p">);</span>
+<span class="p">};</span></code></pre></div>
+
+<p>Enquanto o <code>ItemSelected</code> é disparado todas as vezes que o item selecionado é alterado logo esse evento é disparado toda vez que damos um Tap em um item não selecionado como também é disparado quando alteramos o item selecionado via código.</p>
+
+<div class="highlight"><pre><code class="language-c#" data-lang="c#"><span class="n">listView</span><span class="p">.</span><span class="n">ItemSelected</span> <span class="p">+=</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">SelectedItemChangedEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+	<span class="n">DisplayAlert</span><span class="p">(</span><span class="s">&quot;ItemSelected&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">.</span><span class="n">SelectedItem</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span> <span class="s">&quot;Ok&quot;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Alterações via código também disparam o evento ItemSelected</span>
+<span class="n">listView</span><span class="p">.</span><span class="n">SelectedItem</span> <span class="p">=</span> <span class="kt">object</span><span class="p">;</span></code></pre></div>
+
+<h3 id="por-hoje--s">Por hoje é só!</h3>
+
+<p>Esse post ficou bem longo, porém é justificável visto que o controle ListView é bem extenso e possui várias configurações possíveis. Agora você pode mandar ver com as ListViews nos seus aplicativos e qualquer dúvida é só entrar em contato comigo!</p>
+
+<p><a href="https://github.com/pauloortins/MyXamarinSamples">Todos os exemplo estão disponíveis na minha conta do Github.</a></p>
+
+<p>Até mais!</p>
+
+
+        </div>
+    </article>
+    <div class="blog-divider"></div>     
+    
+
+
+
+
+<div class="about-author">
+    <h3 class="title">Sobre o Autor</h3>
+    <div class="author-content">
+        <div class="avatar"><img alt="" src="/content/img/team/paulo.jpeg"></div>
+        <div class="data">
+                <h4><a href="mailto:pauloortins@oncedev.com">Paulo Ortins</a></h4>
+                <p>
+                    Completamente apaixonado por programação, sócio e desenvolvedor na OnceDev, estudante de mestrado na UFBA e também escreve em inglês em www.pauloortins.com.
+                </p>
+        </div>
+        <!-- End data -->
+    </div>
+</div>
+    <div class="divider"></div>
+    <!-- Comments Section Start -->
+    <div class="comment-wrapper">
+        <h3 class="title">Comentários</h3>
+        <div class="clearfix"></div>
+            
+                        <div id="disqus_thread"></div>
+                    <script type="text/javascript">
+                            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                            var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+
+                            /* * * DON'T EDIT BELOW THIS LINE * * */
+                            (function() {
+                                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            
+        <div class="clearfix">
+        </div>
+    </div>
+    <!-- Comments Section End -->
+    <div class="divider"></div>
+
+</div>
+
+                        <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <!-- Tab Start -->
+    <div class="widget tabs">
+        <h3 class="title">Recentes</h3>
+        <div id="horizontal-tabs">
+            <div class="contents">
+                <div class="tabscontent" id="content1" style="display: block;">
+                    <ul class="posts">
+                    
+                    <li>
+                        <p><a href="/mobile/2015/05/03/xamarin-forms-usando-listview/">Xamarin Forms: Usando a ListView</a></p>
+                        <span class="color">03/05/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/04/25/xamarin-vs-outras-plataformas/">Como o Xamarin se compara com outras plataformas?</a></p>
+                        <span class="color">25/04/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/agilidade/2015/04/15/quer-ser-um-cliente-feliz-pergunte-me-como/">Quer ser um cliente feliz? Pergunte-me como!</a></p>
+                        <span class="color">15/04/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/04/10/xamarin-forms-usando-pages-parte-2/">Xamarin Forms: Usando Pages - Parte 2</a></p>
+                        <span class="color">10/04/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/04/08/xamarin-forms-usando-pages-parte-1/">Xamarin Forms: Usando Pages - Parte 1</a></p>
+                        <span class="color">08/04/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/03/18/anatomia-de-um-aplicativo-xamarins-forms/">Anatomia de um aplicativo Xamarin.Forms</a></p>
+                        <span class="color">18/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mobile/2015/03/08/xamarin-forms/">O que é o Xamarin.Forms e pra que serve?</a></p>
+                        <span class="color">08/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/mercado/2015/03/07/o-proximo-campo-de-batalha/">O próximo campo de batalha</a></p>
+                        <span class="color">07/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/agilidade/2015/03/02/em-qual-tipo-de-empresa-agil-voce-trabalha/">Em qual tipo de empresa ágil você trabalha?</a></p>
+                        <span class="color">02/03/2015</span>
+                    </li>
+                    
+                    <li>
+                        <p><a href="/carreira/2014/10/25/o-que-eu-encontrei-fora-da-matrix/">O que eu encontrei fora da Matrix?</a></p>
+                        <span class="color">25/10/2014</span>
+                    </li>
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab End -->
+    <!-- Category Widget Start -->
+    <div class="widget category">
+        <h3 class="title">Categorias</h3>
+        <ul class="category-list slide">
+            
+            <li><a href="/eventos">eventos</a></li>
+            
+            <li><a href="/lideranca">lideranca</a></li>
+            
+            <li><a href="/testes">testes</a></li>
+            
+            <li><a href="/jekyll">jekyll</a></li>
+            
+            <li><a href="/mobile">mobile</a></li>
+            
+            <li><a href="/carreira">carreira</a></li>
+            
+            <li><a href="/aspnet">aspnet</a></li>
+            
+            <li><a href="/agilidade">agilidade</a></li>
+            
+            <li><a href="/mercado">mercado</a></li>
+            
+        </ul>
+    </div>
+    <!-- Category Widget End -->                                
+</div>
+<!-- Sidebar End --> 
+    
+                        </div>
+                </div>
+                </div>
+                <!-- Main Content end-->
+                </div>
+		 <!-- Content End -->		
+		 
+         <!-- Footer Start -->
+         <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+               <div class="container">
+                  <div class="row">
+				  <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                       <div class="fb-like-box" data-href="https://www.facebook.com/oncedevsolucoes" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+					 </section>
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                        <h3>Sobre</h3>
+                        <p> 
+                           A OnceDev foi fundada por profissionais que acreditam que é possível produzir software de maneira profissional, com alta produtividade sem abrir mão de qualidade e do respeito ao cliente. 
+                        </p>
+                     </section>
+					
+                     <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-three">
+                        <h3>Contatos</h3>
+                        <ul class="contact-us">
+                           <li>
+                              <i class="icon-map-marker"></i>
+                              <p> 
+                                 <strong>Endereço:</strong> Av. Otavio Mangabeira, nº 929 - Pituba, <br>
+                                 Salvador, Bahia 
+                              </p>
+                           </li>
+                           <li>
+                              <i class="icon-phone"></i>
+                              <p><strong>Telefone:</strong> +55 71 9993 1356</p>
+                           </li>
+                           <li>
+                              <i class="icon-envelope"></i>
+                              <p><strong>Email:</strong><a href="mailto:oncedev@oncedev.com">oncedev@oncedev.com</a></p>
+                           </li>
+                        </ul>
+                     </section>
+					 
+					  </div>
+               </div>
+            </div>
+            <!-- Footer Top End --> 
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 "> &copy; Copyright 2013 by <a href="#">OnceDev</a>. All Rights Reserved. </div>					 
+                     <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                        <ul class="social social-icons-footer-bottom">
+                           <a href="https://www.facebook.com/oncedevsolucoes" target="_blankk" data-toggle="tooltip" title="Facebook"><li class="facebook" style="margin-right: 5px !important;"><i class="icon-facebook"></i></li></a>
+                           <a href="https://twitter.com/OnceDev" target="_blankk" data-toggle="tooltip" title="Twitter"><li class="twitter"><i class="icon-twitter"></i></li></a>
+                           <!-- <li class="dribbble"><a href="#" data-toggle="tooltip" title="Dribble"><i class="icon-dribbble"></i></a></li>
+                           <li class="linkedin"><a href="#" data-toggle="tooltip" title="LinkedIn"><i class="icon-linkedin"></i></a></li>
+                           <li class="rss"><a href="#" data-toggle="tooltip" title="Rss"><i class="icon-rss"></i></a></li> -->
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Footer Bottom End --> 
+         </footer>
+         <!-- Scroll To Top --> 
+         <a href="#" class="scrollup"><i class="icon-angle-up"></i></a>
+		</div>
+		<!-- Wrap End -->
+		<!-- The Scripts -->
+		<script src="/content/js/jquery.min.js"></script>
+		<script src="/content/js/bootstrap.js"></script>
+		<script src="/content/js/jquery.parallax.js"></script> 
+		<script src="/content/js/modernizr-2.6.2.min.js"></script> 
+		<script src="/content/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="/content/js/jquery.nivo.slider.pack.js"></script>
+		<script src="/content/js/jquery.prettyPhoto.js"></script>
+		<script src="/content/js/superfish.js"></script>
+		<script src="/content/js/tweetMachine.js"></script>
+		<script src="/content/js/tytabs.js"></script>
+		<script src="/content/js/jquery.gmap.min.js"></script>
+		<script src="/content/js/circularnav.js"></script>
+		<script src="/content/js/jquery.sticky.js"></script>
+		<script src="/content/js/jflickrfeed.js"></script>
+		<script src="/content/js/imagesloaded.pkgd.min.js"></script>
+		<script src="/content/js/waypoints.min.js"></script>
+		<script src=" /content/js/custom.js "></script>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+			  
+		<script type="text/javascript">
+			var disqus_shortname = 'oncedev'; // required: replace example with your forum shortname
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+		</script>
+		
+	  </body>
+	  
+</html>
