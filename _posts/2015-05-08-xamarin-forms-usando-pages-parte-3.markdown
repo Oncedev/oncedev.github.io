@@ -117,7 +117,7 @@ public class MasterDetail : MasterDetailPage
 }
 {% endhighlight %}
 
-Ao executar o código abaixo no smartphone nós temos as seguintes telas:
+Ao executar o código acima no smartphone nós temos as seguintes telas:
 
 ![MasterDetailPage com tela de Master][3]
 
